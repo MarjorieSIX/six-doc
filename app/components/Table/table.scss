@@ -1,0 +1,74 @@
+@import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+.ds-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 1392px;
+  width: 100%;
+
+  th,
+  td {
+    border-right: 2px solid $color-grey-25;
+    padding: 24px 30px;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  &.condensed {
+    th,
+    td {
+      padding: 12px 15px;
+    }
+  }
+
+  &.max-50 {
+    max-width: 50%;
+  }
+
+  th {
+    font-weight: $ds-font-weight-bold;
+  }
+
+  thead {
+    tr {
+      &:last-child {
+        border-bottom: 2px solid $color-green-30;
+      }
+
+      &:first-child {
+        th {
+          background: $color-graphite-50;
+          border-bottom: 0;
+          color: $color-white-00-10-20;
+        }
+      }
+    }
+
+    th {
+      background: $color-green-00;
+      color: $color-graphite-50;
+      font-size: 16px;
+      line-height: 20px;
+
+      &.colspan {
+        background: $color-graphite-50;
+        border-bottom: 0;
+        color: $color-white-00-10-20;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background: #d3d3d3;
+      }
+    }
+  }
+
+  .cell-num {
+    text-align: right;
+  }
+}

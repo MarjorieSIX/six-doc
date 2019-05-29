@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+
+  <title>Desjardins Design System | Accordéon</title>
+
+  <link href="../../../css/styles.css" rel="stylesheet" />
+  <link href="accordion.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+  <div class="demo-block">
+    <!-- Accordion Configuration Options
+    
+    data-allow-toggle
+      Allow for each toggle to both open and close its section. Makes it possible for all sections to be closed. Assumes only one section may be open.
+    
+    data-allow-multiple
+      Allow for multiple accordion sections to be expanded at the same time. Assumes data-allow-toggle otherwise the toggle on open sections would be disabled.
+    __________
+    
+    Ex:
+      <div id="accordionGroup" class="Accordion" data-allow-multiple>
+    
+      <div id="accordionGroup" class="Accordion" data-allow-toggle>
+    -->
+    <div id="accordionGroup" class="Accordion">
+      <h3>
+        <button aria-expanded="true" class="Accordion-trigger"
+                aria-controls="sect1"
+                id="accordion1id">
+          <span class="Accordion-title">
+            Personal Information
+            <span class="Accordion-icon"></span>
+          </span>
+        </button>
+      </h3>
+      <div id="sect1" role="region"
+            aria-labelledby="accordion1id"
+            class="Accordion-panel">
+        <div>
+            <h3>
+              <button aria-expanded="true" class="Accordion-trigger"
+                      aria-controls="sect1"
+                      id="accordion1id">
+                <span class="Accordion-title">
+                  Personal
+                  <span class="Accordion-icon"></span>
+                </span>
+              </button>
+            </h3>
+            <div id="sect4" role="region"
+                  aria-labelledby="accordion4id"
+                  class="Accordion-panel">
+              <div>
+                BOOK
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+      <h3>
+        <button aria-expanded="false"
+                class="Accordion-trigger"
+                aria-controls="sect2"
+                id="accordion2id">
+          <span class="Accordion-title">
+            Billing Address
+            <span class="Accordion-icon"></span>
+          </span>
+        </button>
+      </h3>
+      <div id="sect2"
+            role="region"
+            aria-labelledby="accordion2id"
+            class="Accordion-panel"
+            hidden="">
+        <div>
+          test2
+        </div>
+      </div>
+      <h3>
+        <button aria-expanded="false"
+                class="Accordion-trigger"
+                aria-controls="sect3"
+                id="accordion3id">
+          <span class="Accordion-title">
+            Shipping Address
+            <span class="Accordion-icon"></span>
+          </span>
+        </button>
+      </h3>
+      <div id="sect3"
+            role="region"
+            aria-labelledby="accordion3id"
+            class="Accordion-panel"
+            hidden="">
+        <div>
+          Test 4
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="accordion.js"></script>
+</body>
+
+</html>

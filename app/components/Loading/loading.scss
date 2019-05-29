@@ -1,0 +1,15 @@
+@import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+.ds-loading {
+  animation: spin .8s ease-in-out infinite;
+  border: 3px solid rgba(0, 135, 78, .8);
+  border-radius: 50%;
+  border-top-color: $color-green-50;
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

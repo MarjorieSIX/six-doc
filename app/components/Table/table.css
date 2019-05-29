@@ -1,0 +1,42 @@
+/**
+ * Do not edit directly
+ * Generated on Mon, 27 May 2019 15:25:52 GMT
+ */
+.ds-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  max-width: 1392px;
+  width: 100%; }
+  .ds-table th,
+  .ds-table td {
+    border-right: 2px solid #aaaaaa;
+    padding: 24px 30px; }
+    .ds-table th:last-child,
+    .ds-table td:last-child {
+      border-right: 0; }
+  .ds-table.condensed th,
+  .ds-table.condensed td {
+    padding: 12px 15px; }
+  .ds-table.max-50 {
+    max-width: 50%; }
+  .ds-table th {
+    font-weight: 700; }
+  .ds-table thead tr:last-child {
+    border-bottom: 2px solid #00874e; }
+  .ds-table thead tr:first-child th {
+    background: #383838;
+    border-bottom: 0;
+    color: #ffffff; }
+  .ds-table thead th {
+    background: #cce7dc;
+    color: #383838;
+    font-size: 16px;
+    line-height: 20px; }
+    .ds-table thead th.colspan {
+      background: #383838;
+      border-bottom: 0;
+      color: #ffffff; }
+  .ds-table tbody tr:nth-child(even) {
+    background: #d3d3d3; }
+  .ds-table .cell-num {
+    text-align: right; }

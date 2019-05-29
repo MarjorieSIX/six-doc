@@ -1,0 +1,58 @@
+@import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+.ds-tabs {
+  &-list {
+    background: $color-graphite-00;
+    border: 2px solid $color-grey-25;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+  }
+
+  &-link {
+    border: 2px solid transparent;
+    border-top: 0;
+    color: $color-black-40-50;
+    display: block;
+    margin-bottom: -2px;
+    min-width: 5rem;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+
+    &.is-active {
+      background: $color-white-00-10-20;
+      border-bottom-color: $color-white-00-10-20;
+      border-left-color: $color-grey-25;
+      border-right-color: $color-grey-25;
+      color: $color-black-40-50;
+      font-weight: $ds-font-weight-bold;
+    }
+  }
+
+  &-item {
+    &:first-of-type {
+      border-left: 0;
+
+      .is-active {
+        border-left: 0;
+        border-radius: 8px 0 0;
+      }
+    }
+  }
+
+  &-body {
+    background: $color-white-00-10-20;
+    border: 2px solid $color-grey-25;
+    border-top: 0;
+    padding: 10px 0;
+  }
+
+  &-panel {
+    display: none;
+    padding: 1rem;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}

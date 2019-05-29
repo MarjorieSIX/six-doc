@@ -1,0 +1,43 @@
+@import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+h1,
+.heading1,
+h2,
+.heading2,
+h3,
+.heading3,
+h4,
+.heading4 {
+  color: $color-graphite-50;
+  font-family: $ds-font-main-name, Arial, Helvetica, sans-serif;
+  font-weight: $ds-font-weight-bold;
+  text-align: left;
+}
+
+h1,
+.heading1 {
+  font-size: 68px;
+  line-height: 76px;
+  margin-bottom: 26px;
+}
+
+h2,
+.heading2 {
+  font-size: 42px;
+  line-height: 48px;
+  margin-bottom: 16px;
+}
+
+h3,
+.heading3 {
+  font-size: 26px;
+  line-height: 32px;
+  margin-bottom: 13px;
+}
+
+h4,
+.heading4 {
+  font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 16px;
+}
