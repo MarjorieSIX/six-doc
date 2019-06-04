@@ -7,8 +7,12 @@ h2,
 h3,
 .heading3,
 h4,
-.heading4 {
-  color: $color-graphite-50;
+.heading4,
+h5,
+.heading5,
+h6,
+.heading6 {
+  color: $color-graphite-medium;
   font-family: $ds-font-main-name, Arial, Helvetica, sans-serif;
   font-weight: $ds-font-weight-bold;
   text-align: left;
@@ -25,7 +29,7 @@ h2,
 .heading2 {
   font-size: 42px;
   line-height: 48px;
-  margin-bottom: 16px;
+  margin-bottom: $ds-spaces-even-x-4;
 }
 
 h3,
@@ -39,5 +43,19 @@ h4,
 .heading4 {
   font-size: 20px;
   line-height: 25px;
-  margin-bottom: 16px;
+  margin-bottom: $ds-spaces-even-x-4;
+}
+
+h5,
+.heading5 {
+  /*font-size: 20px;
+  line-height: 25px;
+  margin-bottom: 16px;*/
+}
+
+h6,
+.heading6 {
+  font-size: 20px;
+  line-height: 20px;
+  margin-bottom: 0;
 }

@@ -1,0 +1,104 @@
+@import "../../../../node_modules/six-design-tokens/build/scss/token-variables.scss";
+
+.bases {
+  .library {
+    background: $color-grey;
+
+    .swatches {
+      height: 100px;
+      width: 100px;
+
+      .white {
+        background: $color-white;
+      }
+
+      .grey {
+        background: $color-grey;
+      }
+
+      .black {
+        background: $color-black;
+      }
+
+      .blue-light {
+        background: $color-blue-light;
+      }
+
+      .blue-medium {
+        background: $color-blue-medium;
+      }
+
+      .blue-dark {
+        background: $color-blue-dark;
+      }
+
+      .red-light {
+        background: $color-red-light;
+      }
+
+      .red-medium {
+        background: $color-red-medium;
+      }
+
+      .red-dark {
+        background: $color-red-dark;
+      }
+
+      .orange-light {
+        background: $color-orange-light;
+      }
+
+      .orange-medium {
+        background: $color-orange-medium;
+      }
+
+      .orange-dark {
+        background: $color-orange-dark;
+      }
+
+      .yellow-light {
+        background: $color-yellow-light;
+      }
+
+      .yellow-light {
+        background: $color-yellow-light;
+      }
+
+      .yellow-dark {
+        background: $color-yellow-dark;
+      }
+
+      .green-light {
+        background: $color-green-light;
+      }
+
+      .green-medium {
+        background: $color-green-medium;
+      }
+
+      .green-dark {
+        background: $color-green-dark;
+      }
+
+      .graphite-light {
+        background: $color-graphite-light;
+      }
+
+      .graphite-medium {
+        background: $color-graphite-medium;
+      }
+
+      .graphite-dark {
+        background: $color-graphite-dark;
+      }
+
+      .advantage {
+        background: $color-advantage;
+      }
+
+      .accent {
+        background: $color-accent;
+      }
+    }
+  }
+}

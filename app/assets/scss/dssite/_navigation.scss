@@ -8,7 +8,7 @@
 
 .ds-main-nav {
   height: 100%;
-  margin-right: 24px;
+  margin-right: $ds-spaces-even-x-6;
   margin-top: 100px;
   overflow-y: auto;
 
@@ -16,29 +16,29 @@
     list-style-type: none;
 
     li {
-      min-height: 24px;
+      min-height: $ds-spaces-even-x-6;
     }
 
     > li {
-      border-bottom: 2px solid #ccc;
+      border-bottom: 2px solid $color-graphite-light;
       margin-top: 10px;
     }
 
-    a, 
+    a,
     label {
-      color: $color-graphite-50;
+      color: $color-graphite-dark;
       cursor: pointer;
       display: block;
       font-size: 16px;
       font-weight: normal;
-      line-height: 24px;
+      line-height: $ds-spaces-even-x-6;
       margin: 0 0 11px 0;
       text-decoration: none;
       transition: all .25s ease-in;
     }
 
     li.active > a:first-child {
-      font-weight: 700;
+      font-weight: $ds-font-weight-bold;
     }
 
     input[type=checkbox]:checked + label + ul {
@@ -63,14 +63,14 @@
 
   .level3,
   .level4 {
-    background: rgba($color-graphite-50, .1);
+    background: rgba($color-graphite-dark, .1);
     li:first-child {
       margin-top: 11px;
     }
   }
 
   .level3 {
-    border-radius: 8px;
+    border-radius: $ds-sizes-border-sm;
     margin-left: -20px;
   }
 
@@ -81,7 +81,7 @@
   }
 
   input[type=checkbox]:checked + label {
-    font-weight: 700;
+    font-weight: $ds-font-weight-bold;
   }
 
   /* Rotating chevron icon

@@ -1,14 +1,70 @@
 /**
  * Do not edit directly
- * Generated on Mon, 27 May 2019 15:25:52 GMT
+ * Generated on Thu, 30 May 2019 20:39:23 GMT
  */
 /**
  * Do not edit directly
- * Generated on Mon, 27 May 2019 15:25:52 GMT
+ * Generated on Thu, 30 May 2019 20:39:23 GMT
+ */
+.bases .library {
+  background: #aaaaaa; }
+  .bases .library .swatches {
+    height: 100px;
+    width: 100px; }
+    .bases .library .swatches .white {
+      background: #ffffff; }
+    .bases .library .swatches .grey {
+      background: #aaaaaa; }
+    .bases .library .swatches .black {
+      background: #000000; }
+    .bases .library .swatches .blue-light {
+      background: #e2dff2; }
+    .bases .library .swatches .blue-medium {
+      background: #3f42db; }
+    .bases .library .swatches .blue-dark {
+      background: #161c71; }
+    .bases .library .swatches .red-light {
+      background: #ffdddd; }
+    .bases .library .swatches .red-medium {
+      background: #d20023; }
+    .bases .library .swatches .red-dark {
+      background: #790318; }
+    .bases .library .swatches .orange-light {
+      background: #f6ebd8; }
+    .bases .library .swatches .orange-medium {
+      background: #ee9109; }
+    .bases .library .swatches .orange-dark {
+      background: #3f2802; }
+    .bases .library .swatches .yellow-light {
+      background: #f3f6d8; }
+    .bases .library .swatches .yellow-light {
+      background: #f3f6d8; }
+    .bases .library .swatches .yellow-dark {
+      background: #3f3f02; }
+    .bases .library .swatches .green-light {
+      background: #cce7dc; }
+    .bases .library .swatches .green-medium {
+      background: #00874e; }
+    .bases .library .swatches .green-dark {
+      background: #064a2d; }
+    .bases .library .swatches .graphite-light {
+      background: #e6e7e8; }
+    .bases .library .swatches .graphite-medium {
+      background: #666666; }
+    .bases .library .swatches .graphite-dark {
+      background: #383838; }
+    .bases .library .swatches .advantage {
+      background: #ffc90d; }
+    .bases .library .swatches .accent {
+      background: #652f9d; }
+
+/**
+ * Do not edit directly
+ * Generated on Thu, 30 May 2019 20:39:23 GMT
  */
 pre {
-  background: #064a2d;
-  border: 1px solid #064a2d;
+  background: #00874e;
+  border: 1px solid #00874e;
   border-radius: 8px 8px 0 0;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.5);
   overflow-x: auto; }
@@ -40,7 +96,7 @@ pre[class*="language-"] {
 
 /**
  * Do not edit directly
- * Generated on Mon, 27 May 2019 15:25:52 GMT
+ * Generated on Thu, 30 May 2019 20:39:23 GMT
  */
 /* if selector is wider than the screensize we are calling */
 [hidden] {
@@ -64,7 +120,7 @@ pre[class*="language-"] {
     .ds-main-nav .level1 li {
       min-height: 24px; }
     .ds-main-nav .level1 > li {
-      border-bottom: 2px solid #ccc;
+      border-bottom: 2px solid #e6e7e8;
       margin-top: 10px; }
     .ds-main-nav .level1 a,
     .ds-main-nav .level1 label {

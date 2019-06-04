@@ -1,16 +1,15 @@
 @import "../../../../node_modules/six-design-tokens/build/scss/token-variables.scss";
 
-
 pre {
-  background: $color-green-50;
-  border: 1px solid $color-green-50;
+  background: $color-green-medium;
+  border: 1px solid $color-green-medium;
   border-radius: 8px 8px 0 0;
-  box-shadow: 0 1px 1px 0 rgba($color-black-40-50, .5);
+  box-shadow: 0 1px 1px 0 rgba($color-black, .5);
   overflow-x: auto;
 
   code {
     border: 0;
-    color: $color-white-00-10-20;
+    color: $color-white;
     display: inline-block;
     height: 250px;
     overflow-y: auto;
@@ -21,7 +20,7 @@ pre {
 .hljs {
   background: none;
   border: 0;
-  color: $color-white-00-10-20;
+  color: $color-white;
   display: inline-block;
   height: 250px;
   overflow-y: auto;

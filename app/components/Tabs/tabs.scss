@@ -1,17 +1,17 @@
-@import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
+@import '../../../node_modules/six-design-tokens/build/scss/token-variables';
 
 .ds-tabs {
   &-list {
-    background: $color-graphite-00;
-    border: 2px solid $color-grey-25;
-    border-radius: 8px 8px 0 0;
+    background: $color-graphite-light;
+    border: 2px solid $color-grey;
+    border-radius: $ds-sizes-border-sm $ds-sizes-border-sm 0 0;
     display: flex;
   }
 
   &-link {
     border: 2px solid transparent;
     border-top: 0;
-    color: $color-black-40-50;
+    color: $color-black;
     display: block;
     margin-bottom: -2px;
     min-width: 5rem;
@@ -20,11 +20,11 @@
     text-decoration: none;
 
     &.is-active {
-      background: $color-white-00-10-20;
-      border-bottom-color: $color-white-00-10-20;
-      border-left-color: $color-grey-25;
-      border-right-color: $color-grey-25;
-      color: $color-black-40-50;
+      background: $color-white;
+      border-bottom-color: $color-white;
+      border-left-color: $color-grey;
+      border-right-color: $color-grey;
+      color: $color-black;
       font-weight: $ds-font-weight-bold;
     }
   }
@@ -35,14 +35,14 @@
 
       .is-active {
         border-left: 0;
-        border-radius: 8px 0 0;
+        border-radius: $ds-sizes-border-sm 0 0;
       }
     }
   }
 
   &-body {
-    background: $color-white-00-10-20;
-    border: 2px solid $color-grey-25;
+    background: $color-white;
+    border: 2px solid $color-grey;
     border-top: 0;
     padding: 10px 0;
   }
