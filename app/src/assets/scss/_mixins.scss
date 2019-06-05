@@ -1,0 +1,70 @@
+@import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+// color variable map
+$color-combi: (
+  blue: (
+    medium: #33D1FF,
+    light: #368EA8,
+    dark: #13566A
+  ),
+  red: (
+    medium: #d98328,
+    light: #dd8f3d,
+    dark: #c57623
+  ),
+  orange: (
+    medium: #5a1321,
+    light: #7b1a2d,
+    dark: #51111e
+  )
+);
+
+@mixin combi-dark-bgbd {
+  @each $color, $color-variant, $color-value in $color-combi { 
+    .#{$color} {
+      &-light  { 
+        background: #{'$'}color-#{$color}-light; 
+        border-color: #{'$'}color-#{$color}-medium;
+        &:after { 
+          content: "#{$color}-light: #{$color-value}"; 
+          color: "#{$color}"; 
+        }
+      }
+      &-medium { 
+        background: #{'$'}color-#{$color}-medium; 
+        border-color: #{'$'}color-#{$color}-dark;
+      }
+      &-dark  { 
+        background: #{'$'}color-#{$color}-dark; 
+        border-color: black;
+      }
+    }
+  }
+}
+
+@mixin combi-light-bgbd {
+  @each $color, $color-variant in $color-combi { // map-get(map-get($color-combi, colors)
+    .#{$color} {
+      &-light  { 
+        background: #{'$'}color-#{$color}-light; 
+        border-color: white;
+        &:after { content: "#{$color}"; }
+      }
+      &-medium { 
+        background: #{'$'}color-#{$color}-medium; 
+        border-color: #{'$'}color-#{$color}-light;
+      }
+      &-dark  { 
+        background: #{'$'}color-#{$color}-dark; 
+        border-color: #{'$'}color-#{$color}-medium;
+      }
+    }
+  }
+}
+
+.box-dark-combi-bgborder {
+  @include combi-dark-bgbd;
+  border: 4px solid;
+  height: 100px;
+  width: 100px;
+}
