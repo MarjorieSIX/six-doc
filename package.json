@@ -14,13 +14,9 @@
     "gulp-autoprefixer": "^6.1.0",
     "gulp-compile-handlebars": "^0.6.1",
     "gulp-concat": "^2.6.1",
-    "gulp-declare": "^0.3.0",
-    "gulp-handlebars": "^5.0.2",
-    "gulp-hb": "^8.0.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
-    "gulp-wrap": "^0.15.0",
     "node-sass": "^4.12.0"
   },
   "dependencies": {
