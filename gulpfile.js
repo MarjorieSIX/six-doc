@@ -20,8 +20,8 @@ const autoprefixerOptions = {
 const paths = {
   styles: {
     components: {
-      src: './app/components/**/*.scss',
-      dest: './app/components/'
+      src: './app/build/components/**/*.scss',
+      dest: './app/build/components/'
     },
     website: {
       src: './app/src/assets/scss/**/*.scss',

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+
+  <title>Desjardins Design System | Formulaire</title>
+
+  <link href="../../css/styles.css" rel="stylesheet" />
+  <link href="../../css/dssite/styles.css" rel="stylesheet" />
+  <link href="form.css" rel="stylesheet" />
+</head>
+
+<body style="background: white; margin: 20px;">
+
+  <div class="ds-form">
+    <form method="POST" action="" enctype="" role="form">
+      <div class="initial no-value">
+        <label for="no-value" class="floating">No value</label>
+        <input type="text" name="no-value" id="no-value" placeholder="No value">
+      </div>
+      <div class="initial value">
+        <label for="value" class="floating">Initial value</label>
+        <input type="text" name="value" id="value" value="Initial value">
+      </div>
+      <div class="initial no-value textarea">
+        <label for="no-value-textarea">No value on a textarea</label>
+        <textarea name="no-value-textarea" id="no-value-textarea" placeholder="No value"></textarea>
+      </div>
+      <div class="initial value textarea">
+        <label for="value-textarea" class="floating">Initial value on a textarea</label>
+        <textarea name="value-textarea" id="value-textarea">Initial value</textarea>
+      </div>
+      <div class="initial no-label">
+        <input type="text" name="no-label" id="no-label" placeholder="This input doesn't have a label">
+      </div>
+      <button class="continuer btn btn-primary">Continuer</button>
+  </form>
+  
+
+
+    <div class="panel-questions">
+      <fieldset class="form-group">
+        <legend>
+          Faites-vous bien cette demande d’ouverture de compte pour votre usage personnel?
+        </legend>
+        <div id="modTierce">
+          <label class="c-input c-radio" for="modTierceOui">
+            <input type="radio" id="modTierceOui" name="modTierce" value="o/">
+            <span class="c-indicator"></span>
+            Oui.
+          </label>
+        </div>
+        <div>
+          <label class="c-input c-radio" for="modTierceNon">
+            <input type="radio" id="modTierceNon" name="modTierce" value="n">
+            <span class="c-indicator"></span>
+            Non, je fais cette demande au profit ou pour l’usage d’un tiers (personne ou entreprise).
+          </label>
+          <button id="popOverTierce" class="btn btn-primary popover-ocp" style="background-image:url('https://static.mouv.desjardins.com/static-adpm/0.0/ouverture-compte-en-ligne-ocp/img/ic-aide.svg')" data-content="<p>Un tiers est une personne ou une entité qui utilise à ses fins un compte dont elle n’est ni titulaire ni procureur. Le tiers donne au titulaire du compte des instructions sur les opérations à faire pour son propre usage.</p><h3><b>Exemple de compte pour l’usage d’un tiers</b></h3><p>Jade demande à son père d’ouvrir un compte et de contracter un prêt hypothécaire en son nom, car elle a un mauvais dossier de crédit. Elle y verse de l’argent chaque mois pour faire ses paiements hypothécaires. <b>Jade est le tiers du compte.</b></p><h3><b>Comptes n’impliquant pas un tiers</b></h3><p>Le compte parent pour enfant et le compte avec procuration ne sont pas des comptes pour un tiers.</p>" data-html="true" data-placement="bottom" data-toggle="popover" type="button" data-title="Qu’est-ce qu’un tiers?" title="" data-original-title="">
+            <span class="sr-only">
+                Qu’est-ce qu’un tiers?
+                - Ouvre une boîte de dialogue
+            </span>
+          </button>
+        </div>
+      </fieldset>
+  
+        <div class="form-group conditions-utilisation">
+          <div class="c-inputs-stacked">
+            <label class="c-input c-checkbox c-inputs-stacked">
+              <input type="checkbox" id="chkAccCondUtil" name="chkAccCondUtil">
+              <span class="c-indicator"></span>
+              J'ai lu et j'accepte les <!--
+               --><a href="https://www.desjardins.com/particuliers/comptes-services-relies/ouvrir-compte-devenir-membre/conditions-utilisation/" class="conditionUtilisation" data-url="https://www.desjardins.com/particuliers/comptes-services-relies/ouvrir-compte-devenir-membre/conditions-utilisation/"><!--
+        -->conditions d'utilisation<!--
+        --></a><!--
+               -->.
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <button class="continuer btn btn-primary">Continuer</button>
+
+    </div>
+  </div>
+
+  <script>floatingLabel.init();</script>
+  <script type="text/javascript" src="form.js"></script>
+</body>
+</html>
