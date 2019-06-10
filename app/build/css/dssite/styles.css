@@ -2,61 +2,180 @@
  * Do not edit directly
  * Generated on Thu, 30 May 2019 20:39:23 GMT
  */
-/**
- * Do not edit directly
- * Generated on Thu, 30 May 2019 20:39:23 GMT
- */
 .bases .library {
-  background: #aaaaaa; }
+  align-items: stretch;
+  background: #aaaaaa;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 8;
+  flex-wrap: wrap;
+  margin: 24px -24px -24px;
+  padding: 17px 24px;
+  position: relative; }
+  .bases .library .heading-6 {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 24px;
+    padding: 12px 16px; }
   .bases .library .swatches {
-    height: 100px;
-    width: 100px; }
-    .bases .library .swatches .white {
-      background: #ffffff; }
-    .bases .library .swatches .grey {
-      background: #aaaaaa; }
-    .bases .library .swatches .black {
-      background: #000000; }
-    .bases .library .swatches .blue-light {
-      background: #e2dff2; }
-    .bases .library .swatches .blue-medium {
-      background: #3f42db; }
-    .bases .library .swatches .blue-dark {
-      background: #161c71; }
-    .bases .library .swatches .red-light {
-      background: #ffdddd; }
-    .bases .library .swatches .red-medium {
-      background: #d20023; }
-    .bases .library .swatches .red-dark {
-      background: #790318; }
-    .bases .library .swatches .orange-light {
-      background: #f6ebd8; }
-    .bases .library .swatches .orange-medium {
-      background: #ee9109; }
-    .bases .library .swatches .orange-dark {
-      background: #3f2802; }
-    .bases .library .swatches .yellow-light {
-      background: #f3f6d8; }
-    .bases .library .swatches .yellow-light {
-      background: #f3f6d8; }
-    .bases .library .swatches .yellow-dark {
-      background: #3f3f02; }
-    .bases .library .swatches .green-light {
-      background: #cce7dc; }
-    .bases .library .swatches .green-medium {
-      background: #00874e; }
-    .bases .library .swatches .green-dark {
-      background: #064a2d; }
-    .bases .library .swatches .graphite-light {
-      background: #e6e7e8; }
-    .bases .library .swatches .graphite-medium {
-      background: #666666; }
-    .bases .library .swatches .graphite-dark {
-      background: #383838; }
-    .bases .library .swatches .advantage {
-      background: #ffc90d; }
-    .bases .library .swatches .accent {
-      background: #652f9d; }
+    flex-direction: row;
+    margin-bottom: 24px; }
+    .bases .library .swatches:nth-child(1) {
+      flex-grow: 5;
+      margin-right: 24px; }
+    .bases .library .swatches:nth-child(2) {
+      flex-grow: 3; }
+  .bases .library .swatches-list {
+    display: flex;
+    flex-flow: column wrap;
+    height: 408px; }
+    .bases .library .swatches-list div {
+      display: flex;
+      flex-direction: column;
+      height: 92px;
+      margin-bottom: 24px;
+      padding: 6px;
+      width: 92px; }
+      .bases .library .swatches-list div.white {
+        background: #ffffff;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.white:after {
+          content: "white | #ffffff";
+          flex-basis: end; }
+      .bases .library .swatches-list div.grey {
+        background: #aaaaaa;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.grey:after {
+          content: "grey | #aaaaaa";
+          flex-basis: end; }
+      .bases .library .swatches-list div.black {
+        background: #000000;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.black:after {
+          content: "black | #000000";
+          flex-basis: end; }
+      .bases .library .swatches-list div.blue-light {
+        background: #e2dff2;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.blue-light:after {
+          content: "blue-light | #e2dff2";
+          flex-basis: end; }
+      .bases .library .swatches-list div.blue-medium {
+        background: #3f42db;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.blue-medium:after {
+          content: "blue-medium | #3f42db";
+          flex-basis: end; }
+      .bases .library .swatches-list div.blue-dark {
+        background: #161c71;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.blue-dark:after {
+          content: "blue-dark | #161c71";
+          flex-basis: end; }
+      .bases .library .swatches-list div.red-light {
+        background: #ffdddd;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.red-light:after {
+          content: "red-light | #ffdddd";
+          flex-basis: end; }
+      .bases .library .swatches-list div.red-medium {
+        background: #d20023;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.red-medium:after {
+          content: "red-medium | #d20023";
+          flex-basis: end; }
+      .bases .library .swatches-list div.red-dark {
+        background: #790318;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.red-dark:after {
+          content: "red-dark | #790318";
+          flex-basis: end; }
+      .bases .library .swatches-list div.orange-light {
+        background: #f6ebd8;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.orange-light:after {
+          content: "orange-light | #f6ebd8";
+          flex-basis: end; }
+      .bases .library .swatches-list div.orange-medium {
+        background: #ee9109;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.orange-medium:after {
+          content: "orange-medium | #ee9109";
+          flex-basis: end; }
+      .bases .library .swatches-list div.orange-dark {
+        background: #3f2802;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.orange-dark:after {
+          content: "orange-dark | #3f2802";
+          flex-basis: end; }
+      .bases .library .swatches-list div.yellow-light {
+        background: #f3f6d8;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.yellow-light:after {
+          content: "yellow-light | #f3f6d8";
+          flex-basis: end; }
+      .bases .library .swatches-list div.yellow-medium {
+        background: #f4f412;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.yellow-medium:after {
+          content: "yellow-medium | #f4f412";
+          flex-basis: end; }
+      .bases .library .swatches-list div.yellow-dark {
+        background: #3f3f02;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.yellow-dark:after {
+          content: "yellow-dark | #3f3f02";
+          flex-basis: end; }
+      .bases .library .swatches-list div.green-light {
+        background: #cce7dc;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.green-light:after {
+          content: "green-light | #cce7dc";
+          flex-basis: end; }
+      .bases .library .swatches-list div.green-medium {
+        background: #00874e;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.green-medium:after {
+          content: "green-medium | #00874e";
+          flex-basis: end; }
+      .bases .library .swatches-list div.green-dark {
+        background: #064a2d;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.green-dark:after {
+          content: "green-dark | #064a2d";
+          flex-basis: end; }
+      .bases .library .swatches-list div.graphite-light {
+        background: #e6e7e8;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.graphite-light:after {
+          content: "graphite-light | #e6e7e8";
+          flex-basis: end; }
+      .bases .library .swatches-list div.graphite-medium {
+        background: #666666;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.graphite-medium:after {
+          content: "graphite-medium | #666666";
+          flex-basis: end; }
+      .bases .library .swatches-list div.graphite-dark {
+        background: #383838;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.graphite-dark:after {
+          content: "graphite-dark | #383838";
+          flex-basis: end; }
+      .bases .library .swatches-list div.advantage {
+        background: #ffc90d;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.advantage:after {
+          content: "advantage | #ffc90d";
+          flex-basis: end; }
+      .bases .library .swatches-list div.accent {
+        background: #652f9d;
+        justify-content: flex-end; }
+        .bases .library .swatches-list div.accent:after {
+          content: "accent | #652f9d";
+          flex-basis: end; }
 
 /**
  * Do not edit directly
@@ -133,7 +252,7 @@ pre[class*="language-"] {
       margin: 0 0 11px 0;
       text-decoration: none;
       transition: all .25s ease-in; }
-    .ds-main-nav .level1 li.active > a:first-child {
+    .ds-main-nav .level1 li.current > a:first-child {
       font-weight: 700; }
     .ds-main-nav .level1 input[type=checkbox]:checked + label + ul {
       max-height: 1000px; }
@@ -236,4 +355,4 @@ body {
 article {
   background: #ffffff;
   border-radius: 8px;
-  padding: 24px 48px; }
+  padding: 24px; }

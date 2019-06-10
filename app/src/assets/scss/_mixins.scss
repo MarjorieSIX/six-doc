@@ -20,22 +20,25 @@ $color-combi: (
 );
 
 @mixin combi-dark-bgbd {
-  @each $color, $color-variant, $color-value in $color-combi { 
+  @each $color, $color-value in $ds-colors {
     .#{$color} {
-      &-light  { 
-        background: #{'$'}color-#{$color}-light; 
+      &-light {
+        background: #{'$'}color-#{$color}-light;
         border-color: #{'$'}color-#{$color}-medium;
-        &:after { 
-          content: "#{$color}-light: #{$color-value}"; 
-          color: "#{$color}"; 
+
+        &:after {
+          content: "#{$color}: #{$color-value}";
+          color: "#{$color}";
         }
       }
-      &-medium { 
-        background: #{'$'}color-#{$color}-medium; 
-        border-color: #{'$'}color-#{$color}-dark;
+
+      &-medium {
+        background: #{'$'}color-#{$color}-medium;
+        border-color: #{'$'}color-#{$color}-dark
       }
-      &-dark  { 
-        background: #{'$'}color-#{$color}-dark; 
+
+      &-dark {
+        background: #{'$'}color-#{$color}-dark;
         border-color: black;
       }
     }

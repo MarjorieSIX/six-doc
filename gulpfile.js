@@ -6,6 +6,7 @@ const handlebars    = require('gulp-compile-handlebars');
 const rename        = require('gulp-rename');
 const concat        = require('gulp-concat');
 const uglify 	      = require('gulp-uglify');
+const preprocess    = require('gulp-preprocess');
 //const data          = require('gulp-data');
 //const json          = require('gulp-data-json');
 //const through       = require('through2');
@@ -57,6 +58,7 @@ function styleWebsite() {
   return (
     gulp
       .src(paths.styles.website.src, { sourcemaps: true }) // where is my scss file
+      .pipe(preprocess({context: { NODE_PATH: '$NODE_PATH:/node_modules'}})) //To set environment variables in-line
       .pipe(sass().on('error', sass.logError)) // sass compiler
       .pipe(autoprefixer(autoprefixerOptions)) // add prefixer
       .pipe(gulp.dest(paths.styles.website.dest)) // where to save the css file
@@ -141,7 +143,7 @@ function i18n() {
 function watch() {
   browserSync.init({
     server: {
-      baseDir: './app/build/'
+      baseDir: ['./', './app/build/']
     }
   });
   gulp.watch('./app/src/assets/fonts/*.{ttf,woff,eof,woff2}', copyFonts);

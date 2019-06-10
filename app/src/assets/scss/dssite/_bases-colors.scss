@@ -1,103 +1,94 @@
-@import '../../../../../node_modules/six-design-tokens/build/scss/token-variables';
+// @import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+
+
+$ds-colors: (
+  white: $color-white,
+  grey: $color-grey,
+  black: $color-black,
+  blue-light: $color-blue-light,
+  blue-medium: $color-blue-medium,
+  blue-dark: $color-blue-dark,
+  red-light: $color-red-light,
+  red-medium: $color-red-medium,
+  red-dark: $color-red-dark,
+  orange-light: $color-orange-light,
+  orange-medium: $color-orange-medium,
+  orange-dark: $color-orange-dark,
+  yellow-light: $color-yellow-light,
+  yellow-medium: $color-yellow-medium,
+  yellow-dark: $color-yellow-dark,
+  green-light: $color-green-light,
+  green-medium: $color-green-medium,
+  green-dark: $color-green-dark,
+  graphite-light: $color-graphite-light,
+  graphite-medium: $color-graphite-medium,
+  graphite-dark: $color-graphite-dark,
+  advantage: $color-advantage,
+  accent: $color-accent
+);
 
 .bases {
   .library {
+    align-items: stretch;
     background: $color-grey;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 8;
+    flex-wrap: wrap;
+    margin: 24px -24px -24px;
+    padding: 17px 24px;
+    position: relative;
+
+    .heading-6 {
+      background: $color-white;
+      border-radius: $ds-sizes-border-sm;
+      box-shadow:  $ds-shadow-04;
+      margin-bottom: $ds-spaces-even-x-6;
+      padding: 12px 16px;
+    }
 
     .swatches {
-      height: 100px;
-      width: 100px;
+      flex-direction: row;
+      margin-bottom: 24px;
 
-      .white {
-        background: $color-white;
+      &:nth-child(1) {
+        flex-grow: 5;
+        margin-right: 24px;
       }
 
-      .grey {
-        background: $color-grey;
+      &:nth-child(2) {
+        flex-grow: 3;
       }
+    }
 
-      .black {
-        background: $color-black;
-      }
+    .swatches-list {
+      display: flex;
+      flex-flow: column wrap;
+      height: 408px;
 
-      .blue-light {
-        background: $color-blue-light;
-      }
+      div {
+        // border: 4px solid;
+        display: flex;
+        flex-direction: column;
+        height: 92px;
+        margin-bottom: 24px;
+        padding: 6px;
+        width: 92px;
 
-      .blue-medium {
-        background: $color-blue-medium;
-      }
+        @each $color, $color-value in $ds-colors {
+          &.#{$color} {
+            background: $color-value;
+            justify-content: flex-end;
 
-      .blue-dark {
-        background: $color-blue-dark;
-      }
+            &:after {
+              content: '#{$color} | #{$color-value}';
+              flex-basis: end;
+            }
+          }
+        }
 
-      .red-light {
-        background: $color-red-light;
-      }
-
-      .red-medium {
-        background: $color-red-medium;
-      }
-
-      .red-dark {
-        background: $color-red-dark;
-      }
-
-      .orange-light {
-        background: $color-orange-light;
-      }
-
-      .orange-medium {
-        background: $color-orange-medium;
-      }
-
-      .orange-dark {
-        background: $color-orange-dark;
-      }
-
-      .yellow-light {
-        background: $color-yellow-light;
-      }
-
-      .yellow-light {
-        background: $color-yellow-light;
-      }
-
-      .yellow-dark {
-        background: $color-yellow-dark;
-      }
-
-      .green-light {
-        background: $color-green-light;
-      }
-
-      .green-medium {
-        background: $color-green-medium;
-      }
-
-      .green-dark {
-        background: $color-green-dark;
-      }
-
-      .graphite-light {
-        background: $color-graphite-light;
-      }
-
-      .graphite-medium {
-        background: $color-graphite-medium;
-      }
-
-      .graphite-dark {
-        background: $color-graphite-dark;
-      }
-
-      .advantage {
-        background: $color-advantage;
-      }
-
-      .accent {
-        background: $color-accent;
       }
     }
   }
