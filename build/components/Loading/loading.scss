@@ -1,0 +1,37 @@
+@import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+// 2 variantes de couleurs: blanc et vert. Le défaut est vert.
+// 2 variantes de taille: medium et large. Le défaut est medium.
+
+.ds-loading {
+  animation: spin .8s ease-in-out infinite;
+  border-radius: 50%;
+  border-style: solid;
+  display: inline-block;
+
+  &.md {
+    border-width: $ds-spaces-odd-base;
+    height: $ds-sizes-border-md;
+    width: $ds-sizes-border-md;
+  }
+
+  &.lg {
+    border-width: $ds-spaces-even-base;
+    height: $ds-sizes-border-lg;
+    width: $ds-sizes-border-lg;
+  }
+
+  &.green {
+    border-color: rgba($color-green-medium, .8);
+    border-top-color: $color-green-dark;
+  }
+
+  &.white {
+    border-color: rgba($color-white, .6);
+    border-top-color: $color-white;
+  }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

@@ -1,0 +1,30 @@
+@import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+/* averta-light */
+ @font-face {
+  font-family: $ds-font-main-name;
+  font-style: normal;
+  font-weight: $ds-font-weight-light;
+  src: $ds-font-main-url-light;
+}
+/* averta-regular */
+ @font-face {
+  font-family: $ds-font-main-name;
+  font-style: normal;
+  font-weight: $ds-font-weight-regular;
+  src: $ds-font-main-url-regular;
+}
+/* averta-semibold */
+@font-face {
+  font-family: $ds-font-main-name;
+  font-style: normal;
+  font-weight: $ds-font-weight-semibold; /* pour N3-UX devrait etre 600 */
+  src: $ds-font-main-url-semibold;
+}
+/* averta-bold */
+@font-face {
+  font-family: $ds-font-main-name;
+  font-style: normal;
+  font-weight: $ds-font-weight-bold;
+  src: $ds-font-main-url-bold;
+}

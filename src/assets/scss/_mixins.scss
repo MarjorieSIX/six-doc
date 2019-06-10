@@ -1,0 +1,82 @@
+@import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+
+// Mixin font size. px to REM
+$base-font-size: 16px;
+@function calculateRem($sizeValue) {
+  $remSize: $sizeValue / $base-font-size;
+  @return #{$remSize}rem;
+}
+
+@mixin fontSize($sizeValue) {
+  font-size: $sizeValue; //Fallback in px
+  font-size: calculateRem($sizeValue);
+}
+
+
+/* color variable map
+$ds-colo: (
+  blue: (
+    medium: #33D1FF,
+    light: #368EA8,
+    dark: #13566A
+  ),
+  red: (
+    medium: #d98328,
+    light: #dd8f3d,
+    dark: #c57623
+  ),
+  orange: (
+    medium: #5a1321,
+    light: #7b1a2d,
+    dark: #51111e
+  )
+);
+
+@mixin combi-dark-bgbd {
+  @each $color, $color-value in $ds-colors {
+    .#{$color} {
+      [class^=light] {
+        background: #{'$'}color-#{$color}-light;
+        border-color: #{'$'}color-#{$color}-medium;
+
+        &:after {
+          content: "#{$color}: #{$color-value}";
+          color: "#{$color}";
+        }
+      }
+
+      [class^=medium] {
+        background: #{'$'}color-#{$color}-medium;
+        border-color: #{'$'}color-#{$color}-dark
+      }
+
+      [class^=dark] {
+        background: #{'$'}color-#{$color}-dark;
+        border-color: black;
+      }
+    }
+  }
+}
+
+@mixin combi-light-bgbd {
+  @each $color, $color-variant in $color-combi { // map-get(map-get($color-combi, colors)
+    .#{$color} {
+      &[class^="light"] { 
+        background: #{'$'}color-#{$color}-light;
+        border-color: white;
+        &:after { content: "#{$color}"; }
+      }
+      &-medium {
+        background: #{'$'}color-#{$color}-medium;
+        border-color: #{'$'}color-#{$color}-light;
+      }
+      &-dark  {
+        background: #{'$'}color-#{$color}-dark;
+        border-color: #{'$'}color-#{$color}-medium;
+      }
+    }
+  }
+}
+*/
+

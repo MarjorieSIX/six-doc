@@ -1,0 +1,62 @@
+@import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+
+$base-font-size: 16px;
+@function calculate-rem($size-value) {
+  $rem-size: $size-value / $base-font-size;
+  @return #{$rem-size}rem;
+}
+
+@mixin font-size($size-value) {
+  font-size: $size-value; //Fallback in px
+  font-size: calculate-rem($size-value);
+}
+
+button.ds-button {
+    border-radius: $ds-sizes-border-sm;
+    display: inline-block;
+    font-weight: $ds-font-weight-bold;
+    padding: 17px 24px;
+    text-align: center;
+    @include font-size(16px);
+
+    &.primary {
+        background: $color-green-medium;
+        border: 0;
+        box-shadow: $ds-shadow-06;
+        color: $color-white;
+        display: inline-block;
+
+        &:focus,
+        &:hover {
+            box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, .25),
+                        inset 0 -1px 0 1px rgba(0, 0, 0, .25),
+                        0 1px 1px 0 rgba(0, 0, 0, .8),
+                        0 3px 9px 0 rgba(0, 0, 0, .5);
+            cursor: pointer;
+        }
+
+        &:active {
+            background: $color-green-dark;
+        }
+
+        &:disabled {
+            background: $color-graphite-light;
+            box-shadow: $ds-shadow-none;
+            color: rgba($color-graphite-medium, .36);
+        }
+    }
+
+    &.secondary {
+        background: $color-white;
+        border: 2px solid $color-green-medium;
+        box-shadow: $ds-shadow-none;
+        color: $color-graphite-dark;
+    }
+
+    &.tertiary {
+        background: $color-white;
+        border: 2px solid rgba($color-graphite-medium, .9);
+        box-shadow: $ds-shadow-none;
+        color: $color-graphite-dark;
+    }
+}
