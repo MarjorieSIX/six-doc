@@ -20,6 +20,7 @@
     "node-sass": "^4.12.0"
   },
   "dependencies": {
+    "float-labels.js": "^3.3.9",
     "six-design-tokens": "^0.0.16"
   }
 }
