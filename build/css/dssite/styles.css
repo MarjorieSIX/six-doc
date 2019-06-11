@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Thu, 30 May 2019 20:39:23 GMT
+ * Generated on Tue, 11 Jun 2019 13:52:44 GMT
  */
 .bases .library {
   align-items: stretch;
@@ -10,8 +10,8 @@
   flex-direction: row;
   flex-grow: 8;
   flex-wrap: wrap;
-  margin: 24px -24px -24px;
-  padding: 17px 24px;
+  margin: 24px -116px -36px;
+  padding: 17px 116px;
   position: relative; }
   .bases .library .heading-6 {
     background: #ffffff;
@@ -179,7 +179,7 @@
 
 /**
  * Do not edit directly
- * Generated on Thu, 30 May 2019 20:39:23 GMT
+ * Generated on Tue, 11 Jun 2019 13:52:44 GMT
  */
 pre {
   background: #00874e;
@@ -215,7 +215,7 @@ pre[class*="language-"] {
 
 /**
  * Do not edit directly
- * Generated on Thu, 30 May 2019 20:39:23 GMT
+ * Generated on Tue, 11 Jun 2019 13:52:44 GMT
  */
 /* if selector is wider than the screensize we are calling */
 [hidden] {
@@ -323,7 +323,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 0 48px 24px; }
+    padding: 0 116px 24px; }
     .content header h1 {
       color: #383838;
       display: flex;
@@ -342,7 +342,7 @@ body {
 article {
   background: #ffffff;
   border-radius: 8px;
-  padding: 24px; }
+  padding: 36px 116px; }
 
 .dark-mode,
 .light-mode {

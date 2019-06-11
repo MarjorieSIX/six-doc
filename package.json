@@ -21,6 +21,6 @@
     "node-sass": "^4.12.0"
   },
   "dependencies": {
-    "six-design-tokens": "^0.0.16"
+    "six-design-tokens": "^0.0.17"
   }
 }
