@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+  
+  <!-- Code Highlighting -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  <link href="/css/styles.css" rel="stylesheet" />
+  <link href="/css/dssite/styles.css" rel="stylesheet" />
+  
+  <title>Desjardins Design System | Bases - Couleurs</title>
+  
+  <!-- Components CSS -->
+  <link href="components/Flag/flag.css" rel="stylesheet" />
+  <link href="components/Tabs/tabs.css" rel="stylesheet" />
+</head>
+
+<body>
+  
+  <div class="main-wrapper">
+    <div class="sidebar">
+        {{> logo}}
+        
+        <nav class="ds-main-nav">
+          <ul class="level1">
+            <li><a href="#">Introduction</a></li>
+            <li><a href="#">Image de marque</a></li>
+            <li class="current">
+              <input id="level-2" type="checkbox" checked hidden />
+              <label for="level-2">Système de design</label>
+              <ul class="level2">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Fondements UX</a></li>
+                <li><a href="#">Fondements UI</a></li>
+                <li><a href="#">Accessibilité</a></li>
+                <li class="current">
+                  <input id="level-3-1" type="checkbox" checked hidden />
+                  <label for="level-3-1">Bases</label>
+                  <ul class="level3">
+                    <li><a href="/icones.html">Icônes</a></li>
+                    <li class="current"><a href="/couleurs.html">Couleurs</a></li>
+                    <li><a href="/typographie.html">Typographie</a></li>
+                    <li><a href="/styles.html">Styles</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <input id="level-3-2" type="checkbox" hidden />
+                  <label for="level-3-2">Éléments</label>
+                  <ul class="level3">
+                    <li>
+                      <input id="level-4-1" type="checkbox" hidden />
+                      <label for="level-4-1">Interaction</label>
+                      <ul class="level4">
+                        <li><a href="#">iii</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input id="level-4-2" type="checkbox" hidden />
+                      <label for="level-4-2">Contenu</label>
+                      <ul class="level4">
+                        <li><a href="#">ccc</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input id="level-4-3" type="checkbox" hidden />
+                      <label for="level-4-3">Formulaire</label>
+                      <ul class="level4">
+                        <li><a href="#">Radio</a></li>
+                        <li><a href="#">Checkbox</a></li>
+                        <li><a href="#">Text</a></li>
+                        <li><a href="#">Select</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input id="level-4-4" type="checkbox" hidden />
+                      <label for="level-4-4">Navigation</label>
+                      <ul class="level4">
+                        <li><a href="#">nnn</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                    <input id="level-3-3" type="checkbox" hidden />
+                    <label for="level-3-3">Modules</label>
+                    <ul class="level3">
+                      <li><a href="#">mmm</a></li>
+                    </ul>
+                  </li>
+              </ul>
+            </li>
+            <li><a href="#">Outils</a></li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+      <header>
+        <h1>Couleurs</h1>
+        <!-- <span class="ds-flag">Nouveau</span> -->
+        <div class="references">
+          <span class="number">01.02</span>
+          <!-- 
+            Icone pour design token ou web component
+            <img src="" alt="" />
+          -->
+        </div>
+      </header>
+
+      <article class="bases">
+        <p class="description">
+          Les couleurs d'interface et de marque suivent un système numérique qui permet de connaître facilement si une combinaison de couleurs passe les normes d'accessibilité.
+        </p>
+        <p>
+          L'addition des chiffres (ou un des chiffres si la couleur en comporte plusieurs) des deux couleurs doit être égale à <strong>50</strong> afin d'être considérée comme accessible.
+        </p>
+        <p>
+          Pour usage purement décoratif (par ex: illustrations, compositions de couleurs non reliées à de l'information), le code coloriel ne s'applique pas.
+        </p>
+
+        <div class="examples">
+          <div class="swatches">
+            <div class="blue-light"></div>
+            +
+            <div class="blue-dark"></div>
+            =
+            50
+          </div>
+        </div>
+        
+        <div class="library">
+          <div class="swatches">
+            <h2 class="heading-6 graphite-dark">Interface</h2>
+            <div class="swatches-list">
+              <div class="white"></div>
+              <div class="grey"></div>
+              <div class="black"></div>
+              <div class="blue-light"></div>
+              <div class="blue-medium"></div>
+              <div class="blue-dark"></div>
+              <div class="red-light"></div>
+              <div class="red-medium"></div>
+              <div class="red-dark"></div>
+              <div class="orange-light"></div>
+              <div class="orange-medium"></div>
+              <div class="orange-dark"></div>
+              <div class="yellow-light"></div>
+              <div class="yellow-light"></div>
+              <div class="yellow-dark"></div>
+            </div>
+          </div>
+
+          <div class="swatches">
+            <h2 class="heading-6 graphite-dark">Marque</h2>
+            <div class="swatches-list">
+              <div class="green-light"></div>
+              <div class="green-medium"></div>
+              <div class="green-dark"></div>
+              <div class="graphite-light"></div>
+              <div class="graphite-medium"></div>
+              <div class="graphite-dark"></div>
+              <div class="advantage"></div>
+              <div class="accent"></div>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </div>
+
+  <!-- Components -->
+  <script type="text/javascript" src="components/Tabs/tabs.js"></script>
+  <!-- Minified JS - js -->
+  <script type="text/javascript" src="js/main.min.js"></script>
+
+</body>
+
+</html>

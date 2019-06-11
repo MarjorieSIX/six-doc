@@ -6,6 +6,7 @@ const handlebars    = require('gulp-compile-handlebars');
 const rename        = require('gulp-rename');
 const concat        = require('gulp-concat');
 const uglify 	      = require('gulp-uglify');
+const preprocess    = require('gulp-preprocess');
 //const data          = require('gulp-data');
 //const json          = require('gulp-data-json');
 //const through       = require('through2');
@@ -20,23 +21,23 @@ const autoprefixerOptions = {
 const paths = {
   styles: {
     components: {
-      src: './app/build/components/**/*.scss',
-      dest: './app/build/components/'
+      src: './build/components/**/*.scss',
+      dest: './build/components/'
     },
     website: {
-      src: './app/src/assets/scss/**/*.scss',
-      dest: './app/build/css/'
+      src: './src/assets/scss/**/*.scss',
+      dest: './build/css/'
     },
   },
   scripts: {
-    src: './app/src/assets/js/*.js',
-    dest: './app/build/js'
+    src: './src/assets/js/*.js',
+    dest: './build/js'
   },
   templates: {
-    src: './app/src/templates/**/*.hbs',
-    dest: './app/build/',
-    batch: './app/src/partials',
-    data: './app/src/datas'
+    src: './src/templates/**/*.hbs',
+    dest: './build/',
+    batch: './src/partials',
+    data: './src/datas'
   }
 };
 
@@ -57,6 +58,7 @@ function styleWebsite() {
   return (
     gulp
       .src(paths.styles.website.src, { sourcemaps: true }) // where is my scss file
+      .pipe(preprocess({context: { NODE_PATH: '$NODE_PATH:/node_modules'}})) //To set environment variables in-line
       .pipe(sass().on('error', sass.logError)) // sass compiler
       .pipe(autoprefixer(autoprefixerOptions)) // add prefixer
       .pipe(gulp.dest(paths.styles.website.dest)) // where to save the css file
@@ -66,14 +68,14 @@ function styleWebsite() {
 
 function copyFonts() {
   return gulp
-  .src('./app/src/assets/fonts/*.{ttf,woff,eof,woff2}')
-  .pipe(gulp.dest('./app/build/assets/fonts'))
+  .src('./src/assets/fonts/*.{ttf,woff,eof,woff2}')
+  .pipe(gulp.dest('./build/assets/fonts'))
 }
 
 function copyImages() {
   return gulp
-  .src('./app/src/assets/img/**/*.{svg,png,jpg}')
-  .pipe(gulp.dest('./app/build/assets/images'))
+  .src('./src/assets/img/**/*.{svg,png,jpg}')
+  .pipe(gulp.dest('./build/assets/images'))
 }
 
 // Minify all js scripts except for the components
@@ -107,21 +109,21 @@ function templates() {
 
 /*function inject() {
   return gulp
-    .src('./app/src/build/** /*.html')
+    .src('./src/build/** /*.html')
     .pipe(data((file) => {
         return require(file.path.replace('.html', '.json'));
     }))
     .pipe(frontMatter({
         property: 'data.frontMatter'
     }))
-    .pipe(hb().data('./app/assets/data/** /*.js'))
+    .pipe(hb().data('./assets/data/** /*.js'))
     .pipe(gulp.dest('./app'));
 }*/
 
 /*
 function i18n() {
   return gulp
-    .src('.app/data/*.json')
+    .src('.data/*.json')
     .pipe(through.obj((file, enc, cb) => {
       const locale = file.stem;
       const data = {
@@ -129,7 +131,7 @@ function i18n() {
           i18n: JSON.parse(file.contents.toString())
     };
     gulp
-      .src('./app/src/build/** /*.html')
+      .src('./src/build/** /*.html')
       .pipe(hb().data(data))
       .pipe(gulp.dest('./dist/' + locale))
       .on('error', cb)
@@ -141,17 +143,17 @@ function i18n() {
 function watch() {
   browserSync.init({
     server: {
-      baseDir: './app/build/'
+      baseDir: ['./', './build/']
     }
   });
-  gulp.watch('./app/src/assets/fonts/*.{ttf,woff,eof,woff2}', copyFonts);
-  gulp.watch('./app/src/assets/img/**/*.{jpg,svg,png}', copyImages);
+  gulp.watch('./src/assets/fonts/*.{ttf,woff,eof,woff2}', copyFonts);
+  gulp.watch('./src/assets/img/**/*.{jpg,svg,png}', copyImages);
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.styles.components.src, styleComponents); // run the style function if there's a change in any .scss file
   gulp.watch(paths.styles.website.src, styleWebsite); // run the style function if there's a change in any .scss file
   gulp.watch(paths.templates.src, templates).on('change', browserSync.reload);
-  //gulp.watch('./app/src/**/*.html').on('change', browserSync.reload);
-  gulp.watch('./app/src/**/*.js').on('change', browserSync.reload);
+  //gulp.watch('./src/**/*.html').on('change', browserSync.reload);
+  gulp.watch('./src/**/*.js').on('change', browserSync.reload);
 }
 
 

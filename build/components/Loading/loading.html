@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+
+  <title>Desjardins Design System | Icône de chargement</title>
+
+  <link href="../../css/styles.css" rel="stylesheet" />
+  <link href="../../css/dssite/styles.css" rel="stylesheet" />
+
+  <link href="loading.css" rel="stylesheet" />
+  
+  <style>
+    /* Animation de l'affichage du contenu de la page */
+    .animate-bottom {
+      position: relative;
+      -webkit-animation-name: animatebottom;
+      -webkit-animation-duration: 1s;
+      animation-name: animatebottom;
+      animation-duration: 1s
+    }
+
+    @-webkit-keyframes animatebottom {
+      from { bottom:-100px; opacity:0 } 
+      to { bottom:0px; opacity:1 }
+    }
+
+    @keyframes animatebottom { 
+      from{ bottom:-100px; opacity:0 } 
+      to{ bottom:0; opacity:1 }
+    }
+
+    .content {
+      display: none;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body onload="myFunction()" style="background: white; margin: 30px 20px;">
+
+  <!-- Div nécessaire au préchargement -->
+  <div id="dsLoading">
+    <div class="light-mode">
+      <div class="ds-loading md green"></div>
+      <div class="ds-loading lg green"></div>
+    </div>
+    <div class="dark-mode">
+      <div class="ds-loading md white"></div>
+      <div class="ds-loading lg white"></div>
+    </div>
+  </div>
+  <!-- /Div nécessaire au préchargement -->
+
+  <div style="display:none;" id="content" class="content animate-bottom">
+    <h2>Tada!</h2>
+    <p>La page est chargée</p>
+  </div>
+  
+  <script>
+    var myVar;
+    
+    function myFunction() {
+      myVar = setTimeout(showPage, 10000);
+    }
+    
+    function showPage() {
+      document.getElementById('dsLoading').style.display = 'none';
+      document.getElementById('content').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
