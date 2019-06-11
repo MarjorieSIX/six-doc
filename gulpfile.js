@@ -7,6 +7,7 @@ const rename        = require('gulp-rename');
 const concat        = require('gulp-concat');
 const uglify 	      = require('gulp-uglify');
 const preprocess    = require('gulp-preprocess');
+const svg           = require('gulp-svgstore');
 //const data          = require('gulp-data');
 //const json          = require('gulp-data-json');
 //const through       = require('through2');
@@ -19,6 +20,10 @@ const autoprefixerOptions = {
 };
 
 const paths = {
+  icons: {
+    src: './src/assets/icons/**/*.svg',
+    dest: './build/assets/images/'
+  },
   styles: {
     components: {
       src: './build/components/**/*.scss',
@@ -41,29 +46,33 @@ const paths = {
   }
 };
 
+function svgSprite() {
+  return gulp
+  .src(paths.icons.src) // where my svg files are
+  //.pipe(rename({}))
+  .pipe(svg())
+  .pipe(gulp.dest(paths.icons.dest))
+}
+
 // Compile Scss from Components to CSS
 function styleComponents() {
-  return (
-    gulp
-      .src(paths.styles.components.src, { sourcemaps: true }) // where is my scss file
-      .pipe(sass().on('error', sass.logError)) // sass compiler
-      .pipe(autoprefixer(autoprefixerOptions)) // add prefixer
-      .pipe(gulp.dest(paths.styles.components.dest)) // where to save the css file
-      .pipe(browserSync.stream()) // stream to all browsers
-  ); 
+  return gulp
+  .src(paths.styles.components.src, { sourcemaps: true }) // where is my scss file
+  .pipe(sass().on('error', sass.logError)) // sass compiler
+  .pipe(autoprefixer(autoprefixerOptions)) // add prefixer
+  .pipe(gulp.dest(paths.styles.components.dest)) // where to save the css file
+  .pipe(browserSync.stream()) // stream to all browsers
 }
 
 // Compile scss from the documentation website to css
 function styleWebsite() {
-  return (
-    gulp
-      .src(paths.styles.website.src, { sourcemaps: true }) // where is my scss file
-      .pipe(preprocess({context: { NODE_PATH: '$NODE_PATH:/node_modules'}})) //To set environment variables in-line
-      .pipe(sass().on('error', sass.logError)) // sass compiler
-      .pipe(autoprefixer(autoprefixerOptions)) // add prefixer
-      .pipe(gulp.dest(paths.styles.website.dest)) // where to save the css file
-      .pipe(browserSync.stream()) // stream to all browsers
-  ); 
+  return gulp
+  .src(paths.styles.website.src, { sourcemaps: true }) // where is my scss file
+  .pipe(preprocess({context: { NODE_PATH: '$NODE_PATH:/node_modules'}})) //To set environment variables in-line
+  .pipe(sass().on('error', sass.logError)) // sass compiler
+  .pipe(autoprefixer(autoprefixerOptions)) // add prefixer
+  .pipe(gulp.dest(paths.styles.website.dest)) // where to save the css file
+  .pipe(browserSync.stream()) // stream to all browsers
 }
 
 function copyFonts() {
@@ -148,9 +157,10 @@ function watch() {
   });
   gulp.watch('./src/assets/fonts/*.{ttf,woff,eof,woff2}', copyFonts);
   gulp.watch('./src/assets/img/**/*.{jpg,svg,png}', copyImages);
-  gulp.watch(paths.scripts.src, scripts);
+  //gulp.watch(paths.icons.src, svgSprite);
   gulp.watch(paths.styles.components.src, styleComponents); // run the style function if there's a change in any .scss file
   gulp.watch(paths.styles.website.src, styleWebsite); // run the style function if there's a change in any .scss file
+  gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.templates.src, templates).on('change', browserSync.reload);
   //gulp.watch('./src/**/*.html').on('change', browserSync.reload);
   gulp.watch('./src/**/*.js').on('change', browserSync.reload);
@@ -162,6 +172,7 @@ var build = gulp.parallel(copyFonts, copyImages, styleComponents, styleWebsite, 
 gulp.task(build);
 gulp.task('default', build);
 
+exports.svgSprite = svgSprite;
 exports.copyFonts = copyFonts;
 exports.copyImages = copyImages;
 exports.styleWebsite = styleWebsite;

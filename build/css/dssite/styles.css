@@ -177,6 +177,17 @@
           content: "accent | #652f9d";
           flex-basis: end; }
 
+.icons {
+  float: left;
+  width: 48%; }
+  .icons svg {
+    fill: #aaaaaa;
+    height: 2rem;
+    width: 2rem; }
+    .icons svg.outlined {
+      fill: transparent;
+      stroke: #aaaaaa; }
+
 /**
  * Do not edit directly
  * Generated on Tue, 11 Jun 2019 13:52:44 GMT

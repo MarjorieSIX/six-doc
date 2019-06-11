@@ -1,0 +1,15 @@
+.icons {
+  float: left;
+  width: 48%;
+
+  svg {
+    fill: $color-grey;
+    height: 2rem;
+    width: 2rem;
+    
+    &.outlined {
+      fill: transparent;
+      stroke: $color-grey;
+    }
+  }
+}

@@ -15,16 +15,19 @@ button.ds-button {
     border-radius: $ds-sizes-border-sm;
     display: inline-block;
     font-weight: $ds-font-weight-bold;
-    padding: 17px 24px;
+    height: 20px;
+    padding: 17px 24px; //Chaque bouton fait un total de 54px de hauteur
     text-align: center;
     @include font-size(16px);
 
     &.primary {
+        align-content: center;
         background: $color-green-medium;
         border: 0;
         box-shadow: $ds-shadow-06;
         color: $color-white;
-        display: inline-block;
+        display: flex;
+        justify-content: center;
 
         &:focus,
         &:hover {
@@ -66,5 +69,20 @@ button.ds-button {
         &:hover {
             cursor: pointer;
         }
+    }
+
+    .icon {
+        fill: $color-white;
+        height: $ds-sizes-icon-md;
+        position: relative;
+        top: -3px;
+        width: $ds-sizes-icon-md;
+    }
+
+    &.icon-only {
+        display: flex;
+        justify-content: center;
+        padding: 17px 0;
+        width: 54px;
     }
 }

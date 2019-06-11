@@ -9,7 +9,7 @@ $base-font-size: 16px;
 }
 
 @mixin fontSize($sizeValue) {
-  font-size: $sizeValue; //Fallback in px
+  //font-size: $sizeValue; //Fallback in px
   font-size: calculateRem($sizeValue);
 }
 

@@ -2,6 +2,7 @@
 
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
 @import 'utils';
+@import 'accessibility';
 @import 'breakpoints';
 @import 'headings';
 @import 'grid';
@@ -31,4 +32,7 @@ li {
 }
 
 
+svg.icon {
+  fill: $color-grey;
+}
 

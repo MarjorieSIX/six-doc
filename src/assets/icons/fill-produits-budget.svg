@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <title>Produits-Mon budget</title>
+  <path d="M23,17H15V9a1,1,0,0,0-1-1A10,10,0,1,0,24,18,1,1,0,0,0,23,17Z" />
+  <path d="M18,4a1,1,0,0,0-1,1v9a1,1,0,0,0,1,1h9a1,1,0,0,0,1-1A10,10,0,0,0,18,4Z"/>
+</svg>

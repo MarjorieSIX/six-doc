@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <title>Contenu-Entreprises</title>
+  <rect x="12" y="7" width="8" height="2" fill="none"/>
+  <path d="M19,18.72V19a1,1,0,0,1-1,1H14a1,1,0,0,1-1-1v-.28L4,14.56V24a3,3,0,0,0,3,3H25a3,3,0,0,0,3-3V14.56Z" />
+  <path d="M18,17,28,12.36V12a3,3,0,0,0-3-3H22V7a2,2,0,0,0-2-2H12a2,2,0,0,0-2,2V9H7a3,3,0,0,0-3,3v.36L14.05,17ZM12,7h8V9H12Z"/>
+</svg>

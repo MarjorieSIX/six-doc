@@ -21,14 +21,40 @@
     <h3>Neutre</h3>
     <button class="ds-button primary" title="Libellé" tabIndex="0"  type="button">Libellé</button>
     <br /><br />
+
+    <h3>Avec icône à droite</h3>
+    <button class="ds-button primary" title="Libellé" tabIndex="0" type="button">
+        Libellé
+        <svg class="icon fill" focusable="false">
+            <use xlink:href="/assets/images/icons.svg#right-arrow"></use>
+        </svg>
+    </button>
+    <br /><br />
+
+    <h3>Avec icône à gauche</h3>
+    <button class="ds-button primary" title="Libellé" tabIndex="0" type="button">
+        <svg class="icon fill" focusable="false">
+            <use xlink:href="/assets/images/icons.svg#left-arrow"></use>
+        </svg>
+        Libellé
+    </button>
+    <br /><br />
+
+    <h3>Icône seule</h3>
+    <button class="ds-button primary icon-only" title="Libellé" tabIndex="0" type="button">
+        <svg class="icon fill" focusable="false" aria-labelledby="icon-left-arrow">
+            <title class="sr-only" id="icon-left-arrow">Libellé</title>
+            <use xlink:href="/assets/images/icons.svg#left-arrow"></use>
+        </svg>
+    </button>
+    <br /><br />
+
     <h3>Disabled</h3>
     <button class="ds-button primary" title="Libellé" tabIndex="-1" disabled type="button">
         Libellé
-        <!-- <span className="hidden-tag">
-            Libellé
-        </span>
-        <Icon icon="svg-next" />-->
     </button>
+    <br /><br />
+    
 
     <h2>Bouton secondaire - 02.01.02</h2>
     
@@ -41,6 +67,9 @@
     <h3>Neutre</h3>
     <button class="ds-button tertiary" title="Libellé" tabIndex="0"  type="button">Libellé</button>
     <br />
+
+
+    NB Notice the focusable="false" attribute-value combination on the SVG! It will prevent Internet Explorer and Microsoft Edge from focusing the SVG. This is a bug and won’t be fixed for Internet Explorer 10 and 11.
 
 </body>
 </html>

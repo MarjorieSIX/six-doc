@@ -135,6 +135,28 @@ table {
   display: none;
   visibility: hidden; }
 
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important; }
+
+.sr-only-focusable:focus,
+.sr-only-focusable:active {
+  clip: auto !important;
+  -webkit-clip-path: none !important;
+          clip-path: none !important;
+  height: auto !important;
+  margin: auto !important;
+  overflow: visible !important;
+  white-space: normal !important;
+  width: auto !important; }
+
 /* if selector is wider than the screensize we are calling */
 /**
  * Do not edit directly
@@ -629,3 +651,6 @@ h6,
 p,
 li {
   font-family: "Averta", Arial, Helvetica, sans-serif; }
+
+svg.icon {
+  fill: #aaaaaa; }

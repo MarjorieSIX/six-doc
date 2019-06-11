@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+  
+  <!-- Code Highlighting -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  <link href="/css/styles.css" rel="stylesheet" />
+  <link href="/css/dssite/styles.css" rel="stylesheet" />
+  
+  <title>Desjardins Design System | Bases - Icônes</title>
+  
+  <!-- Components CSS -->
+</head>
+
+<body>
+  
+  <div class="main-wrapper">
+    <div class="sidebar">
+        {{> logo}}
+        
+        <nav class="ds-main-nav">
+          <ul class="level1">
+            <li><a href="#">Introduction</a></li>
+            <li><a href="#">Image de marque</a></li>
+            <li class="current">
+              <input id="level-2" type="checkbox" checked hidden />
+              <label for="level-2">Système de design</label>
+              <ul class="level2">
+                <li><a href="#">Introduction</a></li>
+                <li><a href="#">Fondements UX</a></li>
+                <li><a href="#">Fondements UI</a></li>
+                <li><a href="#">Accessibilité</a></li>
+                <li class="current">
+                  <input id="level-3-1" type="checkbox" checked hidden />
+                  <label for="level-3-1">Bases</label>
+                  <ul class="level3">
+                    <li class="current"><a href="/icones.html">Icônes</a></li>
+                    <li><a href="/couleurs.html">Couleurs</a></li>
+                    <li><a href="/typographie.html">Typographie</a></li>
+                    <li><a href="/styles.html">Styles</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <input id="level-3-2" type="checkbox" hidden />
+                  <label for="level-3-2">Éléments</label>
+                  <ul class="level3">
+                    <li>
+                      <input id="level-4-1" type="checkbox" hidden />
+                      <label for="level-4-1">Interaction</label>
+                      <ul class="level4">
+                        <li><a href="#">iii</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input id="level-4-2" type="checkbox" hidden />
+                      <label for="level-4-2">Contenu</label>
+                      <ul class="level4">
+                        <li><a href="#">ccc</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input id="level-4-3" type="checkbox" hidden />
+                      <label for="level-4-3">Formulaire</label>
+                      <ul class="level4">
+                        <li><a href="#">Radio</a></li>
+                        <li><a href="#">Checkbox</a></li>
+                        <li><a href="#">Text</a></li>
+                        <li><a href="#">Select</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input id="level-4-4" type="checkbox" hidden />
+                      <label for="level-4-4">Navigation</label>
+                      <ul class="level4">
+                        <li><a href="#">nnn</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                    <input id="level-3-3" type="checkbox" hidden />
+                    <label for="level-3-3">Modules</label>
+                    <ul class="level3">
+                      <li><a href="#">mmm</a></li>
+                    </ul>
+                  </li>
+              </ul>
+            </li>
+            <li><a href="#">Outils</a></li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>
+        </nav>
+    </div>
+
+    <div class="content">
+      <header>
+        <h1>Icônes</h1>
+        <!-- <span class="ds-flag">Nouveau</span> -->
+        <div class="references">
+          <span class="number">01.04</span>
+          <!-- 
+            Icone pour design token ou web component
+            <img src="" alt="" />
+          -->
+        </div>
+      </header>
+
+      <article class="bases">
+        <div class="icons">
+          <h2>Icônes remplies</h2>
+
+          <h3>Actions</h3>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-action-deconnexion"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-action-modifier"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-partager"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-action-rafraichir"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-action-supprimer"></use>
+          </svg>
+
+          <h3>Alertes</h3>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-alertes-attention"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-alertes-avertissement"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-alertes-avis"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-alertes-confirmation"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-alertes-erreur"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-alertes-information"></use>
+          </svg>
+
+          <h3>Navigation</h3>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-navigation-chevron-bas"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-navigation-chevron-droit"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-navigation-chevron-gauche"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-navigation-chevron-haut"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-navigation-fleche-droite"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-navigation-fleche-gauche"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-navigation-moins"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-navigation-plus"></use>
+          </svg>
+
+
+          <h3>Contenu</h3>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-a-consulter"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-a-echeance"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-accueil"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-assistance"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-cadenas"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-calculateur"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-calendrier"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-camera"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-changement-adresse"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-clavardage"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-concours"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-conjoints"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-conseiller-femme"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-conseiller-homme"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-conseils"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-desktop"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-document-plus"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-document"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-dollars"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-en-ligne"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-entreprises"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-factures"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-favoris-comptes"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-favoris-plus"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-favoris"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-formulaire"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-hameconnage"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-langues"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-membre-femme"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-membre-homme"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-message-lu"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-message"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-mobile"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-non-visible"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-outils"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-par-courriel"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-par-telephone"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-particuliers"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-point-de-services"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-preferences"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-rss"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-service-clientele"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-taux-promo"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-temps"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-videos"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-visible"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-web"></use>
+          </svg>
+
+          <h3>Produits</h3>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-accordd"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-assurances"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-auto"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-bonidollars"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-budget"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-carte-de-credit"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-carte-perdue"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-carte-prepayee"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-compte-en-ligne"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-compte-epargne"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-compte-epargnes"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-depot-mobile"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-disnat"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-dons-commandites"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-etudiants"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-fonds-desjardins"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-habitation"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-hop-epargne"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-interinstitution"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-projets"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-retraite"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-ristournes"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-produits-voyage"></use>
+          </svg>
+          
+
+
+          <h3>Médias sociaux</h3>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-media-sociaux-facebook"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-media-sociaux-instagram"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-media-sociaux-linkedin"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-media-sociaux-twitter"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#fill-media-sociaux-youtube"></use>
+          </svg>
+
+          <!-- <svg class="icon">
+              <use xlink:href="/assets/images/icons.svg#"></use>
+          </svg>
+          <svg class="icon">
+              <use xlink:href="/assets/images/icons.svg#"></use>
+          </svg>
+          <svg class="icon">
+              <use xlink:href="/assets/images/icons.svg#"></use>
+          </svg> -->
+        </div>
+
+        <div class="icons">
+          <h2>Icônes Contour</h2>
+          <h3>Actions</h3>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-action-deconnexion"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-action-modifier"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-action-partager"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-action-payer"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-action-rafraichir"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-action-recherche"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-action-supprimer"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-action-telecharger"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-action-virer"></use>
+          </svg>
+
+          <h3>Alertes</h3>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-alertes-aide"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-alertes-attention"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-alertes-avertissement"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-alertes-avis"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-alertes-confirmation"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-alertes-erreur"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-alertes-information"></use>
+          </svg>
+
+          <h3>Navigation</h3>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-navigation-chevron-grand-droit"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-navigation-chevron-petit-bas"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-navigation-chevron-petit-droit"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-navigation-chevron-petit-gauche"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-navigation-chevron-petit-haut"></use>
+          </svg>
+          <svg class="icon">
+            <use xlink:href="/assets/images/icons.svg#outline-navigation-fermer"></use>
+          </svg>
+        </div>
+
+
+
+        <div class="icons">
+          
+
+          <h3>Autres</h3>
+          
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- Components -->
+
+  <!-- Minified JS - js -->
+  <script type="text/javascript" src="js/main.min.js"></script>
+
+</body>
+
+</html>
