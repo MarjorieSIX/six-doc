@@ -11,5 +11,9 @@
       fill: transparent;
       stroke: $color-grey;
     }
+
+    &::after {
+      content: "";
+    }
   }
 }

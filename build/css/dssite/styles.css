@@ -187,6 +187,8 @@
     .icons svg.outlined {
       fill: transparent;
       stroke: #aaaaaa; }
+    .icons svg::after {
+      content: ""; }
 
 /**
  * Do not edit directly
@@ -316,7 +318,8 @@ body {
     background: #00874e;
     position: fixed;
     width: 312px; }
-    .sidebar .logo img {
+    .sidebar .logo img,
+    .sidebar .logo svg {
       padding: 16px 24px;
       width: 167px; }
   @media (max-width: 991px) {

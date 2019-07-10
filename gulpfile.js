@@ -14,7 +14,7 @@ const svg           = require('gulp-svgstore');
 
 const autoprefixerOptions = {
   // test on https://browserl.ist/
-  browsers: ['last 1 version', 'Safari 9', 'Safari 10', 'Safari 11'], 
+  browsers: ['last 1 version', 'Safari 9', 'Safari 10', 'Safari 11', 'ie >= 11'],
   grid: false,
   supports: true
 };
@@ -22,6 +22,23 @@ const autoprefixerOptions = {
 const paths = {
   icons: {
     src: './src/assets/icons/**/*.svg',
+
+    srcAll: './src/assets/icons/**/*.svg',
+    
+    /*srcFilledActions: './src/assets/icons/filled/actions/*.svg',
+    srcFilledAlerts: './src/assets/icons/filled/alerts/*.svg',
+    srcFilledContent: './src/assets/icons/filled/content/*.svg',
+    srcFilledNavigation: './src/assets/icons/filled/navigation/*.svg',
+    srcFilledProducts: './src/assets/icons/filled/products/*.svg',
+    
+    srcOutlinedActions: './src/assets/icons/outlined/actions/*.svg',
+    srcOutlinedAlerts: './src/assets/icons/outlined/alerts/*.svg',
+    srcOutlinedContent: './src/assets/icons/outlined/content/*.svg',
+    srcOutlinedNavigation: './src/assets/icons/outlined/navigation/*.svg',
+    srcOutlinedProducts: './src/assets/icons/outlined/products/*.svg',
+
+    srcSocialNetworks: './src/assets/icons/filled/social-networks/*.svg',*/
+
     dest: './build/assets/images/'
   },
   styles: {
@@ -46,13 +63,20 @@ const paths = {
   }
 };
 
-function svgSprite() {
+function svgSpriteAll() {
   return gulp
-  .src(paths.icons.src) // where my svg files are
-  //.pipe(rename({}))
+  .src(paths.icons.srcAll) // where my svg files are
   .pipe(svg())
   .pipe(gulp.dest(paths.icons.dest))
 }
+/*
+function svgSpriteCustom() {
+  return gulp
+  .src(paths.icons.srcAll) // where my svg files are
+  .pipe(svg())
+  .pipe(gulp.dest(paths.icons.dest))
+}
+*/
 
 // Compile Scss from Components to CSS
 function styleComponents() {
@@ -172,7 +196,8 @@ var build = gulp.parallel(copyFonts, copyImages, styleComponents, styleWebsite, 
 gulp.task(build);
 gulp.task('default', build);
 
-exports.svgSprite = svgSprite;
+exports.svgSpriteAll = svgSpriteAll;
+//exports.svgSpriteCustom = svgSpriteCustom;
 exports.copyFonts = copyFonts;
 exports.copyImages = copyImages;
 exports.styleWebsite = styleWebsite;

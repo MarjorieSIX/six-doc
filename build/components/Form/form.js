@@ -1,3 +1,56 @@
+const Floaty = () => {
+  function onFocus() {
+    setLabelActive(this.floatingLabel);
+  }
+  
+  function onBlur() {
+    setLabel(this);
+  }
+  
+  function setLabelActive(label) {
+    label.classList.add('floating-label-active');
+  }
+  
+  function setLabelInactive(label) {
+    label.classList.remove('floating-label-active');
+  }
+  
+  function setLabel(input={}) {
+    if (input.value && input.value.length) {
+      setLabelActive(input.floatingLabel);
+    } else {
+      setLabelInactive(input.floatingLabel);
+    }
+  }
+  
+  const inputs = [].slice.call(document.querySelectorAll('[floating-label]'));
+  inputs.forEach(input => {
+    const inputId = input.id,
+          placeholder = input.getAttribute('floating-label');
+    
+    let labelEl = document.createElement('label');
+    
+    labelEl.setAttribute('for', inputId);
+    labelEl.innerHTML = placeholder;
+    labelEl.classList.add('floating-label');
+      
+    input.floatingLabel = labelEl;
+    input.parentNode.appendChild(labelEl);
+    
+    input.addEventListener('focus', onFocus);
+    input.addEventListener('blur', onBlur);
+    
+    setLabel(input);
+  });
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  Floaty();
+});
+
+
+
 /*!
  * Float Labels
  * @version: 3.3.9
@@ -8,7 +61,7 @@
 
 /** global: define, navigator, NodeList, Option */
 
-;(function( window, document, undefined )
+/*;(function( window, document, undefined )
 {
 	"use strict";
 
@@ -49,7 +102,7 @@
 			transform: 'input,select,textarea'
 		},
 
-		/** @return void */
+		// @return void
 		init_: function() {
 			var self = this;
 			self.initEvents_();
@@ -65,7 +118,7 @@
 			});
 		},
 
-		/** @return void */
+		// @return void 
 		initEvents_: function() {
 			var self = this;
 			self.events = {
@@ -77,12 +130,12 @@
 			};
 		},
 
-		/** @return string */
+		// @return string
 		addRemove_: function( bool ) {
 			return bool ? 'add' : 'remove';
 		},
 
-		/** @return null|void */
+		// @return null|void
 		build_: function( el ) {
 			var self = this;
 			var labelEl = self.getLabel_( el );
@@ -97,7 +150,7 @@
 			}
 		},
 
-		/** @return Element */
+		// @return Element 
 		createEl_: function( tag, attributes ) {
 			var el = ( typeof tag === 'string' ) ? document.createElement( tag ) : tag;
 			attributes = attributes || {};
@@ -108,7 +161,7 @@
 			return el;
 		},
 
-		/** @return object */
+		// @return object
 		extend_: function() {
 			var args = [].slice.call( arguments );
 			var result = args[0];
@@ -122,7 +175,7 @@
 			return result;
 		},
 
-		/** @return null|void */
+		// @return null|void 
 		floatLabel_: function( el, rebuild ) {
 			var self = this;
 			if( !self.isValidField_( el ))return;
@@ -133,7 +186,7 @@
 			self.build_( el );
 		},
 
-		/** @return string|false */
+		// @return string|false 
 		getLabel_: function( el ) {
 			var label = 'label[for="' + el.getAttribute( 'id' ) + '"]';
 			var labelEl = this.el_[this.current_].querySelectorAll( label );
@@ -147,7 +200,7 @@
 			return false;
 		},
 
-		/** @return string */
+		// @return string 
 		getLabelText_: function( labelEl, el ) {
 			var labelText = labelEl.textContent.replace( '*', '' ).trim();
 			var placeholderText = el.getAttribute( 'placeholder' );
@@ -157,7 +210,7 @@
 			return labelText;
 		},
 
-		/** @return void */
+		// @return void 
 		handleEvents_: function( el, action ) {
 			var events = this.events;
 			['blur','input','focus'].forEach( function( event ) {
@@ -168,24 +221,24 @@
 			});
 		},
 
-		/** @return bool */
+		// @return bool 
 		hasParent_: function( el ) {
 			return el.parentNode.classList.contains( this.prefixed_( 'wrap' ));
 		},
 
-		/** @return bool */
+		// @return bool 
 		isString_: function( str ) {
 			return Object.prototype.toString.call( str ) === "[object String]";
 		},
 
-		/** @return bool */
+		// @return bool 
 		isValidField_: function( el ) {
 			var isInvalidInput = el.tagName === 'INPUT' && !this.config_[this.current_].inputRegex.test( el.getAttribute( 'type' ));
 			var isInvalidSelect = el.tagName === 'SELECT' && el.getAttribute( 'multiple' ) !== null;
 			return el.getAttribute( 'id' ) && !isInvalidInput && !isInvalidSelect;
 		},
 
-		/** @return void */
+		// @return void 
 		loop_: function( elCallback, fieldCallback ) {
 			var self = this;
 			for( var i = 0; i < self.el_.length; ++i ) {
@@ -208,34 +261,34 @@
 			}
 		},
 
-		/** @return void */
+		// @return void 
 		onBlur_: function( ev ) {
 			ev.target.parentNode.classList.remove( this.prefixed_( 'has-focus' ));
 		},
 
-		/** @return void */
+		// @return void 
 		onInput_: function( ev ) {
 			ev.target.parentNode.classList[
 				this.addRemove_( ev.target.value.length )
 			]( this.prefixed_( 'is-active' ));
 		},
 
-		/** @return void */
+		// @return void 
 		onFocus_: function( ev ) {
 			ev.target.parentNode.classList.add( this.prefixed_( 'has-focus' ));
 		},
 
-		/** @return void */
+		// @return void 
 		onReset_: function() {
 			setTimeout( this.resetFields_.bind( this ));
 		},
 
-		/** @return string */
+		// @return string 
 		prefixed_: function( value ) {
 			return this.config_[this.current_].prefix + value;
 		},
 
-		/** @return void */
+		// @return void 
 		removeClasses_: function( el ) {
 			var prefix = this.config_[this.current_].prefix;
 			var classes = el.className.split( ' ' ).filter( function( c ) {
@@ -244,7 +297,7 @@
 			el.className = classes.join( ' ' ).trim();
 		},
 
-		/** @return null|void */
+		// @return null|void 
 		reset_: function( el ) {
 			var self = this;
 			var parent = el.parentNode;
@@ -260,7 +313,7 @@
 			self.handleEvents_( el, 'remove' );
 		},
 
-		/** @return void */
+		// @return void 
 		resetFields_: function() {
 			var self = this;
 			var fields = self.el_[self.current_].querySelectorAll( self.selectors_[self.current_] );
@@ -271,7 +324,7 @@
 			}
 		},
 
-		/** @return void */
+		// @return void 
 		resetPlaceholder_: function( el ) {
 			var dataPlaceholder = 'data-placeholder';
 			var originalPlaceholder = el.getAttribute( dataPlaceholder );
@@ -281,7 +334,7 @@
 			}
 		},
 
-		/** @return void */
+		// @return void 
 		setLabel_: function( labelEl, el ) {
 			var self = this;
 			labelEl.classList.add( self.prefixed_( 'label' ));
@@ -291,7 +344,7 @@
 			}
 		},
 
-		/** @return void */
+		// @return void 
 		setPlaceholder_: function( labelEl, el ) {
 			var self = this;
 			var placeholderText = el.getAttribute( 'placeholder' );
@@ -312,7 +365,7 @@
 			}
 		},
 
-		/** @return void */
+		// @return void 
 		setSelectPlaceholder_: function( el, placeholderText ) {
 			var childEl = el.firstElementChild;
 			if( childEl.hasAttribute( 'value' ) && childEl.value ) {
@@ -329,7 +382,7 @@
 			}
 		},
 
-		/** @return void */
+		// @return void 
 		wrapLabel_: function( labelEl, el ) {
 			var self = this;
 			var wrapper = self.createEl_( 'div', {
@@ -357,4 +410,4 @@
 		window.FloatLabels = Plugin;
 	}
 
-})( window, document );
+})( window, document );*/

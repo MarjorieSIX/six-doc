@@ -41,7 +41,8 @@ body {
     position: fixed;
     width: $sidebar-width;
 
-    img {
+    img, 
+    svg {
       padding: 16px 24px;
       width: 167px;
     }

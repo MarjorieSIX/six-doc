@@ -1,7 +1,8 @@
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  box-sizing: border-box; // should use border-box, calcul du width et du height incluant les paddings
+  //box-sizing: content-box; 
 }
 
 html,
