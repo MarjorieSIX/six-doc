@@ -8,6 +8,7 @@ const concat        = require('gulp-concat');
 const uglify 	      = require('gulp-uglify');
 const preprocess    = require('gulp-preprocess');
 const svg           = require('gulp-svgstore');
+const svgSprite     = require('gulp-svg-sprite');
 //const data          = require('gulp-data');
 //const json          = require('gulp-data-json');
 //const through       = require('through2');
@@ -21,7 +22,7 @@ const autoprefixerOptions = {
 
 const paths = {
   icons: {
-    src: './src/assets/icons/**/*.svg',
+    // src: './src/assets/icons/**/*.svg',
 
     srcAll: './src/assets/icons/**/*.svg',
     
@@ -69,14 +70,14 @@ function svgSpriteAll() {
   .pipe(svg())
   .pipe(gulp.dest(paths.icons.dest))
 }
-/*
+
 function svgSpriteCustom() {
   return gulp
   .src(paths.icons.srcAll) // where my svg files are
-  .pipe(svg())
+  .pipe(svgSprite())
   .pipe(gulp.dest(paths.icons.dest))
 }
-*/
+
 
 // Compile Scss from Components to CSS
 function styleComponents() {
@@ -197,7 +198,7 @@ gulp.task(build);
 gulp.task('default', build);
 
 exports.svgSpriteAll = svgSpriteAll;
-//exports.svgSpriteCustom = svgSpriteCustom;
+exports.svgSpriteCustom = svgSpriteCustom;
 exports.copyFonts = copyFonts;
 exports.copyImages = copyImages;
 exports.styleWebsite = styleWebsite;

@@ -230,7 +230,22 @@ pre[class*="language-"] {
  * Do not edit directly
  * Generated on Tue, 11 Jun 2019 13:52:44 GMT
  */
-/* if selector is wider than the screensize we are calling */
+/*
+  Mixin targeting the values of a specific breakpoint
+  Usage: @include bp(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint and more
+  Usage: @include bp-above(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint -1 and less
+  Usage: @include bp-below(sm) {}
+*/
+/*
+  Mixin targeting the values between two breakpoints
+  Usage: @include bp-between(sm, md) {}
+*/
 [hidden] {
   display: none;
   visibility: hidden; }

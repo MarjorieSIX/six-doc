@@ -7,11 +7,16 @@ $breakpoints: (
   xl: 1440px
 );
 
-/* if selector is wider than the screensize we are calling */
+
+// TO DO DELETE
+/*
+  Mixin targeting the values of a specific breakpoint
+  Usage: @include bp(sm) {}
+*/
 @mixin bp($screen-size) {
-	/* and if our map that we named $breakpoints includes values (we called them $screen-size) */
+	// If the breakpoint exists in the map.
 	@if map-has-key($breakpoints, $screen-size) {
-		/* then write out a nested Media Query that will target that value as our min-width */
+		// Write the media query targeting that breakpoint.
 		@media (min-width: map-get($breakpoints, $screen-size)) {
       /* write CSS within this mixin that would apply to only this breakpoint or above */
       @content;
@@ -20,5 +25,78 @@ $breakpoints: (
 	} @else {
     /* Debugging */
     @warn "'#{$screen-size}' has not been declared as a breakpoint.";
+  }
+}
+// /TO DO DELETE
+
+
+
+/*
+  Mixin targeting the values of the breakpoint and more
+  Usage: @include bp-above(sm) {}
+*/
+@mixin bp-above($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    // Write the media query targeting that value as ou minimum width.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Debugging. Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+
+/*
+  Mixin targeting the values of the breakpoint -1 and less
+  Usage: @include bp-below(sm) {}
+*/
+@mixin bp-below($breakpoint) {
+  // If the breakpoint exists in the map.
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    // Write the media query targeting that value minus 1px and less, avoinding conflicts with bp-above
+    @media (max-width: ($breakpoint-value - 1)) {
+      @content;
+    }
+  // If the breakpoint doesn't exist in the map.
+  } @else {
+    // Debugging. Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+/*
+  Mixin targeting the values between two breakpoints
+  Usage: @include bp-between(sm, md) {}
+*/
+@mixin bp-between($lower, $upper) {
+  // If both the lower and upper breakpoints exist in the map.
+  @if map-has-key($breakpoints, $lower) and map-has-key($breakpoints, $upper) {
+    // Get the lower and upper breakpoints.
+    $lower-breakpoint: map-get($breakpoints, $lower);
+    $upper-breakpoint: map-get($breakpoints, $upper);
+    // Write the media query.
+    @media (min-width: $lower-breakpoint) and (max-width: ($upper-breakpoint - 1)) {
+      @content;
+    }
+  // If one or both of the breakpoints don't exist.
+  } @else {
+    // If lower breakpoint is invalid.
+    @if (map-has-key($breakpoints, $lower) == false) {
+      // Debugging. Log a warning.
+      @warn 'Your lower breakpoint was invalid: #{$lower}.';
+    }
+    // If upper breakpoint is invalid.
+    @if (map-has-key($breakpoints, $upper) == false) {
+      // Debugging. Log a warning.
+      @warn 'Your upper breakpoint was invalid: #{$upper}.';
+    }
   }
 }

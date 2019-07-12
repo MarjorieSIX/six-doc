@@ -307,7 +307,7 @@ template {
 *,
 *::after,
 *::before {
-  box-sizing: content-box; }
+  box-sizing: border-box; }
 
 html,
 body,
@@ -463,7 +463,22 @@ table {
   white-space: normal !important;
   width: auto !important; }
 
-/* if selector is wider than the screensize we are calling */
+/*
+  Mixin targeting the values of a specific breakpoint
+  Usage: @include bp(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint and more
+  Usage: @include bp-above(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint -1 and less
+  Usage: @include bp-below(sm) {}
+*/
+/*
+  Mixin targeting the values between two breakpoints
+  Usage: @include bp-between(sm, md) {}
+*/
 /**
  * Do not edit directly
  * Generated on Tue, 11 Jun 2019 13:52:44 GMT
@@ -521,7 +536,22 @@ h6,
   line-height: 20px;
   margin-bottom: 0; }
 
-/* if selector is wider than the screensize we are calling */
+/*
+  Mixin targeting the values of a specific breakpoint
+  Usage: @include bp(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint and more
+  Usage: @include bp-above(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint -1 and less
+  Usage: @include bp-below(sm) {}
+*/
+/*
+  Mixin targeting the values between two breakpoints
+  Usage: @include bp-between(sm, md) {}
+*/
 /* 
   nom du breakpoint  
   breakpoint
@@ -715,8 +745,38 @@ h6,
  * Do not edit directly
  * Generated on Tue, 11 Jun 2019 13:52:44 GMT
  */
-/* if selector is wider than the screensize we are calling */
-/* if selector is wider than the screensize we are calling */
+/*
+  Mixin targeting the values of a specific breakpoint
+  Usage: @include bp(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint and more
+  Usage: @include bp-above(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint -1 and less
+  Usage: @include bp-below(sm) {}
+*/
+/*
+  Mixin targeting the values between two breakpoints
+  Usage: @include bp-between(sm, md) {}
+*/
+/*
+  Mixin targeting the values of a specific breakpoint
+  Usage: @include bp(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint and more
+  Usage: @include bp-above(sm) {}
+*/
+/*
+  Mixin targeting the values of the breakpoint -1 and less
+  Usage: @include bp-below(sm) {}
+*/
+/*
+  Mixin targeting the values between two breakpoints
+  Usage: @include bp-between(sm, md) {}
+*/
 /* 
   nom du breakpoint  
   breakpoint
