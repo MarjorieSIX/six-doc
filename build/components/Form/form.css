@@ -1,104 +1,139 @@
 /**
  * Do not edit directly
- * Generated on Tue, 11 Jun 2019 13:52:44 GMT
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
-form {
-  margin: 2rem; }
+/**
+ * Do not edit directly
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ */
+button.ds-button {
+  border-radius: 8px;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  height: 54px;
+  padding: 0 24px;
+  text-align: center;
+  font-size: 16px;
+  font-size: 1rem; }
+  button.ds-button:focus, button.ds-button:hover {
+    cursor: pointer;
+    outline: none; }
+  button.ds-button.primary {
+    align-content: center;
+    background: #00874e;
+    border: 0;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25);
+    color: #ffffff; }
+    button.ds-button.primary:focus, button.ds-button.primary:hover {
+      box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 1px rgba(0, 0, 0, 0.25), 0 1px 1px 0 rgba(0, 0, 0, 0.8), 0 3px 9px 0 rgba(0, 0, 0, 0.4); }
+    button.ds-button.primary:active {
+      background: #064a2d; }
+    button.ds-button.primary:disabled {
+      background: #e6e7e8;
+      box-shadow: none;
+      color: rgba(102, 102, 102, 0.36); }
+  button.ds-button.secondary {
+    background: #ffffff;
+    border: 2px solid #00874e;
+    box-shadow: none;
+    color: #383838; }
+  button.ds-button.tertiary {
+    background: #ffffff;
+    border: 2px solid rgba(102, 102, 102, 0.9);
+    box-shadow: none;
+    color: #383838; }
+  button.ds-button .icon {
+    fill: #ffffff;
+    height: 24px;
+    position: relative;
+    top: -3px;
+    width: 24px; }
+  button.ds-button.icon-only {
+    display: flex;
+    justify-content: center;
+    padding: 17px 0;
+    width: 54px; }
 
-.form-group {
-  position: relative; }
+label {
+  color: #333;
+  display: block;
+  font-size: 16px;
+  padding: 0 18px;
+  position: absolute;
+  top: 16px;
+  transition: 0.3s;
+  will-change: top, font-size;
+  z-index: 10; }
+  label:hover {
+    cursor: text; }
 
 input {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: 0;
-  border-bottom: 1px solid #eee;
-  outline: none;
-  transition: 250ms; }
+  background: transparent;
+  border: 2px solid #666666;
+  border-radius: 4px;
+  color: #383838;
+  font-size: 16px;
+  margin: 2rem 0 0;
+  padding: 23px 16px 9px;
+  transition: 0.3s;
+  will-change: border-color;
+  width: 100%; }
+  input:hover {
+    border-color: #383838; }
   input:focus {
-    border-bottom-color: red; }
-  input:focus + .floating-label {
-    color: red; }
+    border-color: #3f42db;
+    outline: none; }
+    input:focus:valid {
+      border-color: #00874e; }
+  input:valid {
+    border-color: #00874e; }
+  input:first-of-type {
+    margin-top: 0; }
 
-.floating-label {
-  color: #aaa;
-  position: absolute;
-  left: 0;
-  transition: 250ms; }
-
-.floating-label-active {
-  font-size: 10px;
-  top: -12px; }
-
-/*
-a,
-label {
-    color: #0476FA;
-    text-decoration: none;
-}
-
-label {
-    position: absolute;
-    top: 5px;
-    left: 7px;
-    z-index: -1;
+.fieldgroup {
+  margin-bottom: 2rem;
+  position: relative; }
+  .fieldgroup.focus label,
+  .fieldgroup.has-input label {
+    color: #666666;
     font-size: 12px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    opacity: 0;
-    transition: top 200ms, opacity 200ms;
-}
+    top: 7px; }
+  .fieldgroup.error input {
+    background: #ffdddd;
+    border-color: #ea032a; }
+  .fieldgroup.error input,
+  .fieldgroup.error label,
+  .fieldgroup.error .msg-error {
+    color: #790318; }
 
-label.floating {
-    top: -7px;
-    z-index: 1;
-    padding: 0 3px;
-    opacity: 1.0;
-    background-color: #FFF;
-}
+.msg-assistance {
+  color: #666666; }
 
-a:hover,
-a:active {
-    text-decoration: underline;
-}
+.msg-assistance, .msg-error {
+  display: block;
+  font-size: 12px;
+  margin: 2px 0 0 18px; }
+
+.buttongroup {
+  margin: 0 auto; }
+  .buttongroup button {
+    display: inline-block; }
+
+button[type="reset"] {
+  transition: 0.3s;
+  will-change: transform; }
+
+section {
+  width: 800px;
+  margin: 2vh auto;
+  padding: 50px;
+  background-color: white; }
+
+h1 {
+  font-size: 30px;
+  margin: 0;
+  text-align: center; }
 
 form {
-    width: 100%;
-    margin: 0 auto;
-}
-
-form div {
-    position: relative;
-}
-
-form div + div {
-    margin-top: 20px;
-}
-
-input,
-textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-    font-size: 18px;
-    font-size: 1.125rem;
-    background-color: white;
-    border: 1px solid #95ACC1;
-    border-radius: 3.5px;
-    transition: border 200ms;
-}
-
-input:focus,
-textarea:focus {
-    border-color: #0074D9;
-    outline: none;
-}*/
-/*!
- * Float Labels
- * @version: 3.3.9
- * @author: Paul Ryley (http://geminilabs.io)
- * @url: https://pryley.github.io/float-labels.js
- * @license: MIT
- */
+  margin-top: 35px; }

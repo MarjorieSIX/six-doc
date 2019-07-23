@@ -11,98 +11,50 @@
   <link href="../../css/styles.css" rel="stylesheet" />
   <link href="../../css/dssite/styles.css" rel="stylesheet" />
 
-  <link href="../node_modules/float-labels.js/dist/float-labels.min.css" rel="stylesheet" />
+  <!--- link href="../node_modules/float-labels.js/dist/float-labels.min.css" rel="stylesheet" /> -->
   <link href="form.css" rel="stylesheet" />
 </head>
 
 <body style="background: white; margin: 20px;">
-
-  <div style="width: 800px">
-    <form action="">
-      <div class="form-group">
-        <input id="yolo" floating-label="Email">
-        <label for="yolo" class="floating-label">Email</label>
+  
+  <section>
+    <header>
+      <h1>Labels flottant accessibles</h1>
+    </header>
+    
+    <form action="" name="accessible-floating-labels">
+      
+      <div class="fieldgroup">
+        <input type="text" id="firstname" name="firstname" required>
+        <span class="msg-assistance">Assistance</span>
+        <label for="firstname">Prenom</label>		
       </div>
+      
+      <div class="fieldgroup error">
+        <input type="text" id="lastname" name="lastname" required>	
+        <label for="lastname">Nom</label>
+        <span class="msg-error">Message d'erreur</span>		
+      </div>	
+
+      <div class="fieldgroup">
+        <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+      </div>
+
+      <div class="fieldgroup">
+        <input type="password" id="password" name="password" class="icon-eye" required>
+        <label for="password">Mot de passe</label>
+      </div>
+      
+      <div class="buttongroup">
+        <button type="reset" class="ds-button secondary">Vider</button>
+        <button type="submit" class="ds-button primary">Soumettre</button>
+      </div>
+      
     </form>
-  </div>
-  
+  </section>
 
 
-  <!-- <div class="ds-form">
-      <form class="form-1">
-        <label for="input-1">Enter a title</label>
-        <input type="text" id="input-1" placeholder="Input" value="" required/>
-
-        <label for="textarea-1">Enter some content</label>
-        <textarea id="textarea-1" placeholder="Textarea" rows="4" autocomplete="off" required></textarea>
-
-        <label for="select-1">Select an option</label>
-        <select id="select-1" class="required">
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-
-        <input type="radio" name="style" id="style-0" value="0"/>
-        <label for="style-0">Default Style</label>
-
-        <input type="radio" name="style" id="style-1" value="1" checked/>
-        <label for="style-1">Style 1</label>
-
-        <input type="radio" name="style" id="style-2" value="2"/>
-        <label for="style-2">Style 2</label>
-
-        <div class="button-group">
-          <button type="button" class="button large fl-toggle">Toggle Float Labels</button>
-          <button type="reset" class="button large secondary">Reset form</button>
-        </div>
-      </form> -->
-
-
-<!-- 
-    <div class="panel-questions">
-      <fieldset class="form-group">
-        <legend>
-          Faites-vous bien cette demande d’ouverture de compte pour votre usage personnel?
-        </legend>
-        <div id="modTierce">
-          <label class="c-input c-radio" for="modTierceOui">
-            <input type="radio" id="modTierceOui" name="modTierce" value="o/">
-            <span class="c-indicator"></span>
-            Oui.
-          </label>
-        </div>
-        <div>
-          <label class="c-input c-radio" for="modTierceNon">
-            <input type="radio" id="modTierceNon" name="modTierce" value="n">
-            <span class="c-indicator"></span>
-            Non, je fais cette demande au profit ou pour l’usage d’un tiers (personne ou entreprise).
-          </label>
-          <button id="popOverTierce" class="btn btn-primary popover-ocp" style="background-image:url('https://static.mouv.desjardins.com/static-adpm/0.0/ouverture-compte-en-ligne-ocp/img/ic-aide.svg')" data-content="<p>Un tiers est une personne ou une entité qui utilise à ses fins un compte dont elle n’est ni titulaire ni procureur. Le tiers donne au titulaire du compte des instructions sur les opérations à faire pour son propre usage.</p><h3><b>Exemple de compte pour l’usage d’un tiers</b></h3><p>Jade demande à son père d’ouvrir un compte et de contracter un prêt hypothécaire en son nom, car elle a un mauvais dossier de crédit. Elle y verse de l’argent chaque mois pour faire ses paiements hypothécaires. <b>Jade est le tiers du compte.</b></p><h3><b>Comptes n’impliquant pas un tiers</b></h3><p>Le compte parent pour enfant et le compte avec procuration ne sont pas des comptes pour un tiers.</p>" data-html="true" data-placement="bottom" data-toggle="popover" type="button" data-title="Qu’est-ce qu’un tiers?" title="" data-original-title="">
-            <span class="sr-only">
-                Qu’est-ce qu’un tiers?
-                - Ouvre une boîte de dialogue
-            </span>
-          </button>
-        </div>
-      </fieldset>
-  
-      <div class="form-group conditions-utilisation">
-        <div class="c-inputs-stacked">
-          <label class="c-input c-checkbox c-inputs-stacked">
-            <input type="checkbox" id="chkAccCondUtil" name="chkAccCondUtil">
-            <span class="c-indicator"></span>
-            J'ai lu et j'accepte les <a href="https://www.desjardins.com/particuliers/comptes-services-relies/ouvrir-compte-devenir-membre/conditions-utilisation/" class="conditionUtilisation" data-url="https://www.desjardins.com/particuliers/comptes-services-relies/ouvrir-compte-devenir-membre/conditions-utilisation/">conditions d'utilisation</a>.
-          </label>
-        </div>
-      </div>
-    </div>
-
-    <button class="continuer btn btn-primary">Continuer</button>
-  -->
-
-  
-   <!--<script type="text/javascript" src="../node_modules/float-label.js/dist/float-labels.min.js"></script> -->
   <script type="text/javascript" src="form.js"></script>
 </body>
 </html>

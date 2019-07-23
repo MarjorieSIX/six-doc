@@ -7,32 +7,35 @@ $base-font-size: 16px;
 }
 
 @mixin font-size($size-value) {
-  font-size: $size-value; //Fallback in px
+  font-size: $size-value; // Fallback in px
   font-size: calculate-rem($size-value);
 }
 
 button.ds-button {
     border-radius: $ds-sizes-border-sm;
-    display: inline-block;
+    display: flex;
     font-weight: $ds-font-weight-bold;
-    height: 20px;
-    padding: 17px 24px; //Chaque bouton fait un total de 54px de hauteur
+    justify-content: center;
+    height: 54px; // Each button has a total of 54px height
+    padding: 0 $ds-spaces-even-x-6; 
     text-align: center;
     @include font-size(16px);
 
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        outline: none;
+    }
     &.primary {
         align-content: center;
         background: $color-green-medium;
         border: 0;
         box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
         color: $color-white;
-        display: flex;
-        justify-content: center;
 
         &:focus,
         &:hover {
             box-shadow: $ds-shadow-06;
-            cursor: pointer;
         }
 
         &:active {
@@ -48,24 +51,16 @@ button.ds-button {
 
     &.secondary {
         background: $color-white;
-        border: 2px solid $color-green-medium;
+        border: $ds-sizes-border-xs/2 solid $color-green-medium;
         box-shadow: $ds-shadow-none;
         color: $color-graphite-dark;
-        &:focus,
-        &:hover {
-            cursor: pointer;
-        }
     }
 
     &.tertiary {
         background: $color-white;
-        border: 2px solid rgba($color-graphite-medium, .9);
+        border: $ds-sizes-border-xs/2 solid rgba($color-graphite-medium, .9);
         box-shadow: $ds-shadow-none;
         color: $color-graphite-dark;
-        &:focus,
-        &:hover {
-            cursor: pointer;
-        }
     }
 
     .icon {

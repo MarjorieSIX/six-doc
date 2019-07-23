@@ -1,0 +1,104 @@
+/**
+ * Do not edit directly
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ */
+form {
+  margin: 2rem; }
+
+.form-group {
+  position: relative; }
+
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 0;
+  border-bottom: 1px solid #eee;
+  outline: none;
+  transition: 250ms; }
+  input:focus {
+    border-bottom-color: red; }
+  input:focus + .floating-label {
+    color: red; }
+
+.floating-label {
+  color: #aaa;
+  position: absolute;
+  left: 0;
+  transition: 250ms; }
+
+.floating-label-active {
+  font-size: 10px;
+  top: -12px; }
+
+/*
+a,
+label {
+    color: #0476FA;
+    text-decoration: none;
+}
+
+label {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    z-index: -1;
+    font-size: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    opacity: 0;
+    transition: top 200ms, opacity 200ms;
+}
+
+label.floating {
+    top: -7px;
+    z-index: 1;
+    padding: 0 3px;
+    opacity: 1.0;
+    background-color: #FFF;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+form div {
+    position: relative;
+}
+
+form div + div {
+    margin-top: 20px;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
+    font-size: 18px;
+    font-size: 1.125rem;
+    background-color: white;
+    border: 1px solid #95ACC1;
+    border-radius: 3.5px;
+    transition: border 200ms;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #0074D9;
+    outline: none;
+}*/
+/*!
+ * Float Labels
+ * @version: 3.3.9
+ * @author: Paul Ryley (http://geminilabs.io)
+ * @url: https://pryley.github.io/float-labels.js
+ * @license: MIT
+ */

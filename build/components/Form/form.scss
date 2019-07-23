@@ -1,113 +1,129 @@
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+@import '../Button/button.scss';
+
+// Variable to become tokens?
+$page-animDuration: .3s;
 
 
-form {
-  margin: 2rem;
-}
 
-.form-group {
-  position: relative;
+label {
+	// background: $color-white;
+	color: #333;
+	display: block;
+	font-size: 16px;
+	padding: 0 18px; // 16px + 2px border from input
+	position: absolute;
+	top: 16px;	
+	transition: $page-animDuration;	
+	will-change: top, font-size;
+	z-index: 10;
+	
+	&:hover { 
+    cursor: text;
+  }
 }
 
 input {
-  appearance: none;
-  border: 0;
-  border-bottom: 1px solid #eee;
-  outline: none;
-  transition: 250ms;
+	background: transparent;
+  border: 2px solid $color-graphite-medium;
+  border-radius: 4px;
+	color: $color-graphite-dark;
+  font-size: 16px;
+  margin: 2rem 0 0;
+	padding: 23px 16px 9px;
+	transition: $page-animDuration;
+	will-change: border-color;
+	width: 100%;
   
-  &:focus {
-    border-bottom-color: red;
+  &:hover {
+    border-color: $color-graphite-dark;
+  }
+
+	&:focus {
+    border-color: $color-blue-medium;
+		outline: none;
+		
+		&:valid { 
+      border-color: $color-primary;
+    }
+	}
+	
+	&:valid {
+    border-color: $color-primary;
+  }
+		
+	&:first-of-type { 
+    margin-top: 0;
+  }
+}
+
+.fieldgroup {
+  margin-bottom: 2rem;
+  position: relative;
+	
+	&.focus label,
+	&.has-input label {
+    color: $color-graphite-medium;
+		font-size: 12px;
+		top: 7px;
   }
   
-  &:focus + .floating-label {
-    color: red;
+  &.error {
+    input {
+      background: #ffdddd;
+      border-color: #ea032a;
+    }
+    input,
+    label,
+    .msg-error {
+      color: $color-red-dark;
+      
+    }
   }
 }
 
-.floating-label {
-  color: #aaa;
-  position: absolute;
-  left: 0;
-  transition: 250ms;
+// Messages
+.msg-assistance {
+  color: $color-graphite-medium; 
 }
 
-.floating-label-active {
-  font-size: 10px;
-  top: -12px;
-}
-
-
-/*
-a,
-label {
-    color: #0476FA;
-    text-decoration: none;
-}
-
-label {
-    position: absolute;
-    top: 5px;
-    left: 7px;
-    z-index: -1;
+.msg {
+  &-assistance,
+  &-error {
+    display: block;
     font-size: 12px;
-    font-size: 0.75rem;
-    font-weight: bold;
-    opacity: 0;
-    transition: top 200ms, opacity 200ms;
+    margin: 2px 0 0 18px;
+  }
 }
 
-label.floating {
-    top: -7px;
-    z-index: 1;
-    padding: 0 3px;
-    opacity: 1.0;
-    background-color: #FFF;
+.buttongroup {
+  margin: 0 auto;
+  button {
+    display: inline-block;
+  }
 }
 
-a:hover,
-a:active {
-    text-decoration: underline;
+button[type="reset"] {
+	transition: $page-animDuration;
+	will-change: transform;
+}
+
+// -----------------------------------
+// Styles for demo only, not required.
+// -----------------------------------
+section {
+	width: 800px;
+	margin: 2vh auto;
+	padding: 50px;
+  background-color: white;
+}
+
+h1 {
+  font-size: 30px;
+	margin: 0;
+	text-align: center;
 }
 
 form {
-    width: 100%;
-    margin: 0 auto;
+	margin-top: 35px;
 }
-
-form div {
-    position: relative;
-}
-
-form div + div {
-    margin-top: 20px;
-}
-
-input,
-textarea {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    font-family: 'Helvetica Neue', Helvetica, Arial, Sans-serif;
-    font-size: 18px;
-    font-size: 1.125rem;
-    background-color: white;
-    border: 1px solid #95ACC1;
-    border-radius: 3.5px;
-    transition: border 200ms;
-}
-
-input:focus,
-textarea:focus {
-    border-color: #0074D9;
-    outline: none;
-}*/
-
-
-/*!
- * Float Labels
- * @version: 3.3.9
- * @author: Paul Ryley (http://geminilabs.io)
- * @url: https://pryley.github.io/float-labels.js
- * @license: MIT
- */
