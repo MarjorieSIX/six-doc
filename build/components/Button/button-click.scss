@@ -1,48 +1,24 @@
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
 
-.push {
-  height: 25px;
-}
-
 .button {
-  /* background-color: green;
-  color: #ecf0f1;
-  box-shadow: 2px 2px 5px #809093;
-  box-shadow: 10px 10px 5px #809093;
-  height: 50px;
-  width: 300px;
-  font-size: 30px;
-  border-radius: 5px;
-  outline: none;
-  border: 0;
-  overflow: hidden;   */
+  overflow: hidden;
   position: relative;
   cursor: pointer;
-  /*&:hover {
-    opacity: .9;
-  }*/
 }
 
 .hold-mouse {
-  box-shadow: 4px 4px 55px #809093;
+  // box-shadow: 4px 4px 55px #809093;
 }
 
 .hexagon {
-  /*position: relative;
-  display: inline-block;
-  margin: 0 .5rem;
-  width: 1rem;
-  height: calc(1rem * 1.732);
-  background-color: pink;*/
-  height: 1rem;
-  width: calc(1rem * 1.732); 
-  background-color: rgba(255, 255, 255, .9);
-  //border-radius: 50%;
-  position: absolute;
+  background-color: rgba(255, 255, 255, .8);
+  height: 10px;
   left: 50%;
-  top: 50%;
   pointer-events: none;
+  position: absolute;
+  top: 50%;
   transform: scale(0);
+  width: 10px; 
   &::before {
     width: inherit;
     height: inherit;
@@ -65,12 +41,12 @@
     
 @keyframes grow { 
   0% { 
-    background-color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 255, 255, .6);
     transform: scale(1); 
     z-index: 2;
   }
   100% {
-    background-color: rgba(255, 255, 255, .7);
+    background-color: rgba(255, 255, 255, .4);
     opacity: 0; 
     transform: scale(30); 
     z-index: -1;
@@ -78,5 +54,5 @@
 }
 
 .grow {
-  animation: grow 1.4s ease-out forwards;   
+  animation: grow 1s ease-out forwards;   
 }

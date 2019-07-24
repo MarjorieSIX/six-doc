@@ -24,33 +24,49 @@
     
     <form action="" name="accessible-floating-labels">
       
-      <div class="fieldgroup">
+      <div class="fieldgroup assistance required">
         <input type="text" id="firstname" name="firstname" required>
-        <span class="msg-assistance">Assistance</span>
-        <label for="firstname">Prenom</label>		
+        <label for="firstname">Prénom*</label>		
+        <span class="msg">Assistance</span>
       </div>
       
-      <div class="fieldgroup error">
-        <input type="text" id="lastname" name="lastname" required>	
-        <label for="lastname">Nom</label>
-        <span class="msg-error">Message d'erreur</span>		
+      <div class="fieldgroup">
+        <input type="text" id="lastname" name="lastname">
+        <label for="lastname">Nom</label>		
       </div>	
 
-      <div class="fieldgroup">
+      <div class="fieldgroup required icon-leading">
         <input type="email" id="email" name="email" required>
+        <svg class="icon" viewbox="0 0 32 32">
+          <use xlink:href="/assets/images/icons.svg#fill-contenu-cadenas"></use>
+        </svg>	
         <label for="email">Email</label>
       </div>
 
-      <div class="fieldgroup">
-        <input type="password" id="password" name="password" class="icon-eye" required>
+      <div class="fieldgroup required pwd icon-trailing">
+        <input type="password" id="password" name="password" required>
+          <svg title="Mot de passe" class="icon" viewbox="0 0 32 32">
+            <use xlink:href="/assets/images/icons.svg#fill-contenu-visible"></use>
+          </svg>
+        </input>
         <label for="password">Mot de passe</label>
+        <span class="msg">Le mot de passe doit contenir au moins 8 lettres.</span>
+      </div>
+
+      <div class="fieldgroup disabled">
+        <input type="text" id="test1" name="disableTest" disabled>	
+        <label for="disableTest">disableTest</label>
+      </div>
+
+      <div class="fieldgroup readonly">
+        <input type="text" id="test2" name="readonlyTest" readonly>	
+        <label for="readonlyTest">readonlyTest</label>
       </div>
       
       <div class="buttongroup">
         <button type="reset" class="ds-button secondary">Vider</button>
         <button type="submit" class="ds-button primary">Soumettre</button>
       </div>
-      
     </form>
   </section>
 

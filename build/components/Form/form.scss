@@ -2,15 +2,13 @@
 @import '../Button/button.scss';
 
 // Variable to become tokens?
-$page-animDuration: .3s;
-
-
+$page-animDuration: .1s;
 
 label {
-	// background: $color-white;
-	color: #333;
+	color: $color-graphite-medium;
 	display: block;
-	font-size: 16px;
+  font-size: 16px;
+  line-height: 20px;
 	padding: 0 18px; // 16px + 2px border from input
 	position: absolute;
 	top: 16px;	
@@ -23,12 +21,35 @@ label {
   }
 }
 
+// Messages
+.msg {
+  color: $color-graphite-medium; 
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 2px 0 0 18px;
+}
+
+.buttongroup {
+  margin: 0 auto;
+
+  button {
+    display: inline-block;
+  }
+}
+
+button[type="reset"] {
+	transition: $page-animDuration;
+	will-change: transform;
+}
+
 input {
 	background: transparent;
   border: 2px solid $color-graphite-medium;
   border-radius: 4px;
 	color: $color-graphite-dark;
   font-size: 16px;
+  line-height: 20px;
   margin: 2rem 0 0;
 	padding: 23px 16px 9px;
 	transition: $page-animDuration;
@@ -40,7 +61,7 @@ input {
   }
 
 	&:focus {
-    border-color: $color-blue-medium;
+    border-color: rgba($color-blue-medium, .8);
 		outline: none;
 		
 		&:valid { 
@@ -48,8 +69,17 @@ input {
     }
 	}
 	
-	&:valid {
+	&:active {
     border-color: $color-primary;
+    &:focus {
+      border-color: rgba($color-blue-medium, .8);
+    }
+  }
+
+  &:disabled,
+  &:read-only {
+    background: $color-graphite-light;
+    border-color: $color-graphite-light;
   }
 		
 	&:first-of-type { 
@@ -60,53 +90,75 @@ input {
 .fieldgroup {
   margin-bottom: 2rem;
   position: relative;
-	
+  
+  svg {
+    fill: $color-graphite-medium;
+    height: 24px;
+    position: absolute;
+    top: 23%;
+    width: 24px;
+  }
+
+  &.icon {
+    &-leading {
+      input {
+        padding-left: 34px;
+      }
+
+      label {
+        margin-left: 18px;
+      }
+
+      .msg {
+        margin-left: 48px;
+      }
+
+      svg {
+        left: 9px;
+      }
+    }
+
+    &-trailing svg {
+      right: 9px;
+    }
+  }
+
 	&.focus label,
 	&.has-input label {
     color: $color-graphite-medium;
 		font-size: 12px;
 		top: 7px;
   }
-  
+
+  &.disabled {
+    label,
+    span {
+      opacity: .36;
+    }
+
+    svg {
+      opacity: .5;
+    }
+  }  
+
   &.error {
     input {
-      background: #ffdddd;
+      background: $color-red-light;
       border-color: #ea032a;
     }
+
     input,
     label,
-    .msg-error {
+    span.error {
       color: $color-red-dark;
-      
     }
-  }
+
+    svg {
+      fill: $color-red-medium;
+    }
+  }  
 }
 
-// Messages
-.msg-assistance {
-  color: $color-graphite-medium; 
-}
-
-.msg {
-  &-assistance,
-  &-error {
-    display: block;
-    font-size: 12px;
-    margin: 2px 0 0 18px;
-  }
-}
-
-.buttongroup {
-  margin: 0 auto;
-  button {
-    display: inline-block;
-  }
-}
-
-button[type="reset"] {
-	transition: $page-animDuration;
-	will-change: transform;
-}
 
 // -----------------------------------
 // Styles for demo only, not required.
