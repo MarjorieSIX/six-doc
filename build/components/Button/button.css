@@ -153,7 +153,8 @@
         fill: #383838; }
     .ds-button.link:disabled {
       background: none;
-      color: rgba(102, 102, 102, 0.36); }
+      color: rgba(102, 102, 102, 0.36);
+      text-decoration: none; }
       .ds-button.link:disabled svg.icon {
         fill: rgba(102, 102, 102, 0.36); }
   .ds-button.link-invert {
@@ -172,7 +173,8 @@
       background: none; }
     .ds-button.link-invert:disabled {
       background: none;
-      color: rgba(102, 102, 102, 0.36); }
+      color: rgba(102, 102, 102, 0.36);
+      text-decoration: none; }
       .ds-button.link-invert:disabled svg.icon {
         fill: rgba(102, 102, 102, 0.36); }
   .ds-button:disabled {
