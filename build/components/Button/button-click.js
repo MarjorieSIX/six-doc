@@ -1,11 +1,10 @@
-/* from jquery to vanillaJS */
 function ready(event) {
   const myButton = document.getElementById('button-1');
 
   myButton.addEventListener('mousedown', function(elem) {
     myButton.classList.add('hold-mouse');
-    const x = elem.pageX;
-    const y = elem.pageY;
+    const x = elem.pageX - 20;
+    const y = elem.pageY - 90;
     myButton.innerHTML += `<div class="hexagon grow" style="left:${x}px;top:${y}px;"></div>`;
   });
   
