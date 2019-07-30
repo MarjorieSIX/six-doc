@@ -189,6 +189,10 @@
     .ds-button:disabled svg.icon {
       fill: rgba(102, 102, 102, 0.36); }
 
+/**
+ * Do not edit directly
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ */
 label {
   color: #666666;
   display: block;
@@ -202,22 +206,6 @@ label {
   z-index: 10; }
   label:hover {
     cursor: text; }
-
-.msg {
-  color: #666666;
-  display: block;
-  font-size: 12px;
-  line-height: 15px;
-  margin: 2px 0 0 18px; }
-
-.buttongroup {
-  margin: 0 auto; }
-  .buttongroup button {
-    display: inline-block; }
-
-button[type="reset"] {
-  transition: 0.1s;
-  will-change: transform; }
 
 input {
   background: transparent;
@@ -244,10 +232,12 @@ input {
       border-color: rgba(63, 66, 219, 0.8); }
   input:disabled, input:-moz-read-only {
     background: #e6e7e8;
-    border-color: #e6e7e8; }
+    border-color: #e6e7e8;
+    cursor: none; }
   input:disabled, input:read-only {
     background: #e6e7e8;
-    border-color: #e6e7e8; }
+    border-color: #e6e7e8;
+    cursor: none; }
   input:first-of-type {
     margin-top: 0; }
 
@@ -276,9 +266,10 @@ input {
     font-size: 12px;
     top: 7px; }
   .fieldgroup.disabled label,
-  .fieldgroup.disabled span {
+  .fieldgroup.disabled span, .fieldgroup.read-only label,
+  .fieldgroup.read-only span {
     opacity: .36; }
-  .fieldgroup.disabled svg {
+  .fieldgroup.disabled svg, .fieldgroup.read-only svg {
     opacity: .5; }
   .fieldgroup.error input {
     background: #ffdddd;
@@ -290,16 +281,26 @@ input {
   .fieldgroup.error svg {
     fill: #d20023; }
 
-section {
-  width: 800px;
-  margin: 2vh auto;
-  padding: 50px;
-  background-color: white; }
+.msg {
+  color: #666666;
+  display: block;
+  font-size: 12px;
+  height: 20px;
+  line-height: 15px;
+  margin: 2px 0 0 18px; }
 
-h1 {
-  font-size: 30px;
-  margin: 0;
-  text-align: center; }
+.msg {
+  color: #666666;
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 2px 0 0 18px; }
 
-form {
-  margin-top: 35px; }
+.buttongroup {
+  margin: 0 auto; }
+  .buttongroup button {
+    display: inline-block; }
+
+button[type="reset"] {
+  transition: 0.1s;
+  will-change: transform; }

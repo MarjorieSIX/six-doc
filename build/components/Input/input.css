@@ -1,0 +1,99 @@
+/**
+ * Do not edit directly
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ */
+label {
+  color: #666666;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 18px;
+  position: absolute;
+  top: 16px;
+  transition: 0.1s;
+  will-change: top, font-size;
+  z-index: 10; }
+  label:hover {
+    cursor: text; }
+
+input {
+  background: transparent;
+  border: 2px solid #666666;
+  border-radius: 4px;
+  color: #383838;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 2rem 0 0;
+  padding: 23px 16px 9px;
+  transition: 0.1s;
+  will-change: border-color;
+  width: 100%; }
+  input:hover {
+    border-color: #383838; }
+  input:focus {
+    border-color: rgba(63, 66, 219, 0.8);
+    outline: none; }
+    input:focus:valid {
+      border-color: #00874e; }
+  input:active {
+    border-color: #00874e; }
+    input:active:focus {
+      border-color: rgba(63, 66, 219, 0.8); }
+  input:disabled, input:-moz-read-only {
+    background: #e6e7e8;
+    border-color: #e6e7e8;
+    cursor: none; }
+  input:disabled, input:read-only {
+    background: #e6e7e8;
+    border-color: #e6e7e8;
+    cursor: none; }
+  input:first-of-type {
+    margin-top: 0; }
+
+.fieldgroup {
+  margin-bottom: 2rem;
+  position: relative; }
+  .fieldgroup svg {
+    fill: #666666;
+    height: 24px;
+    position: absolute;
+    top: 23%;
+    width: 24px; }
+  .fieldgroup.icon-leading input {
+    padding-left: 34px; }
+  .fieldgroup.icon-leading label {
+    margin-left: 18px; }
+  .fieldgroup.icon-leading .msg {
+    margin-left: 48px; }
+  .fieldgroup.icon-leading svg {
+    left: 9px; }
+  .fieldgroup.icon-trailing svg {
+    right: 9px; }
+  .fieldgroup.focus label,
+  .fieldgroup.has-input label {
+    color: #666666;
+    font-size: 12px;
+    top: 7px; }
+  .fieldgroup.disabled label,
+  .fieldgroup.disabled span, .fieldgroup.read-only label,
+  .fieldgroup.read-only span {
+    opacity: .36; }
+  .fieldgroup.disabled svg, .fieldgroup.read-only svg {
+    opacity: .5; }
+  .fieldgroup.error input {
+    background: #ffdddd;
+    border-color: #ea032a; }
+  .fieldgroup.error input,
+  .fieldgroup.error label,
+  .fieldgroup.error .msg {
+    color: #790318; }
+  .fieldgroup.error svg {
+    fill: #d20023; }
+
+.msg {
+  color: #666666;
+  display: block;
+  font-size: 12px;
+  height: 20px;
+  line-height: 15px;
+  margin: 2px 0 0 18px; }
