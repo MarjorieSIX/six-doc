@@ -316,6 +316,9 @@ $base-font-size: 16px;
         svg.icon {
             fill: rgba($color-graphite-medium, .36);
         }
+        &:hover {
+            box-shadow: $ds-shadow-none;
+        }
     }
 
     

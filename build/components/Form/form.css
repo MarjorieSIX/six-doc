@@ -188,6 +188,8 @@
     cursor: none; }
     .ds-button:disabled svg.icon {
       fill: rgba(102, 102, 102, 0.36); }
+    .ds-button:disabled:hover {
+      box-shadow: none; }
 
 /**
  * Do not edit directly
