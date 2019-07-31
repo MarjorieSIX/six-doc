@@ -183,7 +183,7 @@
         fill: rgba(102, 102, 102, 0.36); }
   .ds-button:disabled {
     border: none;
-    box-shadow: none;
+    box-shadow: none !important;
     color: rgba(102, 102, 102, 0.36);
     cursor: none; }
     .ds-button:disabled svg.icon {

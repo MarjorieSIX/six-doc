@@ -310,7 +310,7 @@ $base-font-size: 16px;
 
     &:disabled {
         border: none;
-        box-shadow: $ds-shadow-none;
+        box-shadow: $ds-shadow-none !important;
         color: rgba($color-graphite-medium, .36);
         cursor: none;
         svg.icon {
