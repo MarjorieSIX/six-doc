@@ -1,0 +1,130 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Load More Button</title>
+
+  <style>
+    /* .sr-only {
+      border: 0 !important;
+      clip: rect(1px, 1px, 1px, 1px) !important;
+      height: 1px !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      padding: 0 !important;
+      position: absolute !important;
+      white-space: nowrap !important;
+      width: 1px !important;
+    }
+
+    .sr-only-focusable:focus,
+    .sr-only-focusable:active {
+      clip: auto !important;
+      clip-path: none !important;
+      height: auto !important;
+      margin: auto !important;
+      overflow: visible !important;
+      white-space: normal !important;
+      width: auto !important;
+    }*/
+
+    .visually-hidden { 
+      position: absolute; 
+      overflow: hidden; 
+      clip: rect(0 0 0 0); 
+      height: 1px; width: 1px; 
+      margin: -1px; padding: 0; border: 0; 
+    }
+  </style>
+</head>
+<body>
+  
+  <h1>Load More Button</h1>
+  <span class="sr-only number-items-begin"></span>
+  <ul class="my-list">
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+    <li class="item">Item</li>
+  </ul>
+  
+  <button id="load-more-comments">
+    <!-- Afficher plus -->
+    <span class="sr-only show-more"></span>
+  </button>
+
+  <script>
+    // cache vars
+    const parent = document.querySelector('ul'),
+          items  = parent.querySelectorAll('li'),
+          totalItems = parent.querySelectorAll('li').length,
+          loadMoreBtn =  document.querySelector('#load-more-comments'),
+          maxItems = 5,
+          hiddenClass = "visually-hidden",
+          startingItemsNum = document.querySelector('.number-items-begin'),
+          showMore = document.querySelector('.show-more');
+
+    [].forEach.call(items, function(item, idx){
+      if (idx > maxItems) {
+        showMore.innerHTML = `Afficher ${maxItems} éléments de plus`;
+      } else if (idx < maxItems) {
+        showMore.innerHTML = `Afficher ${idx} éléments de plus`;
+      }
+      
+      if (idx > maxItems - 1) {
+        item.classList.add(hiddenClass);
+      }
+      
+      startingItemsNum.innerHTML = `Affichage de ${maxItems} éléments sur ${totalItems}`;
+    });
+
+    loadMoreBtn.addEventListener('click', function(){
+      [].forEach.call(document.querySelectorAll('.' + hiddenClass), function(item, idx){
+        // let hiddenItems = items.contains('visually-hidden');
+        // if (document.querySelector('li').contains('visually-hidden')) {
+        //   console.log(document.querySelector('li').length);
+        // }
+        // console.log(hiddenItems);
+        
+        // const combi = maxItems;
+        // startingItemsNum.innerHTML = `Affichage de ${combi} éléments sur ${totalItems}`;
+        if (idx > maxItems) {
+          showMore.innerHTML = `Afficher ${maxItems} éléments de plus`;
+          // console.log(maxItems);
+        } else if (idx < maxItems) {
+          showMore.innerHTML = `Afficher ${idx} éléments de plus`;
+          // console.log(maxItems);
+        }
+        
+        if (idx < maxItems - 1) {
+          item.classList.remove(hiddenClass);
+          // combi = combi + maxItems;
+        }
+
+        if ( document.querySelectorAll('.' + hiddenClass).length === 0) {
+          loadMoreBtn.style.display = 'none';
+        }
+
+        // console.log(combi);
+
+      });
+    });
+  </script>
+</body>
+</html>
