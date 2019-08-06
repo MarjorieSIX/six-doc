@@ -1,4 +1,7 @@
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+// transition sur l'actif et pas de fadeout
+// comme material
+
 
 .button {
   overflow: hidden;
@@ -11,14 +14,14 @@
 }
 
 .hexagon {
-  background-color: rgba(255, 255, 255, .8);
-  height: 10px;
+  background-color: $color-green-dark;
+  height: 1px;
   left: 50%;
   pointer-events: none;
   position: absolute;
   top: 50%;
   transform: scale(0);
-  width: 10px; 
+  width: 1px; 
   &::before {
     width: inherit;
     height: inherit;
@@ -26,7 +29,7 @@
     content: "";
     position: absolute;
     left: 0;
-    transform: rotate(-60deg);
+    // transform: rotate(-60deg);
   }
   &::after {
     width: inherit;
@@ -35,24 +38,24 @@
     content: "";
     position: absolute;
     left: 0;
-    transform: rotate(60deg);
+    // transform: rotate(60deg);
   }
 }
     
 @keyframes grow { 
   0% { 
-    background-color: rgba(255, 255, 255, .6);
-    transform: scale(10); 
+    background-color: rgba($color-green-dark, .6);
+    transform: scale(1); 
     z-index: 2;
   }
   100% {
-    background-color: rgba(255, 255, 255, .4);
+    background-color: rgba($color-green-dark, .4);
     opacity: 0; 
-    transform: scale(20); 
+    transform: scale(200); 
     z-index: -1;
   }
 }
 
 .grow {
-  animation: grow 1s ease-out forwards;   
+  animation: grow 400ms ease-in forwards;   
 }

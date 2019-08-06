@@ -1,6 +1,8 @@
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
 
 $base-font-size: 16px;
+
+// Move to utilities
 @function calculate-rem($size-value) {
   $rem-size: $size-value / $base-font-size;
   @return #{$rem-size}rem;
@@ -18,26 +20,33 @@ $base-font-size: 16px;
     font-weight: $ds-font-weight-bold;
     justify-content: center;
     height: 54px; // Each button has a total of 54px height
+    line-height: 1.5;
     padding: 0 $ds-spaces-even-x-6; 
     text-align: center;
     @include font-size(16px);
 
     // SVG Icon
     svg.icon {
-        height: $ds-sizes-icon-md;
+        height: $ds-sizes-icon-lg;
         position: relative;
-        top: -3px;
-        width: $ds-sizes-icon-md;
+        width: $ds-sizes-icon-lg;
     }
 
-    &.leading svg.icon {
-        margin-right: $ds-spaces-even-x-3;
+    &.leading {
+        padding: 6px $ds-spaces-even-x-6 0 $ds-spaces-even-x-4;
+        svg.icon {
+            margin-right: $ds-spaces-even-x-3;
+            top: -3px;
+        }
     }
 
-    &.trailing svg.icon {
-        margin-left: $ds-spaces-even-x-3;
+    &.trailing {
+        padding: 6px $ds-spaces-even-x-4 0 $ds-spaces-even-x-6;
+        svg.icon {
+            margin-left: $ds-spaces-even-x-3;
+            top: -3px;
+        }
     }
-
 
     &:focus,
     &:hover {
@@ -45,14 +54,11 @@ $base-font-size: 16px;
         outline: none;
     }
 
-    &.icon {
-        padding: 6px $ds-spaces-even-x-6 0;
-    }
-
     &.icon-only {
         display: flex;
         justify-content: center;
-        padding: 17px 0;
+        line-height: 1;
+        padding: 0;
         width: 54px;
     }
 

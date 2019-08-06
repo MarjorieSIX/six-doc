@@ -1,0 +1,21 @@
+[
+  "_commentaire": "Insérez ici votre commentaire",
+  {
+    "id": 1,
+    "title": "Boutons",
+    "version": "v 0.0.1",
+    "designToken": null,
+    "webComponent": null,
+    "description": "Une action par l'utilisateur",
+    "details": "test du WYSIWYG ```test de code```",
+    "demo": "http://marjorielazaro.com/desj/six-components/components/Button/",
+    "accessibility": null,
+    "goodPractices": null,
+    "other": null,
+    "element": null,
+    "references": null,
+    "created_at": "2019-08-02T14:49:59.879Z",
+    "updated_at": "2019-08-02T19:31:52.612Z",
+    "elements": [ ]
+  }
+]

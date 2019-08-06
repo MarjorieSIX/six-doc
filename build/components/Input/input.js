@@ -1,6 +1,6 @@
 const inputs = document.querySelectorAll('input');
+
 (function init() {
-	// Loop and addEventListeners
 	for(let i = 0; i < inputs.length; i++) {
 		inputs[i].addEventListener('focus', function() {
 			inputs[i].classList.add('focus');

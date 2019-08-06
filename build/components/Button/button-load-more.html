@@ -6,7 +6,7 @@
   <title>Load More Button</title>
 
   <style>
-    /* .sr-only {
+    .sr-only {
       border: 0 !important;
       clip: rect(1px, 1px, 1px, 1px) !important;
       height: 1px !important;
@@ -16,6 +16,7 @@
       position: absolute !important;
       white-space: nowrap !important;
       width: 1px !important;
+      list-style-type: disc;
     }
 
     .sr-only-focusable:focus,
@@ -27,52 +28,106 @@
       overflow: visible !important;
       white-space: normal !important;
       width: auto !important;
-    }*/
+    }
 
     .visually-hidden { 
       position: absolute; 
       overflow: hidden; 
       clip: rect(0 0 0 0); 
-      height: 1px; width: 1px; 
-      margin: -1px; padding: 0; border: 0; 
+      height: 1px; 
+      width: 1px; 
+      margin: -1px; 
+      padding: 0; 
+      border: 0; 
     }
+
+    /* button[aria-hidden="true"] {
+      display: none;
+    } */
   </style>
 </head>
 <body>
   
   <h1>Load More Button</h1>
+
+  <h2>Scénario 1:</h2>
+  <p>
+      La liste n'est pas trop grande, seulement 8 éléments, donc on cache les 3 derniers sur l'ordinateur et on affiche tout pour le lecteur d'écran.
+  </p>
+  <ul class="my-mini-list">
+    <li class="item">Item 1</li>
+    <li class="item">Item 2</li>
+    <li class="item">Item 3</li>
+    <li class="item">Item 4</li>
+    <li class="item">Item 5</li>
+    <li class="item">Item 6</li>
+    <li class="item">Item 7</li>
+    <li class="item">Item 8</li>
+  </ul>
+  <button id="load-all-items" aria-hidden="true">
+    Afficher tout
+  </button>
+  <script>
+      const miniList = document.querySelector('.my-mini-list'),
+            listItems  = miniList.querySelectorAll('li'),
+            allItems = miniList.querySelectorAll('li').length,
+            loadAllBtn =  document.querySelector('#load-all-items'),
+            maxItemsVisible = 5,
+            visuallyHiddenClass = "sr-only";
+  
+      [].forEach.call(listItems, function(item, idx) {
+        if (idx > maxItemsVisible - 1) {
+          item.classList.add(visuallyHiddenClass);
+        }
+      });
+  
+      loadAllBtn.addEventListener('click', function() {
+        [].forEach.call(document.querySelectorAll('.' + visuallyHiddenClass), function(item, idx) {
+          if (idx < maxItemsVisible - 1) {
+            item.classList.remove(visuallyHiddenClass);
+            loadAllBtn.remove();
+          }
+        });
+      });
+    </script>
+
+<!-- 
+  <h2>Scénario 2:</h2>
+  <p>
+      La liste est vraiment trop grande.
+  </p>
   <span class="sr-only number-items-begin"></span>
   <ul class="my-list">
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
-    <li class="item">Item</li>
+    <li class="item">Item 1</li>
+    <li class="item">Item 2</li>
+    <li class="item">Item 3</li>
+    <li class="item">Item 4</li>
+    <li class="item">Item 5</li>
+    <li class="item">Item 6</li>
+    <li class="item">Item 7</li>
+    <li class="item">Item 8</li>
+    <li class="item">Item 9</li>
+    <li class="item">Item 10</li>
+    <li class="item">Item 11</li>
+    <li class="item">Item 12</li>
+    <li class="item">Item 13</li>
+    <li class="item">Item 14</li>
+    <li class="item">Item 15</li>
+    <li class="item">Item 16</li>
+    <li class="item">Item 17</li>
+    <li class="item">Item 18</li>
+    <li class="item">Item 19</li>
   </ul>
   
   <button id="load-more-comments">
-    <!-- Afficher plus -->
+    <-- Afficher plus --
     <span class="sr-only show-more"></span>
   </button>
-
+-->
   <script>
     // cache vars
-    const parent = document.querySelector('ul'),
-          items  = parent.querySelectorAll('li'),
+    /*const parent = document.querySelector('.my-list'),
+          items  = document.querySelectorAll('.my-list li'),
           totalItems = parent.querySelectorAll('li').length,
           loadMoreBtn =  document.querySelector('#load-more-comments'),
           maxItems = 5,
@@ -80,7 +135,7 @@
           startingItemsNum = document.querySelector('.number-items-begin'),
           showMore = document.querySelector('.show-more');
 
-    [].forEach.call(items, function(item, idx){
+    [].forEach.call(items, function(item, idx) {
       if (idx > maxItems) {
         showMore.innerHTML = `Afficher ${maxItems} éléments de plus`;
       } else if (idx < maxItems) {
@@ -94,8 +149,8 @@
       startingItemsNum.innerHTML = `Affichage de ${maxItems} éléments sur ${totalItems}`;
     });
 
-    loadMoreBtn.addEventListener('click', function(){
-      [].forEach.call(document.querySelectorAll('.' + hiddenClass), function(item, idx){
+    loadMoreBtn.addEventListener('click', function() {
+      [].forEach.call(document.querySelectorAll('.' + hiddenClass), function(item, idx) {
         // let hiddenItems = items.contains('visually-hidden');
         // if (document.querySelector('li').contains('visually-hidden')) {
         //   console.log(document.querySelector('li').length);
@@ -122,9 +177,8 @@
         }
 
         // console.log(combi);
-
       });
-    });
+    });*/
   </script>
 </body>
 </html>
