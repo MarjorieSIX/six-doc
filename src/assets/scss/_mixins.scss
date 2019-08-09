@@ -1,15 +1,5 @@
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
 
-
-// Mixin font size. px to REM
-$base-font-size: 16px;
-@function calculateRem($sizeValue) {
-  $remSize: $sizeValue / $base-font-size;
-  @return #{$remSize}rem;
-}
-
-@mixin fontSize($sizeValue) {
-  //font-size: $sizeValue; //Fallback in px
-  font-size: calculateRem($sizeValue);
-}
-
+@import 'mixins/_breakpoints';
+// @import 'mixins/_colors';
+@import 'mixins/_font-size';

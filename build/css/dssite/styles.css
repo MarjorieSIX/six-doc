@@ -1,6 +1,7 @@
+@charset "UTF-8";
 /**
  * Do not edit directly
- * Generated on Tue, 11 Jun 2019 13:52:44 GMT
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
 .bases .library {
   align-items: stretch;
@@ -192,7 +193,7 @@
 
 /**
  * Do not edit directly
- * Generated on Tue, 11 Jun 2019 13:52:44 GMT
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
 pre {
   background: #00874e;
@@ -228,23 +229,25 @@ pre[class*="language-"] {
 
 /**
  * Do not edit directly
- * Generated on Tue, 11 Jun 2019 13:52:44 GMT
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
 /*
-  Mixin targeting the values of a specific breakpoint
-  Usage: @include bp(sm) {}
+  Mixin ciblant la valeur d'un point de rupture et plus
+  Exemple: Afficher sur un écran de taille minimum sm et plus 
+  Utilisation: @include bp-above(sm) {}
+  Résultat: @media (min-width: 768px) {
 */
 /*
-  Mixin targeting the values of the breakpoint and more
-  Usage: @include bp-above(sm) {}
+  Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
+  Exemple: Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation: @include bp-below(sm) {}
+  Résultat: @media (max-width: 767px) {
 */
 /*
-  Mixin targeting the values of the breakpoint -1 and less
-  Usage: @include bp-below(sm) {}
-*/
-/*
-  Mixin targeting the values between two breakpoints
-  Usage: @include bp-between(sm, md) {}
+  Mixin ciblant les valeurs entre deux points de rupture
+  Exemple: Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation: @include bp-between(sm, md) {}
+  Résultat: @media (min-width: 768px) and (max-width: 1199px) {
 */
 [hidden] {
   display: none;
