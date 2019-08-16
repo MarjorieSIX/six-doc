@@ -438,10 +438,6 @@ table {
  * Do not edit directly
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
-[hidden] {
-  display: none;
-  visibility: hidden; }
-
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -464,24 +460,39 @@ table {
   white-space: normal !important;
   width: auto !important; }
 
-/*
-  Mixin ciblant la valeur d'un point de rupture et plus
-  Exemple: Afficher sur un écran de taille minimum sm et plus 
-  Utilisation: @include bp-above(sm) {}
-  Résultat: @media (min-width: 768px) {
-*/
-/*
-  Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
-  Exemple: Afficher sur un écran de taille maximum sm - 1px et moins 
-  Utilisation: @include bp-below(sm) {}
-  Résultat: @media (max-width: 767px) {
-*/
-/*
-  Mixin ciblant les valeurs entre deux points de rupture
-  Exemple: Afficher sur un écran de taille minimum sm et maximum md
-  Utilisation: @include bp-between(sm, md) {}
-  Résultat: @media (min-width: 768px) and (max-width: 1199px) {
-*/
+/**
+ * Do not edit directly
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ */
+/* averta-light */
+@font-face {
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 300;
+  src: local("Averta"), local("Averta-Light"), url("/assets/fonts/averta-light.woff2") format("woff2"), url("/assets/fonts/averta-light.woff") format("woff"); }
+
+/* averta-regular */
+@font-face {
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Averta"), local("Averta-Regular"), url("/assets/fonts/averta-regular.woff2") format("woff2"), url("/assets/fonts/averta-regular.woff") format("woff"); }
+
+/* averta-semibold */
+@font-face {
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 500;
+  /* pour N3-UX devrait etre 600 */
+  src: local("Averta"), local("Averta-Semibold"), url("/assets/fonts/averta-semibold.woff2") format("woff2"), url("/assets/fonts/averta-semibold.woff"), format("woff"); }
+
+/* averta-bold */
+@font-face {
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Averta"), local("Averta-Bold"), url("/assets/fonts/averta-bold.woff2") format("woff2"), url("/assets/fonts/averta-bold.woff") format("woff"); }
+
 /**
  * Do not edit directly
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT
@@ -541,21 +552,21 @@ h6,
 
 /*
   Mixin ciblant la valeur d'un point de rupture et plus
-  Exemple: Afficher sur un écran de taille minimum sm et plus 
-  Utilisation: @include bp-above(sm) {}
-  Résultat: @media (min-width: 768px) {
+  Exemple : Afficher sur un écran de taille minimum sm et plus 
+  Utilisation : @include bp-above(sm) {}
+  Résultat : @media (min-width: 768px) {
 */
 /*
   Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
-  Exemple: Afficher sur un écran de taille maximum sm - 1px et moins 
-  Utilisation: @include bp-below(sm) {}
-  Résultat: @media (max-width: 767px) {
+  Exemple : Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation : @include bp-below(sm) {}
+  Résultat : @media (max-width: 767px) {
 */
 /*
   Mixin ciblant les valeurs entre deux points de rupture
-  Exemple: Afficher sur un écran de taille minimum sm et maximum md
-  Utilisation: @include bp-between(sm, md) {}
-  Résultat: @media (min-width: 768px) and (max-width: 1199px) {
+  Exemple : Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation : @include bp-between(sm, md) {}
+  Résultat : @media (min-width: 768px) and (max-width: 1199px) {
 */
 /* 
   nom du breakpoint  
@@ -709,82 +720,73 @@ h6,
         display: -ms-grid;
         display: grid; } }
 
-/**
- * Do not edit directly
- * Generated on Mon, 08 Jul 2019 18:56:06 GMT
- */
-/* averta-light */
-@font-face {
-  font-family: "Averta";
-  font-style: normal;
-  font-weight: 300;
-  src: local("Averta"), local("Averta-Light"), url("/assets/fonts/averta-light.woff2") format("woff2"), url("/assets/fonts/averta-light.woff") format("woff"); }
+/*
+  Mixin ciblant la valeur d'un point de rupture et plus
+  Exemple : Afficher sur un écran de taille minimum sm et plus 
+  Utilisation : @include bp-above(sm) {}
+  Résultat : @media (min-width: 768px) {
+*/
+/*
+  Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
+  Exemple : Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation : @include bp-below(sm) {}
+  Résultat : @media (max-width: 767px) {
+*/
+/*
+  Mixin ciblant les valeurs entre deux points de rupture
+  Exemple : Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation : @include bp-between(sm, md) {}
+  Résultat : @media (min-width: 768px) and (max-width: 1199px) {
+*/
+/*
+  Mixin permettant de transformer une font-size de px à rem
+  Exemple: Afficher un texte de 16px (ou 1rem) 
+  Utilisation: @include fontSize(16px) {}
+  Résultat: font-size: 1rem;
+*/
+[hidden] {
+  display: none;
+  visibility: hidden; }
 
-/* averta-regular */
-@font-face {
-  font-family: "Averta";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Averta"), local("Averta-Regular"), url("/assets/fonts/averta-regular.woff2") format("woff2"), url("/assets/fonts/averta-regular.woff") format("woff"); }
-
-/* averta-semibold */
-@font-face {
-  font-family: "Averta";
-  font-style: normal;
-  font-weight: 500;
-  /* pour N3-UX devrait etre 600 */
-  src: local("Averta"), local("Averta-Semibold"), url("/assets/fonts/averta-semibold.woff2") format("woff2"), url("/assets/fonts/averta-semibold.woff"), format("woff"); }
-
-/* averta-bold */
-@font-face {
-  font-family: "Averta";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Averta"), local("Averta-Bold"), url("/assets/fonts/averta-bold.woff2") format("woff2"), url("/assets/fonts/averta-bold.woff") format("woff"); }
-
-/**
- * Do not edit directly
- * Generated on Mon, 08 Jul 2019 18:56:06 GMT
- */
 /**
  * Do not edit directly
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
 /*
   Mixin ciblant la valeur d'un point de rupture et plus
-  Exemple: Afficher sur un écran de taille minimum sm et plus 
-  Utilisation: @include bp-above(sm) {}
-  Résultat: @media (min-width: 768px) {
+  Exemple : Afficher sur un écran de taille minimum sm et plus 
+  Utilisation : @include bp-above(sm) {}
+  Résultat : @media (min-width: 768px) {
 */
 /*
   Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
-  Exemple: Afficher sur un écran de taille maximum sm - 1px et moins 
-  Utilisation: @include bp-below(sm) {}
-  Résultat: @media (max-width: 767px) {
+  Exemple : Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation : @include bp-below(sm) {}
+  Résultat : @media (max-width: 767px) {
 */
 /*
   Mixin ciblant les valeurs entre deux points de rupture
-  Exemple: Afficher sur un écran de taille minimum sm et maximum md
-  Utilisation: @include bp-between(sm, md) {}
-  Résultat: @media (min-width: 768px) and (max-width: 1199px) {
+  Exemple : Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation : @include bp-between(sm, md) {}
+  Résultat : @media (min-width: 768px) and (max-width: 1199px) {
 */
 /*
   Mixin ciblant la valeur d'un point de rupture et plus
-  Exemple: Afficher sur un écran de taille minimum sm et plus 
-  Utilisation: @include bp-above(sm) {}
-  Résultat: @media (min-width: 768px) {
+  Exemple : Afficher sur un écran de taille minimum sm et plus 
+  Utilisation : @include bp-above(sm) {}
+  Résultat : @media (min-width: 768px) {
 */
 /*
   Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
-  Exemple: Afficher sur un écran de taille maximum sm - 1px et moins 
-  Utilisation: @include bp-below(sm) {}
-  Résultat: @media (max-width: 767px) {
+  Exemple : Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation : @include bp-below(sm) {}
+  Résultat : @media (max-width: 767px) {
 */
 /*
   Mixin ciblant les valeurs entre deux points de rupture
-  Exemple: Afficher sur un écran de taille minimum sm et maximum md
-  Utilisation: @include bp-between(sm, md) {}
-  Résultat: @media (min-width: 768px) and (max-width: 1199px) {
+  Exemple : Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation : @include bp-between(sm, md) {}
+  Résultat : @media (min-width: 768px) and (max-width: 1199px) {
 */
 /* 
   nom du breakpoint  
