@@ -1,7 +1,5 @@
 // @import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
 
-
-
 $ds-colors: (
   white: $color-white,
   grey: $color-grey,
@@ -49,46 +47,237 @@ $ds-colors: (
       padding: 12px 16px;
     }
 
-    .swatches {
-      flex-direction: row;
-      margin-bottom: 24px;
-
-      &:nth-child(1) {
-        flex-grow: 5;
-        margin-right: 24px;
-      }
-
-      &:nth-child(2) {
-        flex-grow: 3;
-      }
-    }
-
     .swatches-list {
-      display: flex;
-      flex-flow: column wrap;
-      height: 408px;
-
       div {
-        // border: 4px solid;
-        display: flex;
-        flex-direction: column;
-        height: 92px;
-        margin-bottom: 24px;
+        border: 4px solid white;
+        box-shadow: $ds-shadow-04;
+        float: left;
+        height: 188px;
+        margin-right: 20px;
+        margin-bottom: 20px;
         padding: 6px;
-        width: 92px;
+        width: 126px;
 
-        @each $color, $color-value in $ds-colors {
-          &.#{$color} {
-            background: $color-value;
-            justify-content: flex-end;
-
-            &:after {
-              content: '#{$color} | #{$color-value}';
-              flex-basis: end;
-            }
+        span {
+          background: white;
+          color: black;
+          display: block;
+          margin: 100px -10px 0;
+          padding: 8px;
+          &::before,
+          &:after {
+            display: block;
           }
         }
         
+        //@each $color, $color-value in $ds-colors {
+        &.white {
+          background: $color-white;
+          span:before {
+            content: 'Blanc';
+          }
+          span:after {
+            content: '00.10.20';
+          }
+        }
+        &.grey {
+          background: $color-grey;
+          span:before {
+            content: 'Gris';
+          }
+          span:after {
+            content: '25';
+          }
+        }
+        &.black {
+          background: $color-black;
+          span:before {
+            content: 'Noir';
+          }
+          span:after {
+            content: '40.50';
+          }
+        }
+        &.blue-light {
+          background: $color-blue-light;
+          span:before {
+            content: 'Bleu clair';
+          }
+          span:after {
+            content: '00';
+          }
+        }
+        &.blue-medium {
+          background: $color-blue-medium;
+          span:before {
+            content: 'Bleu moyen';
+          }
+          span:after {
+            content: '30';
+          }
+        }
+        &.blue-dark {
+          background: $color-blue-dark;
+          span:before {
+            content: 'Bleu foncé';
+          }
+          span:after {
+            content: '50';
+          }
+        }
+        &.red-light {
+          background: $color-red-light;
+          span:before {
+            content: 'Rouge clair';
+          }
+          span:after {
+            content: '00';
+          }
+        }
+        &.red-medium {
+          background: $color-red-medium;
+          span:before {
+            content: 'Rouge moyen';
+          }
+          span:after {
+            content: '30';
+          }
+        }
+        &.red-dark {
+          background: $color-red-dark;
+          span:before {
+            content: 'Rouge foncé';
+          }
+          span:after {
+            content: '50';
+          }
+        }
+        &.orange-light {
+          background: $color-orange-light;
+          span:before {
+            content: 'Orange clair';
+          }
+          span:after {
+            content: '00';
+          }
+        }
+        &.orange-medium {
+          background: $color-orange-medium;
+          span:before {
+            content: 'Orange moyen';
+          }
+          span:after {
+            content: '05';
+          }
+        }
+        &.orange-dark {
+          background: $color-orange-dark;
+          span:before {
+            content: 'Orange foncé';
+          }
+          span:after {
+            content: '45.50';
+          }
+        }
+        &.yellow-light {
+          background: $color-yellow-light;
+          span:before {
+            content: 'Jaune clair';
+          }
+          span:after {
+            content: '00';
+          }
+        }
+        &.yellow-medium {
+          background: $color-yellow-medium;
+          span:before {
+            content: 'Jaune moyen';
+          }
+          span:after {
+            content: '00.10';
+          }
+        }
+        &.yellow-dark {
+          background: $color-yellow-dark;
+          span:before {
+            content: 'Jaune foncé';
+          }
+          span:after {
+            content: '50';
+          }
+        }
+        &.green-light {
+          background: $color-green-light;
+          span:before {
+            content: 'Vert clair';
+          }
+          span:after {
+            content: '00';
+          }
+        }
+        &.green-medium {
+          background: $color-green-medium;
+          span:before {
+            content: 'Vert moyen';
+          }
+          span:after {
+            content: '30';
+          }
+        }
+        &.green-dark {
+          background: $color-green-dark;
+          span:before {
+            content: 'Vert foncé';
+          }
+          span:after {
+            content: '50';
+          }
+        }
+        &.graphite-light {
+          background: $color-graphite-light;
+          span:before {
+            content: 'Gris clair';
+          }
+          span:after {
+            content: '00';
+          }
+        }
+        &.graphite-medium {
+          background: $color-graphite-medium;
+          span:before {
+            content: 'Gris moyen';
+          }
+          span:after {
+            content: '40';
+          }
+        }
+        &.graphite-dark {
+          background: $color-graphite-dark;
+          span:before {
+            content: 'Gris foncé';
+          }
+          span:after {
+            content: '50';
+          }
+        }
+        &.advantage {
+          background: $color-advantage;
+          span:before {
+            content: 'Avantage';
+          }
+          span:after {
+            content: '00.10';
+          }
+        }
+        &.accent {
+          background: $color-accent;
+          span:before {
+            content: 'Accent';
+          }
+          span:after {
+            content: '30';
+          }
+        }  
       }
     }
   }
