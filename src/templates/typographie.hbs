@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="fr">
 
 <head>
@@ -16,9 +15,10 @@
   <link href="css/styles.css" rel="stylesheet" />
   <link href="css/dssite/styles.css" rel="stylesheet" />
   
-  <title>Desjardins Design System | Bases - Styles</title>
+  <title>Desjardins Design System | Bases - Typographie</title>
   
   <!-- Components -->
+  <link href="components/Flag/flag.css" rel="stylesheet" />
   <link href="components/Tabs/tabs.css" rel="stylesheet" />
 </head>
 
@@ -57,9 +57,7 @@
 
   <div class="main-wrapper">
     <div class="sidebar">
-        <div class="logo">
-          <img src="assets/img/logos/logo-desjardins-white.svg" />
-        </div>
+        {{> logo}}
         
         <nav class="ds-main-nav">
           <ul class="level1">
@@ -137,7 +135,7 @@
     <div class="content"> <!-- a cause de IE11 on ne peut pas utiliser la balise main -->
       <header>
         <h1>Text</h1>
-        <span class="flag">Nouveau</span>
+        <span class="ds-flag">Nouveau</span>
         <div class="references">
           <span class="number">02.03.04</span>
           <!-- 
@@ -216,12 +214,12 @@
       </article>
     </div>
   </div>
-  
-  <script src="documentation/index.js"></script>
 
   <!-- Components -->
   <script type="text/javascript" src="components/Tabs/tabs.js"></script>
 
+  <!-- Minified JS - js -->
+  <script type="text/javascript" src="js/main.min.js"></script>
 </body>
 
 </html>

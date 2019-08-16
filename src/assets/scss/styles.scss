@@ -2,14 +2,14 @@
 @import 'reset';
 
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+@import 'mixins';
 @import 'utilities';
 @import 'accessibility';
-@import 'breakpoints';
-@import 'headings';
 @import 'grid';
 @import 'fonts';
-@import 'mixins';
 
+/* components */
+@import 'components/headings';
 @import 'footer';
 
 body {
@@ -21,12 +21,12 @@ body {
   width: 100%;
 }
 
-h1,
+/*h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6,*/
 p,
 li {
   font-family: $ds-font-main-name, Arial, Helvetica, sans-serif;

@@ -12,6 +12,10 @@ $base-font-size: 16px;
   @return #{$remSize}rem;
 }
 
-@mixin fontSize($sizeValue) {
-  font-size: calculateRem($sizeValue);
+@mixin fontSizeRem($fsValue) {
+  font-size: calculateRem($fsValue);
+}
+
+@mixin lineHeightRem($lhValue) {
+  line-height: calculateRem($lhValue);
 }

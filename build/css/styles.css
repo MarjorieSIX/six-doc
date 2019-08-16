@@ -438,10 +438,38 @@ table {
  * Do not edit directly
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
-[hidden] {
-  display: none;
-  visibility: hidden; }
-
+/**
+ * Do not edit directly
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ */
+/*
+  Mixin ciblant la valeur d'un point de rupture et plus
+  Exemple : Afficher sur un écran de taille minimum sm et plus 
+  Utilisation : @include bp-above(sm) {}
+  Résultat : @media (min-width: 768px) {
+*/
+/*
+  Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
+  Exemple : Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation : @include bp-below(sm) {}
+  Résultat : @media (max-width: 767px) {
+*/
+/*
+  Mixin ciblant les valeurs entre deux points de rupture
+  Exemple : Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation : @include bp-between(sm, md) {}
+  Résultat : @media (min-width: 768px) and (max-width: 1199px) {
+*/
+/*
+  Mixin permettant de transformer une font-size de px à rem
+  Exemple: Afficher un texte de 16px (ou 1rem) 
+  Utilisation: @include fontSize(16px) {}
+  Résultat: font-size: 1rem;
+*/
+/**
+ * Do not edit directly
+ * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ */
 .sr-only {
   border: 0 !important;
   clip: rect(1px, 1px, 1px, 1px) !important;
@@ -466,96 +494,21 @@ table {
 
 /*
   Mixin ciblant la valeur d'un point de rupture et plus
-  Exemple: Afficher sur un écran de taille minimum sm et plus 
-  Utilisation: @include bp-above(sm) {}
-  Résultat: @media (min-width: 768px) {
+  Exemple : Afficher sur un écran de taille minimum sm et plus 
+  Utilisation : @include bp-above(sm) {}
+  Résultat : @media (min-width: 768px) {
 */
 /*
   Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
-  Exemple: Afficher sur un écran de taille maximum sm - 1px et moins 
-  Utilisation: @include bp-below(sm) {}
-  Résultat: @media (max-width: 767px) {
+  Exemple : Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation : @include bp-below(sm) {}
+  Résultat : @media (max-width: 767px) {
 */
 /*
   Mixin ciblant les valeurs entre deux points de rupture
-  Exemple: Afficher sur un écran de taille minimum sm et maximum md
-  Utilisation: @include bp-between(sm, md) {}
-  Résultat: @media (min-width: 768px) and (max-width: 1199px) {
-*/
-/**
- * Do not edit directly
- * Generated on Mon, 08 Jul 2019 18:56:06 GMT
- */
-h1,
-.heading1,
-h2,
-.heading2,
-h3,
-.heading3,
-h4,
-.heading4,
-h5,
-.heading5,
-h6,
-.heading6 {
-  color: #666666;
-  font-family: "Averta", Arial, Helvetica, sans-serif;
-  font-weight: 700;
-  text-align: left; }
-
-h1,
-.heading1 {
-  font-size: 68px;
-  line-height: 76px;
-  margin-bottom: 26px; }
-
-h2,
-.heading2 {
-  font-size: 42px;
-  line-height: 48px;
-  margin-bottom: 16px; }
-
-h3,
-.heading3 {
-  font-size: 26px;
-  line-height: 32px;
-  margin-bottom: 13px; }
-
-h4,
-.heading4 {
-  font-size: 20px;
-  line-height: 25px;
-  margin-bottom: 16px; }
-
-h5,
-.heading5 {
-  /*font-size: 20px;
-  line-height: 25px;
-  margin-bottom: 16px;*/ }
-
-h6,
-.heading6 {
-  font-size: 20px;
-  line-height: 20px;
-  margin-bottom: 0; }
-
-/*
-  Mixin ciblant la valeur d'un point de rupture et plus
-  Exemple: Afficher sur un écran de taille minimum sm et plus 
-  Utilisation: @include bp-above(sm) {}
-  Résultat: @media (min-width: 768px) {
-*/
-/*
-  Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
-  Exemple: Afficher sur un écran de taille maximum sm - 1px et moins 
-  Utilisation: @include bp-below(sm) {}
-  Résultat: @media (max-width: 767px) {
-*/
-/*
-  Mixin ciblant les valeurs entre deux points de rupture
-  Exemple: Afficher sur un écran de taille minimum sm et maximum md
-  Utilisation: @include bp-between(sm, md) {}
-  Résultat: @media (min-width: 768px) and (max-width: 1199px) {
+  Exemple : Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation : @include bp-between(sm, md) {}
+  Résultat : @media (min-width: 768px) and (max-width: 1199px) {
 */
 /* 
   nom du breakpoint  
@@ -742,49 +695,139 @@ h6,
   font-weight: 700;
   src: local("Averta"), local("Averta-Bold"), url("/assets/fonts/averta-bold.woff2") format("woff2"), url("/assets/fonts/averta-bold.woff") format("woff"); }
 
+/* components */
 /**
  * Do not edit directly
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
+/*
+  Mixin permettant de transformer une font-size de px à rem
+  Exemple: Afficher un texte de 16px (ou 1rem) 
+  Utilisation: @include fontSize(16px) {}
+  Résultat: font-size: 1rem;
+*/
+/*
+  Attention box et text shadow sont differents en déclaration
+
+  text shadow:
+  X and Y offsets from the element, blur radius, and color.
+  ex: text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+  ex. unset
+
+  box shadow
+  X and Y offsets relative to the element, blur and spread radius, and color
+  ex: box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .5);
+  ex. none
+*/
+h1,
+.heading1, h2,
+.heading2, h3,
+.heading3, h4,
+.heading4, h6,
+.heading6 {
+  color: #666666;
+  font-family: "Averta", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  text-align: left; }
+  h1.c-light,
+  .c-light.heading1, h2.c-light,
+  .c-light.heading2, h3.c-light,
+  .c-light.heading3, h4.c-light,
+  .c-light.heading4, h6.c-light,
+  .c-light.heading6 {
+    color: #ffffff; }
+  h1.c-brand,
+  .c-brand.heading1, h2.c-brand,
+  .c-brand.heading2, h3.c-brand,
+  .c-brand.heading3, h4.c-brand,
+  .c-brand.heading4, h6.c-brand,
+  .c-brand.heading6 {
+    color: #064a2d; }
+  h1.c-darkmode,
+  .c-darkmode.heading1, h2.c-darkmode,
+  .c-darkmode.heading2, h3.c-darkmode,
+  .c-darkmode.heading3, h4.c-darkmode,
+  .c-darkmode.heading4, h6.c-darkmode,
+  .c-darkmode.heading6 {
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); }
+
+h1,
+.heading1 {
+  font-size: 4.25rem;
+  line-height: 4.75rem;
+  margin-bottom: 26px; }
+
+h2,
+.heading2 {
+  font-size: 2.625rem;
+  line-height: 3rem;
+  margin-bottom: 16px; }
+
+h3,
+.heading3 {
+  font-size: 1.625rem;
+  line-height: 2rem;
+  margin-bottom: 13px; }
+
+h4,
+.heading4 {
+  font-size: 1.25rem;
+  line-height: 1.5625rem;
+  margin-bottom: 16px; }
+
+h5,
+.heading5 {
+  /*@extend %heading-bases;
+  @include fontSizeRem(20px);
+  @include lineHeightRem(25px);
+  margin-bottom: 16px;*/ }
+
+h6,
+.heading6 {
+  font-size: 1.25rem;
+  line-height: 1.25rem;
+  margin-bottom: 0; }
+
 /**
  * Do not edit directly
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
 /*
   Mixin ciblant la valeur d'un point de rupture et plus
-  Exemple: Afficher sur un écran de taille minimum sm et plus 
-  Utilisation: @include bp-above(sm) {}
-  Résultat: @media (min-width: 768px) {
+  Exemple : Afficher sur un écran de taille minimum sm et plus 
+  Utilisation : @include bp-above(sm) {}
+  Résultat : @media (min-width: 768px) {
 */
 /*
   Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
-  Exemple: Afficher sur un écran de taille maximum sm - 1px et moins 
-  Utilisation: @include bp-below(sm) {}
-  Résultat: @media (max-width: 767px) {
+  Exemple : Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation : @include bp-below(sm) {}
+  Résultat : @media (max-width: 767px) {
 */
 /*
   Mixin ciblant les valeurs entre deux points de rupture
-  Exemple: Afficher sur un écran de taille minimum sm et maximum md
-  Utilisation: @include bp-between(sm, md) {}
-  Résultat: @media (min-width: 768px) and (max-width: 1199px) {
+  Exemple : Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation : @include bp-between(sm, md) {}
+  Résultat : @media (min-width: 768px) and (max-width: 1199px) {
 */
 /*
   Mixin ciblant la valeur d'un point de rupture et plus
-  Exemple: Afficher sur un écran de taille minimum sm et plus 
-  Utilisation: @include bp-above(sm) {}
-  Résultat: @media (min-width: 768px) {
+  Exemple : Afficher sur un écran de taille minimum sm et plus 
+  Utilisation : @include bp-above(sm) {}
+  Résultat : @media (min-width: 768px) {
 */
 /*
   Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
-  Exemple: Afficher sur un écran de taille maximum sm - 1px et moins 
-  Utilisation: @include bp-below(sm) {}
-  Résultat: @media (max-width: 767px) {
+  Exemple : Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation : @include bp-below(sm) {}
+  Résultat : @media (max-width: 767px) {
 */
 /*
   Mixin ciblant les valeurs entre deux points de rupture
-  Exemple: Afficher sur un écran de taille minimum sm et maximum md
-  Utilisation: @include bp-between(sm, md) {}
-  Résultat: @media (min-width: 768px) and (max-width: 1199px) {
+  Exemple : Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation : @include bp-between(sm, md) {}
+  Résultat : @media (min-width: 768px) and (max-width: 1199px) {
 */
 /* 
   nom du breakpoint  
@@ -1017,12 +1060,12 @@ body {
   padding: 0;
   width: 100%; }
 
-h1,
+/*h1,
 h2,
 h3,
 h4,
 h5,
-h6,
+h6,*/
 p,
 li {
   font-family: "Averta", Arial, Helvetica, sans-serif; }

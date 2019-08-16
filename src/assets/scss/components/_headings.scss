@@ -1,0 +1,85 @@
+@import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+@import 'mixins/to-rem';
+
+
+/*
+  Attention box et text shadow sont differents en déclaration
+
+  text shadow:
+  X and Y offsets from the element, blur radius, and color.
+  ex: text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+  ex. unset
+
+  box shadow
+  X and Y offsets relative to the element, blur and spread radius, and color
+  ex: box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .5);
+  ex. none
+*/
+
+%heading-bases {
+  color: $color-graphite-medium;
+  font-family: $ds-font-main-name, Arial, Helvetica, sans-serif;
+  font-weight: $ds-font-weight-bold;
+  text-align: left;
+
+  &.c-light {
+    color: $color-white;
+  }
+
+  &.c-brand {
+    color: $color-green-dark;
+  }
+
+  &.c-darkmode {
+    color: $color-white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .5);
+  }
+}
+
+h1,
+.heading1 {
+  @extend %heading-bases;
+  @include fontSizeRem(68px);
+  @include lineHeightRem(76px);
+  margin-bottom: 26px;
+}
+
+h2,
+.heading2 {
+  @extend %heading-bases;
+  @include fontSizeRem(42px);
+  @include lineHeightRem(48px);
+  margin-bottom: $ds-spaces-even-x-4;
+}
+
+h3,
+.heading3 {
+  @extend %heading-bases;
+  @include fontSizeRem(26px);
+  @include lineHeightRem(32px);
+  margin-bottom: 13px;
+}
+
+h4,
+.heading4 {
+  @extend %heading-bases;
+  @include fontSizeRem(20px);
+  @include lineHeightRem(25px);
+  margin-bottom: $ds-spaces-even-x-4;
+}
+
+h5,
+.heading5 {
+  /*@extend %heading-bases;
+  @include fontSizeRem(20px);
+  @include lineHeightRem(25px);
+  margin-bottom: 16px;*/
+}
+
+h6,
+.heading6 {
+  @extend %heading-bases;
+  @include fontSizeRem(20px);  
+  @include lineHeightRem(20px);
+  margin-bottom: 0;
+}

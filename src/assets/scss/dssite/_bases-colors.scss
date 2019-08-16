@@ -1,32 +1,4 @@
-// @import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
-
-
-
-$ds-colors: (
-  white: $color-white,
-  grey: $color-grey,
-  black: $color-black,
-  blue-light: $color-blue-light,
-  blue-medium: $color-blue-medium,
-  blue-dark: $color-blue-dark,
-  red-light: $color-red-light,
-  red-medium: $color-red-medium,
-  red-dark: $color-red-dark,
-  orange-light: $color-orange-light,
-  orange-medium: $color-orange-medium,
-  orange-dark: $color-orange-dark,
-  yellow-light: $color-yellow-light,
-  yellow-medium: $color-yellow-medium,
-  yellow-dark: $color-yellow-dark,
-  green-light: $color-green-light,
-  green-medium: $color-green-medium,
-  green-dark: $color-green-dark,
-  graphite-light: $color-graphite-light,
-  graphite-medium: $color-graphite-medium,
-  graphite-dark: $color-graphite-dark,
-  advantage: $color-advantage,
-  accent: $color-accent
-);
+//@import '../../../../node_modules/six-design-tokens/build/scss/token-variables';
 
 .bases {
   .library {
@@ -49,7 +21,7 @@ $ds-colors: (
       padding: 12px 16px;
     }
 
-    .swatches {
+    /*.swatches {
       flex-direction: row;
       margin-bottom: 24px;
 
@@ -61,34 +33,26 @@ $ds-colors: (
       &:nth-child(2) {
         flex-grow: 3;
       }
-    }
+    }*/
 
     .swatches-list {
-      display: flex;
-      flex-flow: column wrap;
-      height: 408px;
-
+      display: block;
+      height: auto;
+      
       div {
-        // border: 4px solid;
-        display: flex;
-        flex-direction: column;
+        border: 4px solid white;
+        display: block;
+        float: left;
         height: 92px;
         margin-bottom: 24px;
         padding: 6px;
         width: 92px;
-
-        @each $color, $color-value in $ds-colors {
-          &.#{$color} {
-            background: $color-value;
-            justify-content: flex-end;
-
-            &:after {
-              content: '#{$color} | #{$color-value}';
-              flex-basis: end;
-            }
+        &.white {
+          background: $color-white;
+          div {
+            content: 'Blanc \A #FFFFFF \A 00.10.20';
           }
         }
-        
       }
     }
   }

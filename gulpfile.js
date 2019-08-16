@@ -92,7 +92,7 @@ function styleComponents() {
 // Compile scss from the documentation website to css
 function styleWebsite() {
   return gulp
-  .src(paths.styles.website.src, { sourcemaps: true }) // where is my scss file
+  .src(paths.styles.website.src) // where is my scss file
   .pipe(preprocess({context: { NODE_PATH: '$NODE_PATH:/node_modules'}})) //To set environment variables in-line
   .pipe(sass().on('error', sass.logError)) // sass compiler
   .pipe(autoprefixer(autoprefixerOptions)) // add prefixer
