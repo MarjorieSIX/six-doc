@@ -1,17 +1,30 @@
 @import 'normalize';
-@import 'reset';
+// @import 'reset';
 
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
 @import 'accessibility';
 @import 'fonts';
 @import 'headings';
 @import 'grid';
+
+// MIXINS
 @import 'mixins/breakpoints';
 //@import 'mixins/color';
 @import 'mixins/font-size';
-@import 'utilities';
 
+// UTILITIES
+@import 'utilities/borders';
+@import 'utilities/spacings';
+@import 'utilities/text';
+
+
+// COMPONENTS
 @import 'footer';
+
+
+* {
+  box-sizing: content-box;
+}
 
 body {
   font-family: $ds-font-main-name, Arial, Helvetica, sans-serif;
@@ -30,10 +43,16 @@ h5,
 h6,
 p,
 li {
+  clear: both;
   font-family: $ds-font-main-name, Arial, Helvetica, sans-serif;
 }
 
 
 svg.icon {
   fill: $color-grey;
+}
+
+[hidden] {
+  display: none;
+  visibility: hidden;
 }

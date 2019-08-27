@@ -84,7 +84,7 @@ abbr[title] {
  */
 b,
 strong {
-  font-weight: bolder; }
+  font-weight: bold; }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -304,135 +304,6 @@ template {
  */
 [hidden] {
   display: none; }
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box; }
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  margin: 0;
-  padding: 0;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block; }
-
-body {
-  line-height: 1.5; }
-
-ol,
-ul {
-  list-style: none; }
-
-blockquote,
-q {
-  quotes: none; }
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
 
 /**
  * Do not edit directly
@@ -741,12 +612,108 @@ h6,
 /*
   Mixin permettant de transformer une font-size de px à rem
   Exemple: Afficher un texte de 16px (ou 1rem) 
-  Utilisation: @include fontSize(16px) {}
+  Utilisation: @include fontSize(16px);
   Résultat: font-size: 1rem;
 */
-[hidden] {
-  display: none;
-  visibility: hidden; }
+.border-0 {
+  border: 0; }
+
+.border-top-0 {
+  border-top: 0; }
+
+.border-right-0 {
+  border-right: 0; }
+
+.border-bottom-0 {
+  border-bottom: 0; }
+
+.border-left-0 {
+  border-left: 0; }
+
+/* 
+$ds-spaces-even-base
+$ds-spaces-odd-base 
+
+TO DO mixins pour taille d'espaces (multiple de 2, 3, 4, 6)
+$ds-spaces-even-base = 4px
+$ds-spaces-odd-base  = 3px
+.ml-evenx2 = margin-left: 4px*2 = 8px
+
+*/
+.m-0 {
+  margin: 0; }
+
+.mb-0 {
+  margin-bottom: 0; }
+
+.ml-0 {
+  margin-left: 0; }
+
+.mr-0 {
+  margin-right: 0; }
+
+.mt-0 {
+  margin-top: 0; }
+
+.p-0 {
+  padding: 0; }
+
+.pb-0 {
+  padding-bottom: 0; }
+
+.pl-0 {
+  padding-left: 0; }
+
+.pr-0 {
+  padding-right: 0; }
+
+.pt-0 {
+  padding-top: 0; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-wrap {
+  white-space: normal; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.text-lowercase {
+  text-transform: lowercase; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
+.font-weight-light {
+  font-weight: 300; }
+
+.font-weight-normal {
+  font-weight: 400; }
+
+.font-weight-semibold {
+  font-weight: 500; }
+
+.font-weight-bold {
+  font-weight: 700; }
+
+.font-italic {
+  font-style: italic; }
+
+.text-decoration-none {
+  text-decoration: none; }
 
 /**
  * Do not edit directly
@@ -1011,6 +978,9 @@ h6,
     .six-footer .legal .copyright {
       text-align: center; }
 
+* {
+  box-sizing: content-box; }
+
 body {
   font-family: "Averta", Arial, Helvetica, sans-serif;
   height: 100%;
@@ -1027,7 +997,12 @@ h5,
 h6,
 p,
 li {
+  clear: both;
   font-family: "Averta", Arial, Helvetica, sans-serif; }
 
 svg.icon {
   fill: #aaaaaa; }
+
+[hidden] {
+  display: none;
+  visibility: hidden; }
