@@ -14,15 +14,15 @@
   padding: 5px 12px;
   text-transform: uppercase;
 
-  &-accent {
+  &.bg-accent {
     background: $color-accent;
   }
 
-  &-special {
+  &.bg-special {
     background: $color-blue-dark;
   }
 
-  &-advantages {
+  &.bg-advantages {
     background: $color-advantage;
     color: $color-graphite-dark;
   }

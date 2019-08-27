@@ -15,10 +15,10 @@
   margin-right: 18px;
   padding: 5px 12px;
   text-transform: uppercase; }
-  .ds-flag-accent {
+  .ds-flag.bg-accent {
     background: #652f9d; }
-  .ds-flag-special {
+  .ds-flag.bg-special {
     background: #161c71; }
-  .ds-flag-advantages {
+  .ds-flag.bg-advantages {
     background: #ffc90d;
     color: #383838; }
