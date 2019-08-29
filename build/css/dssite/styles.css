@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Do not edit directly
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT
@@ -19,163 +20,161 @@
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
     margin-bottom: 24px;
     padding: 12px 16px; }
-  .bases .library .swatches {
-    flex-direction: row;
-    margin-bottom: 24px; }
-    .bases .library .swatches:nth-child(1) {
-      flex-grow: 5;
-      margin-right: 24px; }
-    .bases .library .swatches:nth-child(2) {
-      flex-grow: 3; }
-  .bases .library .swatches-list {
-    display: flex;
-    flex-flow: column wrap;
-    height: 408px; }
-    .bases .library .swatches-list div {
-      display: flex;
-      flex-direction: column;
-      height: 92px;
-      margin-bottom: 24px;
-      padding: 6px;
-      width: 92px; }
-      .bases .library .swatches-list div.white {
-        background: #ffffff;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.white:after {
-          content: "white | #ffffff";
-          flex-basis: end; }
-      .bases .library .swatches-list div.grey {
-        background: #aaaaaa;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.grey:after {
-          content: "grey | #aaaaaa";
-          flex-basis: end; }
-      .bases .library .swatches-list div.black {
-        background: #000000;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.black:after {
-          content: "black | #000000";
-          flex-basis: end; }
-      .bases .library .swatches-list div.blue-light {
-        background: #e2dff2;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.blue-light:after {
-          content: "blue-light | #e2dff2";
-          flex-basis: end; }
-      .bases .library .swatches-list div.blue-medium {
-        background: #3f42db;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.blue-medium:after {
-          content: "blue-medium | #3f42db";
-          flex-basis: end; }
-      .bases .library .swatches-list div.blue-dark {
-        background: #161c71;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.blue-dark:after {
-          content: "blue-dark | #161c71";
-          flex-basis: end; }
-      .bases .library .swatches-list div.red-light {
-        background: #ffdddd;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.red-light:after {
-          content: "red-light | #ffdddd";
-          flex-basis: end; }
-      .bases .library .swatches-list div.red-medium {
-        background: #d20023;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.red-medium:after {
-          content: "red-medium | #d20023";
-          flex-basis: end; }
-      .bases .library .swatches-list div.red-dark {
-        background: #790318;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.red-dark:after {
-          content: "red-dark | #790318";
-          flex-basis: end; }
-      .bases .library .swatches-list div.orange-light {
-        background: #f6ebd8;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.orange-light:after {
-          content: "orange-light | #f6ebd8";
-          flex-basis: end; }
-      .bases .library .swatches-list div.orange-medium {
-        background: #ee9109;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.orange-medium:after {
-          content: "orange-medium | #ee9109";
-          flex-basis: end; }
-      .bases .library .swatches-list div.orange-dark {
-        background: #3f2802;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.orange-dark:after {
-          content: "orange-dark | #3f2802";
-          flex-basis: end; }
-      .bases .library .swatches-list div.yellow-light {
-        background: #f3f6d8;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.yellow-light:after {
-          content: "yellow-light | #f3f6d8";
-          flex-basis: end; }
-      .bases .library .swatches-list div.yellow-medium {
-        background: #f4f412;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.yellow-medium:after {
-          content: "yellow-medium | #f4f412";
-          flex-basis: end; }
-      .bases .library .swatches-list div.yellow-dark {
-        background: #3f3f02;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.yellow-dark:after {
-          content: "yellow-dark | #3f3f02";
-          flex-basis: end; }
-      .bases .library .swatches-list div.green-light {
-        background: #cce7dc;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.green-light:after {
-          content: "green-light | #cce7dc";
-          flex-basis: end; }
-      .bases .library .swatches-list div.green-medium {
-        background: #00874e;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.green-medium:after {
-          content: "green-medium | #00874e";
-          flex-basis: end; }
-      .bases .library .swatches-list div.green-dark {
-        background: #064a2d;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.green-dark:after {
-          content: "green-dark | #064a2d";
-          flex-basis: end; }
-      .bases .library .swatches-list div.graphite-light {
-        background: #e6e7e8;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.graphite-light:after {
-          content: "graphite-light | #e6e7e8";
-          flex-basis: end; }
-      .bases .library .swatches-list div.graphite-medium {
-        background: #666666;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.graphite-medium:after {
-          content: "graphite-medium | #666666";
-          flex-basis: end; }
-      .bases .library .swatches-list div.graphite-dark {
-        background: #383838;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.graphite-dark:after {
-          content: "graphite-dark | #383838";
-          flex-basis: end; }
-      .bases .library .swatches-list div.advantage {
-        background: #ffc90d;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.advantage:after {
-          content: "advantage | #ffc90d";
-          flex-basis: end; }
-      .bases .library .swatches-list div.accent {
-        background: #652f9d;
-        justify-content: flex-end; }
-        .bases .library .swatches-list div.accent:after {
-          content: "accent | #652f9d";
-          flex-basis: end; }
+  .bases .library .swatches-list div {
+    border: 4px solid white;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    float: left;
+    height: 188px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding: 6px;
+    width: 126px; }
+    .bases .library .swatches-list div span {
+      background: white;
+      color: black;
+      display: block;
+      margin: 100px -10px 0;
+      padding: 8px; }
+      .bases .library .swatches-list div span::before, .bases .library .swatches-list div span:after {
+        display: block; }
+    .bases .library .swatches-list div.white {
+      background: #ffffff; }
+      .bases .library .swatches-list div.white span:before {
+        content: 'Blanc'; }
+      .bases .library .swatches-list div.white span:after {
+        content: '00.10.20'; }
+    .bases .library .swatches-list div.grey {
+      background: #aaaaaa; }
+      .bases .library .swatches-list div.grey span:before {
+        content: 'Gris'; }
+      .bases .library .swatches-list div.grey span:after {
+        content: '25'; }
+    .bases .library .swatches-list div.black {
+      background: #000000; }
+      .bases .library .swatches-list div.black span:before {
+        content: 'Noir'; }
+      .bases .library .swatches-list div.black span:after {
+        content: '40.50'; }
+    .bases .library .swatches-list div.blue-light {
+      background: #e2dff2; }
+      .bases .library .swatches-list div.blue-light span:before {
+        content: 'Bleu clair'; }
+      .bases .library .swatches-list div.blue-light span:after {
+        content: '00'; }
+    .bases .library .swatches-list div.blue-medium {
+      background: #3f42db; }
+      .bases .library .swatches-list div.blue-medium span:before {
+        content: 'Bleu moyen'; }
+      .bases .library .swatches-list div.blue-medium span:after {
+        content: '30'; }
+    .bases .library .swatches-list div.blue-dark {
+      background: #161c71; }
+      .bases .library .swatches-list div.blue-dark span:before {
+        content: 'Bleu foncé'; }
+      .bases .library .swatches-list div.blue-dark span:after {
+        content: '50'; }
+    .bases .library .swatches-list div.red-light {
+      background: #ffdddd; }
+      .bases .library .swatches-list div.red-light span:before {
+        content: 'Rouge clair'; }
+      .bases .library .swatches-list div.red-light span:after {
+        content: '00'; }
+    .bases .library .swatches-list div.red-medium {
+      background: #d20023; }
+      .bases .library .swatches-list div.red-medium span:before {
+        content: 'Rouge moyen'; }
+      .bases .library .swatches-list div.red-medium span:after {
+        content: '30'; }
+    .bases .library .swatches-list div.red-dark {
+      background: #790318; }
+      .bases .library .swatches-list div.red-dark span:before {
+        content: 'Rouge foncé'; }
+      .bases .library .swatches-list div.red-dark span:after {
+        content: '50'; }
+    .bases .library .swatches-list div.orange-light {
+      background: #f6ebd8; }
+      .bases .library .swatches-list div.orange-light span:before {
+        content: 'Orange clair'; }
+      .bases .library .swatches-list div.orange-light span:after {
+        content: '00'; }
+    .bases .library .swatches-list div.orange-medium {
+      background: #ee9109; }
+      .bases .library .swatches-list div.orange-medium span:before {
+        content: 'Orange moyen'; }
+      .bases .library .swatches-list div.orange-medium span:after {
+        content: '05'; }
+    .bases .library .swatches-list div.orange-dark {
+      background: #3f2802; }
+      .bases .library .swatches-list div.orange-dark span:before {
+        content: 'Orange foncé'; }
+      .bases .library .swatches-list div.orange-dark span:after {
+        content: '45.50'; }
+    .bases .library .swatches-list div.yellow-light {
+      background: #f3f6d8; }
+      .bases .library .swatches-list div.yellow-light span:before {
+        content: 'Jaune clair'; }
+      .bases .library .swatches-list div.yellow-light span:after {
+        content: '00'; }
+    .bases .library .swatches-list div.yellow-medium {
+      background: #f4f412; }
+      .bases .library .swatches-list div.yellow-medium span:before {
+        content: 'Jaune moyen'; }
+      .bases .library .swatches-list div.yellow-medium span:after {
+        content: '00.10'; }
+    .bases .library .swatches-list div.yellow-dark {
+      background: #3f3f02; }
+      .bases .library .swatches-list div.yellow-dark span:before {
+        content: 'Jaune foncé'; }
+      .bases .library .swatches-list div.yellow-dark span:after {
+        content: '50'; }
+    .bases .library .swatches-list div.green-light {
+      background: #cce7dc; }
+      .bases .library .swatches-list div.green-light span:before {
+        content: 'Vert clair'; }
+      .bases .library .swatches-list div.green-light span:after {
+        content: '00'; }
+    .bases .library .swatches-list div.green-medium {
+      background: #00874e; }
+      .bases .library .swatches-list div.green-medium span:before {
+        content: 'Vert moyen'; }
+      .bases .library .swatches-list div.green-medium span:after {
+        content: '30'; }
+    .bases .library .swatches-list div.green-dark {
+      background: #064a2d; }
+      .bases .library .swatches-list div.green-dark span:before {
+        content: 'Vert foncé'; }
+      .bases .library .swatches-list div.green-dark span:after {
+        content: '50'; }
+    .bases .library .swatches-list div.graphite-light {
+      background: #e6e7e8; }
+      .bases .library .swatches-list div.graphite-light span:before {
+        content: 'Gris clair'; }
+      .bases .library .swatches-list div.graphite-light span:after {
+        content: '00'; }
+    .bases .library .swatches-list div.graphite-medium {
+      background: #666666; }
+      .bases .library .swatches-list div.graphite-medium span:before {
+        content: 'Gris moyen'; }
+      .bases .library .swatches-list div.graphite-medium span:after {
+        content: '40'; }
+    .bases .library .swatches-list div.graphite-dark {
+      background: #383838; }
+      .bases .library .swatches-list div.graphite-dark span:before {
+        content: 'Gris foncé'; }
+      .bases .library .swatches-list div.graphite-dark span:after {
+        content: '50'; }
+    .bases .library .swatches-list div.advantage {
+      background: #ffc90d; }
+      .bases .library .swatches-list div.advantage span:before {
+        content: 'Avantage'; }
+      .bases .library .swatches-list div.advantage span:after {
+        content: '00.10'; }
+    .bases .library .swatches-list div.accent {
+      background: #652f9d; }
+      .bases .library .swatches-list div.accent span:before {
+        content: 'Accent'; }
+      .bases .library .swatches-list div.accent span:after {
+        content: '30'; }
 
 .icons {
   float: left;
@@ -231,25 +230,23 @@ pre[class*="language-"] {
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
 /*
-  Mixin targeting the values of a specific breakpoint
-  Usage: @include bp(sm) {}
+  Mixin ciblant la valeur d'un point de rupture et plus
+  Exemple : Afficher sur un écran de taille minimum sm et plus 
+  Utilisation : @include bp-above(sm) {}
+  Résultat : @media (min-width: 768px) {
 */
 /*
-  Mixin targeting the values of the breakpoint and more
-  Usage: @include bp-above(sm) {}
+  Mixin ciblant la valeur d'un point de rupture -1px (pour éviter les conflits avec la mixin bp-above) et moins
+  Exemple : Afficher sur un écran de taille maximum sm - 1px et moins 
+  Utilisation : @include bp-below(sm) {}
+  Résultat : @media (max-width: 767px) {
 */
 /*
-  Mixin targeting the values of the breakpoint -1 and less
-  Usage: @include bp-below(sm) {}
+  Mixin ciblant les valeurs entre deux points de rupture
+  Exemple : Afficher sur un écran de taille minimum sm et maximum md
+  Utilisation : @include bp-between(sm, md) {}
+  Résultat : @media (min-width: 768px) and (max-width: 1199px) {
 */
-/*
-  Mixin targeting the values between two breakpoints
-  Usage: @include bp-between(sm, md) {}
-*/
-[hidden] {
-  display: none;
-  visibility: hidden; }
-
 .ds-main-nav {
   height: 100%;
   margin-right: 24px;

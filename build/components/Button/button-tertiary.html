@@ -5,75 +5,76 @@
   <meta charset="UTF-8"></meta>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
 
-  <title>Desjardins Design System | Boutons</title>
+  <title>Desjardins Design System | Bouton tertiaire</title>
 
   <link href="../../css/styles.css" rel="stylesheet" />
   <link href="../../css/dssite/styles.css" rel="stylesheet" />
 
   <link href="button.css" rel="stylesheet" />
+  <style rel="stylesheet">
+      button {
+        margin-bottom: 16px;
+      }
+    </style>
 </head>
 
 <body style="background: white; margin: 30px 20px;">
 
-    <h1>Bouton tertiaire - 02.01.03</h1>
-    
-    <h2>Neutre</h2>
-    <button class="ds-button tertiary" title="Libellé" tabindex="0">Libellé</button>
-    <br /><br />
+  <h1>Bouton tertiaire - 02.01.03</h1>
+  
+  <h2>Neutre</h2>
+  <button class="ds-button tertiary" type="button">Libellé</button>
 
-    <h2>Avec icône droite</h2>
-    <button class="ds-button tertiary icon trailing" title="Libellé" tabindex="0">
-        Libellé <svg class="icon" focusable="false" viewbox="0 0 32 32">
-            <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
-        </svg>
-    </button>
-    <br /><br />
+  <h2>Avec icône droite</h2>
+  <button class="ds-button tertiary icon trailing" type="button">
+      Libellé
+      <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
+      </svg>
+  </button>
 
-    <h2>Avec icône gauche</h2>
-    <button class="ds-button tertiary icon leading" title="Libellé" tabindex="0">
-        <svg class="icon" focusable="false" viewbox="0 0 32 32">
-            <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
-        </svg> Libellé
-    </button>
-    <br /><br />
+  <h2>Avec icône gauche</h2>
+  <button class="ds-button tertiary icon leading" type="button">
+    <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
+      <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
+    </svg>
+    Libellé
+  </button>
 
-    <h2>Icône seule</h2>
-    <button class="ds-button tertiary icon-only" title="Libellé" tabindex="0">
-        <svg class="icon" focusable="false" aria-labelledby="icon-left-arrow" viewbox="0 0 32 32">
-            <title class="sr-only" id="icon-left-arrow">Libellé</title>
-            <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
-        </svg>
-    </button>
-    <br /><br />
+  <h2>Icône seule</h2>
+  <button class="ds-button tertiary icon-only" type="button">
+    <span class="sr-only">Libellé</span>
+    <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
+      <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+    </svg>
+  </button>
 
-    <h2>Désactivé</h2>
-    <button class="ds-button tertiary" title="Libellé" tabindex="-1" disabled>
-        Libellé
-    </button>
-    <br /><br />
+  <h2>Désactivé</h2>
+  <button class="ds-button tertiary" type="button" tabindex="-1" disabled>
+    Libellé
+  </button>
 
-    <h2>Désactivé icône droite</h2>
-    <button class="ds-button tertiary icon trailing" title="Libellé" tabindex="-1" disabled>
-        Libellé <svg class="icon" focusable="false" viewbox="0 0 32 32">
-            <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
-        </svg>
-    </button>
-    <br /><br />
+  <h2>Désactivé icône droite</h2>
+  <button class="ds-button tertiary icon trailing" type="button" tabindex="-1" disabled>
+      Libellé
+      <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
+      </svg>
+  </button>
 
-    <h2>Désactivé icône gauche</h2>
-    <button class="ds-button tertiary icon leading" title="Libellé" tabindex="-1" disabled>
-        <svg class="icon" focusable="false" viewbox="0 0 32 32">
-            <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
-        </svg> Libellé
-    </button>
-    <br /><br />
+  <h2>Désactivé icône gauche</h2>
+  <button class="ds-button tertiary icon leading" type="button" tabindex="-1" disabled>
+    <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
+      <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
+    </svg> Libellé
+  </button>
 
-    <h2>Désactivé icône seule</h2>
-    <button class="ds-button tertiary icon-only" title="Libellé" tabindex="-1" disabled>
-        <svg class="icon" focusable="false" aria-labelledby="icon-left-arrow" viewbox="0 0 32 32">
-            <title class="sr-only" id="icon-left-arrow">Libellé</title>
-            <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
-        </svg>
-    </button>
+  <h2>Désactivé icône seule</h2>
+  <button class="ds-button tertiary icon-only" type="button" tabindex="-1" disabled>
+    <span class="sr-only">Libellé</span>
+    <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
+      <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+    </svg>
+  </button>
 </body>
 </html>

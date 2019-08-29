@@ -1,0 +1,44 @@
+/* 
+$ds-spaces-even-base
+$ds-spaces-odd-base 
+
+TO DO mixins pour taille d'espaces (multiple de 2, 3, 4, 6)
+$ds-spaces-even-base = 4px
+$ds-spaces-odd-base  = 3px
+.ml-evenx2 = margin-left: 4px*2 = 8px
+
+*/
+
+// Margins
+.m-0 {
+  margin: 0;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.ml-0 {
+  margin-left: 0;
+}
+.mr-0 {
+  margin-right: 0;
+}
+.mt-0 {
+  margin-top: 0;
+}
+
+// Paddings
+.p-0 {
+  padding: 0;
+}
+.pb-0 {
+  padding-bottom: 0;
+}
+.pl-0 {
+  padding-left: 0;
+}
+.pr-0 {
+  padding-right: 0;
+}
+.pt-0 {
+  padding-top: 0;
+}

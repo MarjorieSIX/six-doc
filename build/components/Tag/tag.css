@@ -2,17 +2,23 @@
  * Do not edit directly
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT
  */
-.ds-flag {
-  background: #652f9d;
+.ds-tag {
+  background: #383838;
   border-radius: 4px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
   color: #ffffff;
-  display: flex;
-  float: left;
+  display: inline-flex;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: .5px;
-  margin-bottom: 13px;
-  margin-left: 18px;
+  margin-bottom: 12px;
+  margin-right: 18px;
   padding: 5px 12px;
   text-transform: uppercase; }
+  .ds-tag.bg-accent {
+    background: #652f9d; }
+  .ds-tag.bg-special {
+    background: #161c71; }
+  .ds-tag.bg-advantages {
+    background: #ffc90d;
+    color: #383838; }

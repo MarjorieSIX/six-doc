@@ -1,0 +1,22 @@
+// Alignements
+.text-left      { text-align: left; }
+.text-right     { text-align: right; }
+.text-center    { text-align: center; }
+.text-justify   { text-align: justify; }
+.text-wrap      { white-space: normal; }
+.text-nowrap    { white-space: nowrap; }
+
+// Transformations
+.text-lowercase  { text-transform: lowercase; }
+.text-uppercase  { text-transform: uppercase; }
+.text-capitalize { text-transform: capitalize; }
+
+// Empatements and italique
+.font-weight-light    { font-weight: $ds-font-weight-light; }
+.font-weight-normal   { font-weight: $ds-font-weight-regular; }
+.font-weight-semibold { font-weight: $ds-font-weight-semibold; }
+.font-weight-bold     { font-weight: $ds-font-weight-bold; }
+.font-italic          { font-style: italic; }
+
+// Autre
+.text-decoration-none { text-decoration: none; }

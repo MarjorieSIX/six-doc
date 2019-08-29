@@ -14,316 +14,316 @@ $base-font-size: 16px;
 }
 
 .ds-button {
-    align-content: center;
-    border-radius: $ds-sizes-border-sm;
-    display: flex;
-    font-weight: $ds-font-weight-bold;
-    justify-content: center;
-    height: 54px; // Each button has a total of 54px height
-    line-height: 1.5;
-    padding: 0 $ds-spaces-even-x-6; 
-    text-align: center;
-    @include font-size(16px);
+  align-items: center;
+  border-radius: $ds-sizes-border-sm;
+  display: flex;
+  font-weight: $ds-font-weight-bold;
+  justify-content: center;
+  min-height: 54px; // Each button has a total of 54px height
+  line-height: 1.5;
+  padding: 0 $ds-spaces-even-x-6; 
+  text-align: center;
+  @include font-size(16px);
 
-    // SVG Icon
+  // SVG Icon
+  svg.icon {
+    height: $ds-sizes-icon-lg;
+    position: relative;
+    width: $ds-sizes-icon-lg;
+  }
+
+  &.leading {
+    padding: 0 $ds-spaces-even-x-6 0 $ds-spaces-even-x-4;
     svg.icon {
-        height: $ds-sizes-icon-lg;
-        position: relative;
-        width: $ds-sizes-icon-lg;
+      margin-right: $ds-spaces-even-x-3;
+      top: 0;
     }
+  }
 
-    &.leading {
-        padding: 6px $ds-spaces-even-x-6 0 $ds-spaces-even-x-4;
-        svg.icon {
-            margin-right: $ds-spaces-even-x-3;
-            top: -3px;
-        }
+  &.trailing {
+    padding: 0 $ds-spaces-even-x-4 0 $ds-spaces-even-x-6;
+    svg.icon {
+      margin-left: $ds-spaces-even-x-3;
+      top: 0;
     }
+  }
 
-    &.trailing {
-        padding: 6px $ds-spaces-even-x-4 0 $ds-spaces-even-x-6;
-        svg.icon {
-            margin-left: $ds-spaces-even-x-3;
-            top: -3px;
-        }
+  &:focus,
+  &:hover {
+    cursor: pointer;
+    outline: none;
+  }
+
+  &.icon-only {
+    display: flex;
+    justify-content: center;
+    line-height: 1;
+    padding: 0;
+    width: 54px;
+  }
+
+  &.primary {
+    background: $color-primary;
+    border: 0;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
+    color: $color-white;
+
+    svg.icon {
+      fill: $color-white;
     }
 
     &:focus,
     &:hover {
-        cursor: pointer;
-        outline: none;
+      box-shadow: $ds-shadow-06;
     }
 
-    &.icon-only {
-        display: flex;
-        justify-content: center;
-        line-height: 1;
-        padding: 0;
-        width: 54px;
-    }
-
-    &.primary {
-        background: $color-primary;
-        border: 0;
-        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
-        color: $color-white;
-
-        svg.icon {
-            fill: $color-white;
-        }
-
-        &:focus,
-        &:hover {
-            box-shadow: $ds-shadow-06;
-        }
-
-        &:active {
-            background: $color-green-dark;
-        }
-
-        &:disabled {
-            background: $color-graphite-light;
-        }
-    }
-
-    &.primary.invert {
-        background: $color-white;
-        box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
-        color: $color-primary;
-
-        svg.icon {
-            fill: $color-primary;
-        }
-
-        &:focus,
-        &:hover {
-            box-shadow: $ds-shadow-06;
-        }
-
-        &:active {
-            background: $color-graphite-light;
-            color: $color-green-dark;
-            svg.icon {
-                fill: $color-green-dark;
-            }
-        }
-
-        &:disabled {
-            background: $color-graphite-light;
-        }
-    }
-
-    &.secondary {
-        background: $color-white;
-        border: $ds-sizes-border-xs/2 solid $color-primary;
-        box-shadow: $ds-shadow-none;
-        color: $color-graphite-dark;
-        svg.icon {
-            fill: $color-graphite-dark;
-        }
-
-        &:focus,
-        &:hover {
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .8), 0 3px 9px 0 rgba(0, 0, 0, .5);
-        }
-
-        &:active {
-            background: $color-primary;
-            color: $color-white;
-            svg.icon {
-                fill: $color-white;
-            }
-        }
-
-        &:disabled {
-            background: $color-graphite-light;
-        }
-    }
-
-    &.tertiary {
-        background: $color-white;
-        border: $ds-sizes-border-xs/2 solid rgba($color-graphite-medium, .9);
-        box-shadow: $ds-shadow-none;
-        color: $color-graphite-dark;
-
-        svg.icon {
-            fill: $color-graphite-dark;
-        }
-
-        &:focus,
-        &:hover {
-            box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .8), 0 3px 9px 0 rgba(0, 0, 0, .5);
-        }
-
-        &:active {
-            background: $color-primary;
-            color: $color-white;
-            svg.icon {
-                fill: $color-white;
-            }
-        }
-
-        &:disabled {
-            background: $color-graphite-light;
-        }
-    }
-
-    &.info {
-        background: $color-blue-medium;
-        border: 0;
-        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
-        color: $color-white;
-
-        svg.icon {
-            fill: $color-white;
-        }
-
-        &:focus,
-        &:hover {
-            box-shadow: $ds-shadow-06;
-        }
-
-        &:active {
-            background: $color-blue-dark;
-        }
-
-        &:disabled {
-            background: $color-graphite-light;
-        }
-    }
-
-    &.warning {
-        background: $color-yellow-medium;
-        border: 0;
-        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
-        color: $color-graphite-dark;
-
-        svg.icon {
-            fill: $color-graphite-dark;
-        }
-
-        &:focus,
-        &:hover {
-            box-shadow: $ds-shadow-06;
-        }
-
-        &:active {
-            background: $color-yellow-dark;
-            color: $color-white;
-            svg.icon {
-                fill: $color-white;
-            }
-        }
-
-        &:disabled {
-            background: $color-graphite-light;
-        }
-    }
-
-    &.error {
-        background: $color-red-medium;
-        border: 0;
-        box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
-        color: $color-white;
-
-        svg.icon {
-            fill: $color-white;
-        }
-
-        &:focus,
-        &:hover {
-            box-shadow: $ds-shadow-06;
-        }
-
-        &:active {
-            background: $color-red-dark;
-        }
-
-        &:disabled {
-            background: $color-graphite-light;
-        }
-    }
-
-    &.link {
-        background: transparent;
-        border: 0;
-        box-shadow: $ds-shadow-none;
-        color: $color-graphite-dark;
-        text-decoration: underline;
-
-        svg.icon {
-            fill: $color-graphite-dark;
-        }
-
-        &:focus,
-        &:hover {
-            color: $color-primary;
-            svg.icon {
-                fill: $color-primary;
-            }
-        }
-
-        &:active {
-            background: none;
-            color: $color-graphite-dark;
-            svg.icon {
-                fill: $color-graphite-dark;
-            }
-        }
-
-        &:disabled {
-            background: none;
-            color: rgba($color-graphite-medium, .36);
-            text-decoration: none;
-            svg.icon {
-                fill: rgba($color-graphite-medium, .36);
-            }
-        }
-    }
-
-    &.link-invert {
-        background: transparent;
-        border: 0;
-        box-shadow: $ds-shadow-none;
-        color: $color-white;
-        text-decoration: underline;
-
-        svg.icon {
-            fill: $color-white;
-        }
-
-        &:focus,
-        &:hover {
-            color: $color-graphite-light;
-            svg.icon {
-                fill: $color-graphite-light;
-            }
-        }
-
-        &:active {
-            background: none;
-        }
-
-        &:disabled {
-            background: none;
-            color: rgba($color-graphite-medium, .36);
-            text-decoration: none;
-            svg.icon {
-                fill: rgba($color-graphite-medium, .36);
-            }
-        }
+    &:active {
+      background: $color-green-dark;
     }
 
     &:disabled {
-        border: none;
-        box-shadow: $ds-shadow-none !important;
-        color: rgba($color-graphite-medium, .36);
-        cursor: none;
-        svg.icon {
-            fill: rgba($color-graphite-medium, .36);
-        }
-        &:hover {
-            box-shadow: $ds-shadow-none;
-        }
+      background: $color-graphite-light;
     }
+  }
+
+  &.primary.invert {
+    background: $color-white;
+    box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.25), inset 0 -1px 0 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
+    color: $color-primary;
+
+    svg.icon {
+      fill: $color-primary;
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: $ds-shadow-06;
+    }
+
+    &:active {
+      background: $color-graphite-light;
+      color: $color-green-dark;
+      svg.icon {
+        fill: $color-green-dark;
+      }
+    }
+
+    &:disabled {
+      background: $color-graphite-light;
+    }
+  }
+
+  &.secondary {
+    background: $color-white;
+    border: $ds-sizes-border-xs/2 solid $color-primary;
+    box-shadow: $ds-shadow-none;
+    color: $color-graphite-dark;
+    svg.icon {
+      fill: $color-graphite-dark;
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .8), 0 3px 9px 0 rgba(0, 0, 0, .5);
+    }
+
+    &:active {
+      background: $color-primary;
+      color: $color-white;
+      svg.icon {
+        fill: $color-white;
+      }
+    }
+
+    &:disabled {
+      background: $color-graphite-light;
+    }
+  }
+
+  &.tertiary {
+    background: $color-white;
+    border: $ds-sizes-border-xs/2 solid rgba($color-graphite-medium, .9);
+    box-shadow: $ds-shadow-none;
+    color: $color-graphite-dark;
+
+    svg.icon {
+      fill: $color-graphite-dark;
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: 0 1px 1px 0 rgba(0, 0, 0, .8), 0 3px 9px 0 rgba(0, 0, 0, .5);
+    }
+
+    &:active {
+      background: $color-primary;
+      color: $color-white;
+      svg.icon {
+        fill: $color-white;
+      }
+    }
+
+    &:disabled {
+      background: $color-graphite-light;
+    }
+  }
+
+  &.info {
+    background: $color-blue-medium;
+    border: 0;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
+    color: $color-white;
+
+    svg.icon {
+      fill: $color-white;
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: $ds-shadow-06;
+    }
+
+    &:active {
+      background: $color-blue-dark;
+    }
+
+    &:disabled {
+      background: $color-graphite-light;
+    }
+  }
+
+  &.warning {
+    background: $color-yellow-medium;
+    border: 0;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
+    color: $color-graphite-dark;
+
+    svg.icon {
+      fill: $color-graphite-dark;
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: $ds-shadow-06;
+    }
+
+    &:active {
+      background: $color-yellow-dark;
+      color: $color-white;
+      svg.icon {
+        fill: $color-white;
+      }
+    }
+
+    &:disabled {
+      background: $color-graphite-light;
+    }
+  }
+
+  &.error {
+    background: $color-red-medium;
+    border: 0;
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.25), inset 0px -1px 0px 1px rgba(0, 0, 0, 0.25); // creer un box shadow pour l'effet emboss
+    color: $color-white;
+
+    svg.icon {
+      fill: $color-white;
+    }
+
+    &:focus,
+    &:hover {
+      box-shadow: $ds-shadow-06;
+    }
+
+    &:active {
+      background: $color-red-dark;
+    }
+
+    &:disabled {
+      background: $color-graphite-light;
+    }
+  }
+
+  &.link {
+    background: transparent;
+    border: 0;
+    box-shadow: $ds-shadow-none;
+    color: $color-graphite-dark;
+    text-decoration: underline;
+
+    svg.icon {
+      fill: $color-graphite-dark;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-primary;
+      svg.icon {
+        fill: $color-primary;
+      }
+    }
+
+    &:active {
+      background: none;
+      color: $color-graphite-dark;
+      svg.icon {
+        fill: $color-graphite-dark;
+      }
+    }
+
+    &:disabled {
+      background: none;
+      color: rgba($color-graphite-medium, .36);
+      text-decoration: none;
+      svg.icon {
+        fill: rgba($color-graphite-medium, .36);
+      }
+    }
+  }
+
+  &.link-invert {
+    background: transparent;
+    border: 0;
+    box-shadow: $ds-shadow-none;
+    color: $color-white;
+    text-decoration: underline;
+
+    svg.icon {
+      fill: $color-white;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-graphite-light;
+      svg.icon {
+        fill: $color-graphite-light;
+      }
+    }
+
+    &:active {
+      background: none;
+    }
+
+    &:disabled {
+      background: none;
+      color: rgba($color-graphite-medium, .36);
+      text-decoration: none;
+      svg.icon {
+        fill: rgba($color-graphite-medium, .36);
+      }
+    }
+  }
+
+  &:disabled {
+    border: none;
+    box-shadow: $ds-shadow-none !important;
+    color: rgba($color-graphite-medium, .36);
+    cursor: none;
+    svg.icon {
+      fill: rgba($color-graphite-medium, .36);
+    }
+    &:hover {
+      box-shadow: $ds-shadow-none;
+    }
+  }
 }

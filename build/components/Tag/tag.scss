@@ -1,0 +1,29 @@
+@import "../../../node_modules/six-design-tokens/build/scss/token-variables";
+
+.ds-tag {
+  background: $color-graphite-dark;
+  border-radius: $ds-sizes-border-xs;
+  box-shadow: $ds-shadow-04;
+  color: $color-white;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: $ds-font-weight-bold;
+  letter-spacing: .5px;
+  margin-bottom: $ds-spaces-odd-base * 4;
+  margin-right: $ds-spaces-odd-base * 6;
+  padding: 5px 12px;
+  text-transform: uppercase;
+
+  &.bg-accent {
+    background: $color-accent;
+  }
+
+  &.bg-special {
+    background: $color-blue-dark;
+  }
+
+  &.bg-advantages {
+    background: $color-advantage;
+    color: $color-graphite-dark;
+  }
+}

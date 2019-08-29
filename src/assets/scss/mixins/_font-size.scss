@@ -1,0 +1,18 @@
+/*
+  Mixin permettant de transformer une font-size de px à rem
+  Exemple: Afficher un texte de 16px (ou 1rem) 
+  Utilisation: @include fontSize(16px);
+  Résultat: font-size: 1rem;
+*/
+
+$base-font-size: 16px;
+
+@function calculateRem($sizeValue) {
+  $remSize: $sizeValue / $base-font-size;
+  @return $remSize * 1rem;
+}
+
+@mixin fontSize($sizeValue) {
+  font-size: $sizeValue;
+  font-size: calculateRem($sizeValue);
+}

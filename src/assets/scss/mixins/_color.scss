@@ -1,5 +1,32 @@
+/*
+@mixin colours(
+  $selector: false,
+	$chain: '&--',
+	$background: 'base',
+	$border: true
+) {
+	@each $name, $values in $colours {
+		#{$chain}#{$name} {
+			@if $selector {
+				#{$selector} {
+					@if $background {
+						background-color: map-get($values, $background);
+						@if $border {
+							border-color: darken(map-get($values, $background), 20%);
+						}
+					}
+				}
+			} @else {
+				@if $background {
+					background-color: map-get($values, $background);
+				}
+			}
+		}
+	}
+}
+*/
 
-/* color variable map
+/*color variable map
 $ds-colo: (
   blue: (
     medium: #33D1FF,

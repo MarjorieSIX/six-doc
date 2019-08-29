@@ -1,17 +1,31 @@
 @import 'normalize';
-@import 'reset';
+// @import 'reset';
 
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
-@import 'utils';
 @import 'accessibility';
-@import 'breakpoints';
+@import 'fonts';
 @import 'headings';
 @import 'grid';
-@import 'fonts';
-@import 'mixins';
-@import 'utilities';
 
+// MIXINS
+@import 'mixins/breakpoints';
+//@import 'mixins/color';
+@import 'mixins/font-size';
+
+// UTILITIES
+@import 'utilities/borders';
+@import 'utilities/spacings';
+@import 'utilities/text';
+
+
+// COMPONENTS
 @import 'footer';
+
+*,
+::after, 
+::before {
+  box-sizing: border-box;
+}
 
 body {
   font-family: $ds-font-main-name, Arial, Helvetica, sans-serif;
@@ -30,6 +44,7 @@ h5,
 h6,
 p,
 li {
+  clear: both;
   font-family: $ds-font-main-name, Arial, Helvetica, sans-serif;
 }
 
