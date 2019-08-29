@@ -1,6 +1,6 @@
 @import "../../../node_modules/six-design-tokens/build/scss/token-variables";
 
-.ds-flag {
+.ds-tag {
   background: $color-graphite-dark;
   border-radius: $ds-sizes-border-xs;
   box-shadow: $ds-shadow-04;
@@ -9,8 +9,8 @@
   font-size: 14px;
   font-weight: $ds-font-weight-bold;
   letter-spacing: .5px;
-  margin-bottom: 13px;
-  margin-right: 18px;
+  margin-bottom: $ds-spaces-odd-base * 4;
+  margin-right: $ds-spaces-odd-base * 6;
   padding: 5px 12px;
   text-transform: uppercase;
 
