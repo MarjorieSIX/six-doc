@@ -191,3 +191,6 @@
       fill: rgba(102, 102, 102, 0.36); }
     .ds-button:disabled:hover {
       box-shadow: none; }
+
+_:-ms-fullscreen, :root .ds-button {
+  height: 54px; }

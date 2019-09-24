@@ -53,7 +53,7 @@ const paths = {
     },
   },
   scripts: {
-    src: './src/assets/js/*.js',
+    src: './src/assets/js/**/*.js',
     dest: './build/js'
   },
   templates: {

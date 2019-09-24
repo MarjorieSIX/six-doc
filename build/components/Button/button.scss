@@ -327,3 +327,5 @@ $base-font-size: 16px;
     }
   }
 }
+// IE 11 
+_:-ms-fullscreen, :root .ds-button { height: 54px; }

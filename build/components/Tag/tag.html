@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 
 <head>
@@ -13,19 +13,30 @@
   
   <link href="tag.css" rel="stylesheet" />
   <style>
+    header {
+      background: #ccc;
+      border-radius: 5px;
+      display: flex;
+      padding: 15px;
+    }
+    header span {
+
+    }
     .ds-tag {
       margin-left: 8px;
     }
   </style>
 </head>
 
-<body style="background: white; margin: 30px 20px;">
-  <h1>Étiquette</h1>
-  <h2 class="heading4">
-    EN: Tag<br />
-    Ref: 02.02.08
-  </h2>
-  <p>
+<body style="background: white; padding: 30px 20px;">
+  <header>
+    <h1 class="heading3">Étiquette</h1>
+    <p>
+      <span>Nom anglais:</span> Tag<br />
+      <span>Référence:</span> 02.02.08
+    </p>
+</header>
+<p>
     Étiquette par défaut
     <span class="ds-tag">
       Nouveau

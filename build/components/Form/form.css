@@ -196,6 +196,9 @@
     .ds-button:disabled:hover {
       box-shadow: none; }
 
+_:-ms-fullscreen, :root .ds-button {
+  height: 54px; }
+
 /**
  * Do not edit directly
  * Generated on Mon, 08 Jul 2019 18:56:06 GMT

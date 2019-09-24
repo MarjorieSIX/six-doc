@@ -1,11 +1,16 @@
-<!DOCTYPE html>
+net group SR-APP-SIPL-DesjardinsComVPSM-developpeur /domain
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <title>Desjardins Design System | Bouton primaire</title>
+
+  <!-- Minified JS -->
+  <script src="/js/main.min.js"></script>
+  <script>svg4everybody(); // run it now or whenever you are ready</script>
 
   <link href="../../css/styles.css" rel="stylesheet" />
   <link href="../../css/dssite/styles.css" rel="stylesheet" />
@@ -18,7 +23,7 @@
   </style>
 </head>
 
-<body style="background: white; margin: 30px 20px;">
+<body style="background: white; padding: 30px 20px;">
 
   <h1>Bouton primaire - 02.01.01</h1>
   
@@ -31,14 +36,14 @@
     <button class="ds-button primary icon trailing" type="button">
       Libellé
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
     </button>
 
     <h3>Avec icône gauche</h3>
     <button class="ds-button primary icon leading" type="button">
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
       Libellé
     </button>
@@ -47,7 +52,7 @@
     <button class="ds-button primary icon-only" type="button">
       <span class="sr-only">Libellé</span>
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
     </button>
 
@@ -56,18 +61,18 @@
       Libellé
     </button>
     
-    <h3>Désactivé icône droite</h2>
+    <h3>Désactivé icône droite</h3>
     <button class="ds-button primary icon trailing" type="button" tabindex="-1" disabled>
       Libellé
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
     </button>
 
     <h3>Désactivé avec icône gauche</h3>
     <button class="ds-button primary icon leading" type="button" tabindex="-1" disabled>
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
       Libellé
     </button>
@@ -76,7 +81,7 @@
     <button class="ds-button primary icon-only" type="button" tabindex="-1" disabled>
       <span class="sr-only">Libellé</span>
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
     </button>
   </div>
@@ -89,14 +94,14 @@
     <h3 style="color: white;">Avec icône à droite</h3>
     <button class="ds-button primary invert icon trailing" type="button">
       Libellé <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
     </button>
 
     <h3 style="color: white;">Avec icône à gauche</h3>
     <button class="ds-button primary invert icon leading" type="button">
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg> Libellé
     </button>
 
@@ -104,7 +109,7 @@
     <button class="ds-button primary invert icon-only" type="button">
       <span class="sr-only">Libellé</span>
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
     </button>
 
@@ -113,28 +118,29 @@
       Libellé
     </button>
 
-    <h3 style="color: white;">Désactivé avec icône à droite</h2>
+    <h3 style="color: white;">Désactivé avec icône à droite</h3>
     <button class="ds-button primary invert icon trailing" type="button" tabindex="-1" disabled>
       Libellé <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
     </button>
 
     <h3 style="color: white;">Désactivé avec icône à gauche</h3>
     <button class="ds-button primary invert icon leading" type="button" tabindex="-1" disabled>
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg> Libellé
     </button>
 
-    <h3 style="color: white;">Désactivé icône seule</h3>
+    <h3 style="color: white;">AA Désactivé icône seule</h3>
     <button class="ds-button primary invert icon-only" type="button" tabindex="-1" disabled>
       <span class="sr-only">Libellé</span>
       <svg class="icon" focusable="false" viewbox="0 0 32 32" aria-hidden="true">
-        <use href="/assets/images/icons.svg#fill-alertes-aide"></use>
+        <use xlink:href="/assets/images/icons.svg#fill-alertes-aide"></use>
       </svg>
     </button>
 
   </div>
+
 </body>
 </html>
