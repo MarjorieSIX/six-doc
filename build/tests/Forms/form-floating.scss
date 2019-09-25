@@ -1,0 +1,35 @@
+@import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+@import '../../components/Button/button.scss';
+@import '../../components/Input/input.scss';
+
+// Variable to become tokens?
+$page-animDuration: .1s;
+
+// Messages
+.msg {
+  color: $color-graphite-medium; 
+  display: block;
+  font-size: 12px;
+  line-height: 15px;
+  margin: 2px 0 0 18px;
+}
+
+.buttongroup {
+  margin: 0 auto;
+
+  button {
+    display: inline-block;
+  }
+}
+
+button[type="reset"] {
+	transition: $page-animDuration;
+	will-change: transform;
+}
+
+
+
+
+// -----------------------------------
+// Styles for demo only, not required.
+// -----------------------------------

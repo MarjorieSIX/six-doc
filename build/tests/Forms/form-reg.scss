@@ -1,69 +1,68 @@
 @import '../../../node_modules/six-design-tokens/build/scss/token-variables';
+@import '../../components/Button/button.scss';
 
 // Variable to become tokens?
 $page-animDuration: .1s;
 
-.floating-labels {
-  label {
-    color: $color-graphite-medium;
-    display: block;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 0 18px; // 16px + 2px border from input
-    position: absolute;
-    top: 16px;	
-    transition: $page-animDuration;	
-    will-change: top, font-size;
-    z-index: 10;
+label {
+  color: $color-graphite-medium;
+  display: block;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 0 18px; // 16px + 2px border from input
+  /*position: absolute;
+  top: 16px;*/
+  transition: $page-animDuration;	
+  will-change: top, font-size;
+  z-index: 10;
+  
+  &:hover { 
+    cursor: text;
+  }
+}
+
+input {
+  background: transparent;
+  border: 2px solid $color-graphite-medium;
+  border-radius: 4px;
+  color: $color-graphite-dark;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 2rem 0 0;
+  padding: 15px 16px 15px;
+  transition: $page-animDuration;
+  will-change: border-color;
+  width: 100%;
+  
+  &:hover {
+    border-color: $color-graphite-dark;
+  }
+
+  &:focus {
+    border-color: rgba($color-blue-medium, .8);
+    outline: none;
     
-    &:hover { 
-      cursor: text;
+    &:valid { 
+      border-color: $color-primary;
+    }
+  }
+  
+  &:active {
+    border-color: $color-primary;
+    &:focus {
+      border-color: rgba($color-blue-medium, .8);
     }
   }
 
-  input {
-    background: transparent;
-    border: 2px solid $color-graphite-medium;
-    border-radius: 4px;
-    color: $color-graphite-dark;
-    font-size: 16px;
-    line-height: 20px;
-    margin: 2rem 0 0;
-    padding: 23px 16px 9px;
-    transition: $page-animDuration;
-    will-change: border-color;
-    width: 100%;
+  &:disabled,
+  &:read-only {
+    background: $color-graphite-light;
+    border-color: $color-graphite-light;
+    cursor: none;
+  }
     
-    &:hover {
-      border-color: $color-graphite-dark;
-    }
-
-    &:focus {
-      border-color: rgba($color-blue-medium, .8);
-      outline: none;
-      
-      &:valid { 
-        border-color: $color-primary;
-      }
-    }
-    
-    &:active {
-      border-color: $color-primary;
-      &:focus {
-        border-color: rgba($color-blue-medium, .8);
-      }
-    }
-
-    &:disabled,
-    &:read-only {
-      background: $color-graphite-light;
-      border-color: $color-graphite-light;
-      cursor: none;
-    }
-      
-    &:first-of-type { 
-      margin-top: 0;
-    }
+  &:first-of-type { 
+    margin-top: 0;
   }
 }
 
@@ -74,7 +73,7 @@ $page-animDuration: .1s;
     fill: $color-graphite-medium;
     height: 24px;
     position: absolute;
-    top: 23%;
+    top: 40%;
     width: 24px;
   }
 
@@ -147,4 +146,8 @@ $page-animDuration: .1s;
   height: 20px;
   line-height: 15px;
   margin: 2px 0 0 18px;
+}
+
+.ds-button {
+  display: inline-block;
 }

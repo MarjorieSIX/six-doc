@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Tests alphas | Libellés de formulaire - Scénario 1</title>
+
+  <link href="../../css/styles.css" rel="stylesheet" />
+  <link href="../../css/dssite/styles.css" rel="stylesheet" />
+
+  <link href="checkbox.css" rel="stylesheet" />
+  <link href="general.css" rel="stylesheet" />
+  <link href="form-reg.css" rel="stylesheet" />
+  <style>
+    form {
+      float: left;
+      width: 49%;
+    }
+
+    .side-content {
+      background: rgb(221, 221, 221);
+      border-radius: 8px;
+      border: 1px solid rgb(221, 221, 221);
+      float: right;
+      text-align: center;
+      width: 49%;
+    }
+
+    .fieldgroup,
+    .remember-me {
+      margin: 0 0 20px;
+    }
+
+    .remember-me .msg {
+      margin-left: 25px;
+    }
+
+    .user label,
+    .user .msg,
+    .pwd label,
+    .pwd .msg {
+      margin: 0;
+      padding: 0 0 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <img src="../../assets/images/logos/logo-desjardins-green.svg" alt="Desjardins" />
+    </header>
+
+    <section>
+      <h1 class="heading4">Se connecter</h1>
+
+      <div class="container">
+  
+        <form action="">
+          <div class="step1">
+            <div class="fieldgroup user assistance required">
+              <label for="username">* Identifiant</label>		
+              <input value="monIdentifiant" type="text" id="username" name="username" required>
+              <span class="msg">N° de carte ou code d'utilisateur</span>
+            </div>
+
+            <div class="assistance remember-me">
+              <input type="checkbox" id="remember" name="remember">
+              <label for="remember">Mémoriser</label>		
+              <span class="msg">Non recommandé sur un ordinateur public</span>
+            </div>
+          </div>
+
+          <div class="step2">
+            <div class="fieldgroup required pwd icon-trailing">
+              <label for="password">* Mot de passe</label>
+              <input value="monMotDePasse" type="password" id="password" name="password" required>
+                <svg title="Mot de passe" class="icon" viewbox="0 0 32 32">
+                  <use xlink:href="/assets/images/icons.svg#fill-contenu-visible"></use>
+                </svg>
+              </input>
+              <span class="msg">Respecter majuscules et minuscules</span>
+            </div>
+          </div>
+
+          <div class="buttongroup">
+            <button type="submit" class="ds-button primary" id="connect">Connexion</button>
+            <button type="reset" class="ds-button secondary step2">Annuler</button>
+          </div>
+
+          <p>
+            <a href="#">J'ai oublié mon identifiant</a>
+          </p>
+        </form>
+        
+        <div class="side-content">
+          <img src="../placeholders/image-placeholder.jpg" alt="" width="200" />
+        </div>
+      </div>
+      <div class="cb"></div>
+
+    </section>
+
+    <footer>
+      <p>@Copyright 2019, Nom entreprise. Tous droits réservés.</p>
+    </footer>
+  </div>
+
+
+  <!-- <script src="../../components/Input/input.js"></script> -->
+  <script>
+    const container = document.querySelector('.container');
+    const step1 = document.querySelector('.step1');
+    const step2 = document.querySelectorAll('.step2');
+    const inputUsername = document.getElementById('username');
+    const inputPwd = document.getElementById('password');
+    const btnConnect = document.getElementById('connect');
+
+    // Starting states
+    btnConnect.setAttribute('disabled', null);
+    const step1DivArray = Object.keys(step2);
+    step1DivArray.forEach(key => {
+      step2[key].style.display = 'none';
+    });
+
+    if (inputUsername.getAttribute.value != '' ) {
+      btnConnect.removeAttribute('disabled');
+    } else {
+      btnConnect.setAttribute('disabled', null);
+    }
+
+    if (inputPwd.getAttribute.value != '' ) {
+      btnConnect.removeAttribute('disabled');
+    } else {
+      btnConnect.setAttribute('disabled', null);
+    }
+    
+    // STEP 1 : Enter a username to enable the button
+    inputUsername.addEventListener('keyup', e => {
+      var nameInput = inputUsername.value;
+      if (nameInput != "") {
+        btnConnect.removeAttribute('disabled');
+      } else {
+        btnConnect.setAttribute('disabled', null);
+      }
+    });
+
+    // STEP 2 : Click on the button to hide the div step1 and display the div step 2
+    btnConnect.addEventListener('click', e => {
+      e.preventDefault();
+      step1.style.display = 'none';
+      step1DivArray.forEach(key => {
+        step2[key].style.display = 'inline-block';
+      });
+
+      if (step1.style.display == 'none') {
+        btnConnect.addEventListener('click', e => {
+          container.innerHTML = `
+            Connexion réussie
+          `;
+        });
+      }
+    });
+  </script>
+</body>
+</html>

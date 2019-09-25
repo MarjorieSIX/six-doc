@@ -43,6 +43,10 @@ const paths = {
     dest: './build/assets/images/'
   },
   styles: {
+    tests: {
+      src: './build/tests/**/*.scss',
+      dest: './build/tests/'
+    },
     components: {
       src: './build/components/**/*.scss',
       dest: './build/components/'
@@ -86,6 +90,16 @@ function styleComponents() {
   .pipe(sass().on('error', sass.logError)) // sass compiler
   .pipe(autoprefixer(autoprefixerOptions)) // add prefixer
   .pipe(gulp.dest(paths.styles.components.dest)) // where to save the css file
+  .pipe(browserSync.stream()) // stream to all browsers
+}
+
+// Compile Scss from Components to CSS
+function styleTests() {
+  return gulp
+  .src(paths.styles.tests.src, { sourcemaps: true }) // where is my scss file
+  .pipe(sass().on('error', sass.logError)) // sass compiler
+  .pipe(autoprefixer(autoprefixerOptions)) // add prefixer
+  .pipe(gulp.dest(paths.styles.tests.dest)) // where to save the css file
   .pipe(browserSync.stream()) // stream to all browsers
 }
 
@@ -184,6 +198,7 @@ function watch() {
   gulp.watch('./src/assets/img/**/*.{jpg,svg,png}', copyImages);
   //gulp.watch(paths.icons.src, svgSprite);
   gulp.watch(paths.styles.components.src, styleComponents); // run the style function if there's a change in any .scss file
+  gulp.watch(paths.styles.tests.src, styleTests); // run the style function if there's a change in any .scss file
   gulp.watch(paths.styles.website.src, styleWebsite); // run the style function if there's a change in any .scss file
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.templates.src, templates).on('change', browserSync.reload);
