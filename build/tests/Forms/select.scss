@@ -4,24 +4,7 @@
 $page-animDuration: .1s;
 
 .floating-labels {
-  label {
-    color: $color-graphite-medium;
-    display: block;
-    font-size: 16px;
-    line-height: 20px;
-    padding: 0 18px; // 16px + 2px border from input
-    position: absolute;
-    top: 16px;	
-    transition: $page-animDuration;	
-    will-change: top, font-size;
-    z-index: 10;
-    
-    &:hover { 
-      cursor: text;
-    }
-  }
-
-  input {
+  select {
     background: transparent;
     border: 2px solid $color-graphite-medium;
     border-radius: 4px;
@@ -29,7 +12,7 @@ $page-animDuration: .1s;
     font-size: 16px;
     line-height: 20px;
     margin: 2rem 0 0;
-    padding: 23px 16px 9px;
+    padding: 23px 16px 9px 10px;
     transition: $page-animDuration;
     will-change: border-color;
     width: 100%;
@@ -54,8 +37,7 @@ $page-animDuration: .1s;
       }
     }
 
-    &:disabled,
-    &:read-only {
+    &:disabled {
       background: $color-graphite-light;
       border-color: $color-graphite-light;
       cursor: none;
@@ -65,72 +47,23 @@ $page-animDuration: .1s;
       margin-top: 0;
     }
   }
+
+  option {
+    padding: 0;
+  }
 }
 
 .fieldgroup {
-  position: relative;
-  
-  svg {
-    fill: $color-graphite-medium;
-    height: 24px;
-    position: absolute;
-    top: 23%;
-    width: 24px;
-  }
-
-  &.icon {
-    &-leading {
-      input {
-        padding-left: 34px;
-      }
-
-      label {
-        margin-left: 18px;
-      }
-
-      .msg {
-        margin-left: 48px;
-      }
-
-      svg {
-        left: 9px;
-      }
-    }
-
-    &-trailing svg {
-      right: 9px;
-    }
-  }
-
-	&.focus label,
-	&.has-input label {
-    color: $color-graphite-medium;
-		font-size: 12px;
-		top: 7px;
-  }
-
-  &.disabled, 
-  &.read-only {
-    label,
-    span {
-      opacity: .36;
-    }
-
-    svg {
-      opacity: .5;
-    }
-  }  
-
-
   &.error {
-    input {
+    select {
       background: $color-red-light;
       border-color: #ea032a;
     }
 
     input,
+    select,
     label,
-    .msg {
+    span {
       color: $color-red-dark;
     }
 

@@ -4,16 +4,33 @@
 // Variable to become tokens?
 $page-animDuration: .1s;
 
+
+fieldset {
+  background: #f0f0f0;
+  margin-bottom: 30px;
+}
+
+legend {
+  background: white;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  margin-left: 20px;
+  padding: 6px;
+}
+
+legend h3.heading6 {
+  margin: 0;
+}
+
 label {
   color: $color-graphite-medium;
-  display: block;
+  display: inline-block;
   font-size: 16px;
   line-height: 20px;
+  margin-right: 20px;
   padding: 0 18px; // 16px + 2px border from input
-  /*position: absolute;
-  top: 16px;*/
-  transition: $page-animDuration;	
-  will-change: top, font-size;
+  text-align: right;
+  width: 300px;
   z-index: 10;
   
   &:hover { 
@@ -21,18 +38,20 @@ label {
   }
 }
 
-input {
-  background: transparent;
+input,
+select {
+  background: white;
   border: 2px solid $color-graphite-medium;
   border-radius: 4px;
   color: $color-graphite-dark;
   font-size: 16px;
   line-height: 20px;
   margin: 2rem 0 0;
-  padding: 15px 16px 15px;
+  //padding: 15px 16px 15px;
+  padding: 8px 9px;
   transition: $page-animDuration;
   will-change: border-color;
-  width: 100%;
+  width: 400px;
   
   &:hover {
     border-color: $color-graphite-dark;
@@ -54,12 +73,12 @@ input {
     }
   }
 
-  &:disabled,
+  /*&:disabled,
   &:read-only {
     background: $color-graphite-light;
     border-color: $color-graphite-light;
     cursor: none;
-  }
+  }*/
     
   &:first-of-type { 
     margin-top: 0;
@@ -73,7 +92,7 @@ input {
     fill: $color-graphite-medium;
     height: 24px;
     position: absolute;
-    top: 40%;
+    top: 5px;
     width: 24px;
   }
 
@@ -121,14 +140,16 @@ input {
   }  
 
   &.error {
-    input {
+    input,
+    select {
       background: $color-red-light;
       border-color: #ea032a;
     }
 
     input,
+    select,
     label,
-    .msg {
+    span {
       color: $color-red-dark;
     }
 
@@ -139,15 +160,23 @@ input {
 }
 
 // Messages
-.msg {
+.fieldgroup span {
   color: $color-graphite-medium; 
   display: block;
   font-size: 12px;
-  height: 20px;
+  min-height: 20px;
   line-height: 15px;
-  margin: 2px 0 0 18px;
+  margin: 2px 0 0 2px;
 }
 
 .ds-button {
   display: inline-block;
+}
+
+.error.message {
+  border: 1px solid #ea032a;
+  background: #ffdddd;
+  color: #ea032a;
+  margin-bottom: 20px;
+  padding: 10px;
 }

@@ -6,12 +6,16 @@
 $page-animDuration: .1s;
 
 // Messages
-.msg {
+.fieldgroup span {
   color: $color-graphite-medium; 
   display: block;
   font-size: 12px;
   line-height: 15px;
   margin: 2px 0 0 18px;
+
+  &.error {
+    color: #ea032a; // $color-red-medium ?
+  }
 }
 
 .buttongroup {
@@ -26,8 +30,6 @@ button[type="reset"] {
 	transition: $page-animDuration;
 	will-change: transform;
 }
-
-
 
 
 // -----------------------------------

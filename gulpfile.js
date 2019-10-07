@@ -14,8 +14,6 @@ const svgSprite     = require('gulp-svg-sprite');
 //const through       = require('through2');
 
 const autoprefixerOptions = {
-  // test on https://browserl.ist/
-  browsers: ['last 1 version', 'Safari 9', 'Safari 10', 'Safari 11', 'ie >= 11'],
   grid: false,
   supports: true
 };
@@ -207,7 +205,7 @@ function watch() {
 }
 
 
-var build = gulp.parallel(copyFonts, copyImages, styleComponents, styleWebsite, scripts, templates, watch);
+var build = gulp.parallel(copyFonts, copyImages, styleComponents, styleTests, styleWebsite, scripts, templates, watch);
 
 gulp.task(build);
 gulp.task('default', build);
@@ -216,6 +214,7 @@ exports.svgSpriteAll = svgSpriteAll;
 exports.svgSpriteCustom = svgSpriteCustom;
 exports.copyFonts = copyFonts;
 exports.copyImages = copyImages;
+exports.styleTests = styleTests;
 exports.styleWebsite = styleWebsite;
 exports.styleComponents = styleComponents;
 exports.scripts = scripts;

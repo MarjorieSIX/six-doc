@@ -1,7 +1,7 @@
 const inputs = document.querySelectorAll('input');
 
 (function init() {
-	for(let i = 0; i < inputs.length; i++) {
+	for (let i = 0; i < inputs.length; i++) {
 		inputs[i].addEventListener('focus', function() {
 			inputs[i].classList.add('focus');
 			inputs[i].parentNode.classList.add('focus');

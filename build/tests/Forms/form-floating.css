@@ -1,10 +1,10 @@
 /**
  * Do not edit directly
- * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ * Generated on Tue, 17 Sep 2019 20:19:31 GMT
  */
 /**
  * Do not edit directly
- * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ * Generated on Tue, 17 Sep 2019 20:19:31 GMT
  */
 .ds-button {
   align-items: center;
@@ -201,7 +201,7 @@ _:-ms-fullscreen, :root .ds-button {
 
 /**
  * Do not edit directly
- * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ * Generated on Tue, 17 Sep 2019 20:19:31 GMT
  */
 .floating-labels label {
   color: #666666;
@@ -290,20 +290,14 @@ _:-ms-fullscreen, :root .ds-button {
   .fieldgroup.error svg {
     fill: #d20023; }
 
-.msg {
-  color: #666666;
-  display: block;
-  font-size: 12px;
-  height: 20px;
-  line-height: 15px;
-  margin: 2px 0 0 18px; }
-
-.msg {
+.fieldgroup span {
   color: #666666;
   display: block;
   font-size: 12px;
   line-height: 15px;
   margin: 2px 0 0 18px; }
+  .fieldgroup span.error {
+    color: #ea032a; }
 
 .buttongroup {
   margin: 0 auto; }

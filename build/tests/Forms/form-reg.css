@@ -1,10 +1,10 @@
 /**
  * Do not edit directly
- * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ * Generated on Tue, 17 Sep 2019 20:19:31 GMT
  */
 /**
  * Do not edit directly
- * Generated on Mon, 08 Jul 2019 18:56:06 GMT
+ * Generated on Tue, 17 Sep 2019 20:19:31 GMT
  */
 .ds-button {
   align-items: center;
@@ -199,52 +199,70 @@
 _:-ms-fullscreen, :root .ds-button {
   height: 54px; }
 
+fieldset {
+  background: #f0f0f0;
+  margin-bottom: 30px; }
+
+legend {
+  background: white;
+  border: 2px solid #f0f0f0;
+  border-radius: 4px;
+  margin-left: 20px;
+  padding: 6px; }
+
+legend h3.heading6 {
+  margin: 0; }
+
 label {
   color: #666666;
-  display: block;
+  display: inline-block;
   font-size: 16px;
   line-height: 20px;
+  margin-right: 20px;
   padding: 0 18px;
-  /*position: absolute;
-  top: 16px;*/
-  transition: 0.1s;
-  will-change: top, font-size;
+  text-align: right;
+  width: 300px;
   z-index: 10; }
   label:hover {
     cursor: text; }
 
-input {
-  background: transparent;
+input,
+select {
+  background: white;
   border: 2px solid #666666;
   border-radius: 4px;
   color: #383838;
   font-size: 16px;
   line-height: 20px;
   margin: 2rem 0 0;
-  padding: 15px 16px 15px;
+  padding: 8px 9px;
   transition: 0.1s;
   will-change: border-color;
-  width: 100%; }
-  input:hover {
+  width: 400px;
+  /*&:disabled,
+  &:read-only {
+    background: $color-graphite-light;
+    border-color: $color-graphite-light;
+    cursor: none;
+  }*/ }
+  input:hover,
+  select:hover {
     border-color: #383838; }
-  input:focus {
+  input:focus,
+  select:focus {
     border-color: rgba(63, 66, 219, 0.8);
     outline: none; }
-    input:focus:valid {
+    input:focus:valid,
+    select:focus:valid {
       border-color: #00874e; }
-  input:active {
+  input:active,
+  select:active {
     border-color: #00874e; }
-    input:active:focus {
+    input:active:focus,
+    select:active:focus {
       border-color: rgba(63, 66, 219, 0.8); }
-  input:disabled, input:-moz-read-only {
-    background: #e6e7e8;
-    border-color: #e6e7e8;
-    cursor: none; }
-  input:disabled, input:read-only {
-    background: #e6e7e8;
-    border-color: #e6e7e8;
-    cursor: none; }
-  input:first-of-type {
+  input:first-of-type,
+  select:first-of-type {
     margin-top: 0; }
 
 .fieldgroup {
@@ -253,7 +271,7 @@ input {
     fill: #666666;
     height: 24px;
     position: absolute;
-    top: 40%;
+    top: 5px;
     width: 24px; }
   .fieldgroup.icon-leading input {
     padding-left: 34px; }
@@ -276,23 +294,32 @@ input {
     opacity: .36; }
   .fieldgroup.disabled svg, .fieldgroup.read-only svg {
     opacity: .5; }
-  .fieldgroup.error input {
+  .fieldgroup.error input,
+  .fieldgroup.error select {
     background: #ffdddd;
     border-color: #ea032a; }
   .fieldgroup.error input,
+  .fieldgroup.error select,
   .fieldgroup.error label,
-  .fieldgroup.error .msg {
+  .fieldgroup.error span {
     color: #790318; }
   .fieldgroup.error svg {
     fill: #d20023; }
 
-.msg {
+.fieldgroup span {
   color: #666666;
   display: block;
   font-size: 12px;
-  height: 20px;
+  min-height: 20px;
   line-height: 15px;
-  margin: 2px 0 0 18px; }
+  margin: 2px 0 0 2px; }
 
 .ds-button {
   display: inline-block; }
+
+.error.message {
+  border: 1px solid #ea032a;
+  background: #ffdddd;
+  color: #ea032a;
+  margin-bottom: 20px;
+  padding: 10px; }

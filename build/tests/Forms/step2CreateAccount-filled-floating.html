@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Tests alphas | Libellés de formulaire - Scénario 2</title>
+
+  <link href="../../css/styles.css" rel="stylesheet" />
+  <link href="../../css/dssite/styles.css" rel="stylesheet" />
+
+  <link href="checkbox.css" rel="stylesheet" />
+  <link href="select.css" rel="stylesheet" />
+  <link href="general.css" rel="stylesheet" />
+  <link href="form-floating.css" rel="stylesheet" />
+  <style>
+    .visibility-hidden {
+      visibility: hidden;
+    }
+    .hidden {
+      display: none;
+    }
+
+    .small input {
+      width: 400px;
+    }
+
+    .small .msg {
+      margin-bottom: 75px;
+      width: 380px;
+    }
+
+    .smaller input {
+      width: 200px;
+    }
+
+    .fieldgroup span {
+      display: block;
+      height: 20px;
+      margin-bottom: 10px;
+    }
+
+    span.error {
+      margin-bottom: 10px;
+    }
+
+    .fieldgroup.icon-trailing svg {
+      margin-left: -41px;
+      position: inherit;
+      right: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <img src="../../assets/images/logos/logo-desjardins-green.svg" alt="Desjardins" />
+    </header>
+
+    <section>
+      <h1 class="heading4">Ouvrir un compte</h1>
+      
+      <div class="container">
+        <img src="../placeholders/etapes.gif" alt="">
+        <h2 class="heading5">Étape 2 - Renseignements personnels</h2>
+  
+        <form id="create-account-form" novalidate>
+          <fieldset>
+            <legend>
+              <h3 class="heading6">Identification</h3>
+            </legend>
+            <div class="floating-labels fieldgroup focus small required">
+              <label for="firstname">Prénom*</label>
+              <input class="focus" type="text" id="firstname" name="firstname" value="Amélie" required>
+              <span></span>
+            </div>
+
+            <div class="floating-labels fieldgroup focus small required">
+              <label for="lastname">Nom*</label>
+              <input class="focus" type="text" id="lastname" name="lastname" value="Poulain" required>
+              <span></span>
+            </div>
+
+            <div class="floating-labels fieldgroup small assistance icon-trailing">
+              <label for="nas">N° d'assurance sociale (NAS)</label>
+              <input type="text" id="nas" name="nas">
+              <svg class="icon" viewbox="0 0 32 32">
+                <use xlink:href="/assets/images/icons.svg#fill-contenu-cadenas"></use>
+              </svg>
+              <span class="msg">
+                Votre NAS vous est demandé à des fins fiscales et pour assurer la sécurité du processus d'ouverture de compte sans déplacement. Si vous ne voulez pas fournir cette information, nous vous invitons à vous présenter à une caisse pour y faire l'ouverture d'un compte en personne.
+              </span>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <h3 class="heading6">Coordonnées</h3>
+            </legend>
+            <div class="floating-labels fieldgroup focus required">
+              <label for="email">Adresse courriel*</label>
+              <input class="focus" type="email" id="email" name="email" value="a.poulain@gmail.com" required>
+              <span></span>
+            </div>
+
+            <div class="floating-labels fieldgroup focus smaller assistance required">
+              <label for="phone">Téléphone*</label>
+              <input class="focus" type="text" id="phone" name="phone" value="514 522-5223" required>
+              <span class="msg">Format: 514 111-1111</span>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>
+              <h3 class="heading6">Adresse</h3>
+            </legend>
+            <div class="floating-labels assistance fieldgroup">
+              <label for="address">N° et rue</label>
+              <input type="text" id="address" name="address">
+              <span></span>
+            </div>
+
+            <div class="floating-labels smaller assistance fieldgroup">
+              <label for="unit">Appartement</label>
+              <input type="text" id="unit" name="unit">
+              <span></span>
+            </div>
+
+            <div class="floating-labels assistance fieldgroup">
+              <label for="city">Ville</label>
+              <input type="text" id="city" name="city">
+              <span></span>
+            </div>
+
+            <div class="floating-labels assistance fieldgroup">
+              <label for="province">Province</label>
+              <select id="state" name="state" onclick="this.setAttribute('value', this.value);" value="">
+                <option value=""></option>
+                <option value="AB">Alberta</option>
+                <option value="BC">Colombie-Britannique</option>
+                <option value="PE">Île-du-Prince-Édouard</option>
+                <option value="MB">Manitoba</option>
+                <option value="NB">Nouveau-Brunswick</option>
+                <option value="NS">Nouvelle-Écosse</option>
+                <option value="NU">Nunavut</option>
+                <option value="ON">Ontario</option>
+                <option value="QC">Québec</option>
+                <option value="SK">Saskatchewan</option>
+                <option value="NL">Terre-Neuve-et-Labrador</option>
+                <option value="NT">Territoires du Nord-Ouest</option>
+                <option value="YT">Yukon</option>
+              </select>
+              <span></span>
+            </div>
+
+            <div class="floating-labels smaller assistance fieldgroup">
+              <label for="zipcode">Code postal</label>
+              <input type="text" id="zipcode" name="zipcode">
+              <span></span>
+            </div>
+          </fieldset>
+
+          <div class="buttongroup">
+            <button type="reset" class="ds-button secondary">Annuler</button>
+            <button class="ds-button secondary">Étape précédente</button>
+            <button type="submit" class="ds-button primary" id="continue">Continuer</button>
+          </div>
+
+        </form>
+      </div>
+      <div class="cb"></div>
+
+    </section>
+
+    <footer>
+      <p>@Copyright 2019, Nom entreprise. Tous droits réservés.</p>
+    </footer>
+  </div>
+
+
+  <script src="../../components/Input/input.js"></script>
+  <script src="select.js"></script>
+  <script>
+    const btnContinue = document.getElementById('continue');
+  </script>
+  <script src="floating-complex-form.js"></script>
+</body>
+</html>

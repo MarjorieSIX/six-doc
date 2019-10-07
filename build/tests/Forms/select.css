@@ -1,0 +1,49 @@
+/**
+ * Do not edit directly
+ * Generated on Tue, 17 Sep 2019 20:19:31 GMT
+ */
+.floating-labels select {
+  background: transparent;
+  border: 2px solid #666666;
+  border-radius: 4px;
+  color: #383838;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 2rem 0 0;
+  padding: 23px 16px 9px 10px;
+  transition: 0.1s;
+  will-change: border-color;
+  width: 100%; }
+  .floating-labels select:hover {
+    border-color: #383838; }
+  .floating-labels select:focus {
+    border-color: rgba(63, 66, 219, 0.8);
+    outline: none; }
+    .floating-labels select:focus:valid {
+      border-color: #00874e; }
+  .floating-labels select:active {
+    border-color: #00874e; }
+    .floating-labels select:active:focus {
+      border-color: rgba(63, 66, 219, 0.8); }
+  .floating-labels select:disabled {
+    background: #e6e7e8;
+    border-color: #e6e7e8;
+    cursor: none; }
+  .floating-labels select:first-of-type {
+    margin-top: 0; }
+
+.floating-labels option {
+  padding: 0; }
+
+.fieldgroup.error select {
+  background: #ffdddd;
+  border-color: #ea032a; }
+
+.fieldgroup.error input,
+.fieldgroup.error select,
+.fieldgroup.error label,
+.fieldgroup.error span {
+  color: #790318; }
+
+.fieldgroup.error svg {
+  fill: #d20023; }

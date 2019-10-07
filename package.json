@@ -25,5 +25,12 @@
   },
   "dependencies": {
     "float-labels.js": "^3.3.9"
-  }
+  },
+  "browserslist": [ 
+    "last 1 version",
+    "Safari 9",
+    "Safari 10",
+    "Safari 11",
+    "IE >= 11"
+  ]
 }
