@@ -20,7 +20,7 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify": "^3.0.2",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "six-design-tokens": "^0.0.18"
   },
   "dependencies": {
